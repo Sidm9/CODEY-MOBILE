@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'CODEY' do
-  # Pods for CODEY
+target 'codeyfe' do
+  # Pods for codeyfe
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -34,7 +34,7 @@ target 'CODEY' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'CODEYTests' do
+  target 'codeyfeTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -42,10 +42,10 @@ target 'CODEY' do
   use_native_modules!
 end
 
-target 'CODEY-tvOS' do
-  # Pods for CODEY-tvOS
+target 'codeyfe-tvOS' do
+  # Pods for codeyfe-tvOS
 
-  target 'CODEY-tvOSTests' do
+  target 'codeyfe-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
