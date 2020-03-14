@@ -1,75 +1,133 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable comma-dangle */
-/* eslint-disable prettier/prettier */
-import * as React from 'react';
-import { Button, Card, Title, Paragraph } from 'react-native-paper';
-import { View, StyleSheet, Text} from 'react-native';
-
-export default function card() {
-  return (
-
-    <View style={styles.container}>
-
-      <Card style={styles.neorphboxStyling}>
-        <Card.Cover style={styles.ImageCoverStyling} source={{ uri: 'https://reactnativecode.com/wp-content/uploads/2017/05/react_thumb_install.png' }} />
-        <Card.Content>
-          <Title style={styles.cardTitle}>Main Title</Title>
-          <Paragraph style={styles.cardSubHeading}> By Alex Mercer - 9 March 2020 </Paragraph>
-          <Paragraph style={styles.cardContent}>
-            Why do we use it?
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
-          </Paragraph>
-          <Card.Actions>
-            <Button /*icon  =  {require('../assets/icons/thumb_up-24pxWHITE.svg')}*/>Cancel</Button>
-            <Button>Ok</Button>
-          </Card.Actions>
-        </Card.Content>
-      </Card>
-    </View>
-  );
-}
+import React from 'react';
+import {Image, Text, View, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-   
-    padding: 15,
-    borderWidth: 0,
-
+  imageStyling: {
+    width: 380,
+    alignSelf: 'center',
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    height: 190,
   },
-  cardTitle: {
+  headingStyling: {
+    textAlignVertical: 'auto',
+    textAlign: 'left',
+    fontSize: 22,
+    marginTop: 10,
+    marginLeft: 15,
+    marginRight: 15,
+    fontWeight: 'normal',
     fontFamily: 'Montserrat-Bold',
-    paddingLeft: 10,
-    paddingTop: 10,
-    fontSize: 20,
   },
-  cardSubHeading: {
+  byLineContainer: {
+    flexDirection: 'row',
+  },
+  imageWhoHasPostedThisPostHeadShotStyling: {
+    width: 40,
+    height: 40,
+    marginTop: 10,
+    marginLeft: 15,
+    borderRadius: 50,
+  },
+  subHeadingStyling: {
+    marginLeft: 15,
+    marginTop: 20,
+    position: 'relative',
+    marginRight: 130,
     fontFamily: 'Montserrat-SemiBold',
-    paddingRight: 10,
-    paddingLeft: 5,
   },
-  cardContent: {
+  contentStyling: {
+    flexWrap: 'wrap',
+    margin: 15,
     fontFamily: 'Montserrat-Regular',
-    padding: 10,
   },
-  ImageCoverStyling: {
+  cardNavbarStyling: {
+    backgroundColor: 'rgba(224, 233, 240, 1)',
+    width: 380,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    flexDirection: 'row',
+    height: 35,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  likeStyling: {
+    paddingRight: 10,
+    paddingLeft: 20,
+  },
+  commentStyling: {
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
+  shareStyling: {
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
 
-    borderTopStartRadius: 25,
-    borderTopEndRadius: 25,
-  },
-  neorphboxStyling: {
-    shadowRadius: 2,
-    borderTopStartRadius: 25,
-    borderTopEndRadius: 25,
-    borderBottomStartRadius: 25,
-    borderBottomEndRadius: 25,
-    backgroundColor: '#e6edf2',
-    shadowColor: "#000",
+  container: {
+    backgroundColor: 'rgba(237, 240, 243, 1)',
+    alignSelf: 'center',
+    justifyContent: 'flex-start',
+    width: 380,
+    position: 'relative',
+    borderRadius: 20,
+    margin: 50,
+    shadowColor: '#000',
     shadowOffset: {
-      width: 0,
-      height: 4,
+      width: 3,
+      height: 5,
     },
-    shadowOpacity: 0.32,
-
-    elevation: 9,
+    shadowOpacity: 0.86,
+    shadowRadius: 6.68,
+    elevation: 11,
   },
 });
+
+const My = props => {
+  return (
+    <>
+      <View style={styles.container}>
+        <Image
+          style={styles.imageStyling}
+          source={require('../assets/images/qqwe.jpg')}
+        />
+        <Text style={styles.headingStyling}>
+          I am the one, don't weigh a ton Don't need a gun to get respect up on
+          the street !!!
+        </Text>
+        <View style={styles.byLineContainer}>
+          <Image
+            style={styles.imageWhoHasPostedThisPostHeadShotStyling}
+            source={require('../assets/images/tyler.jpg')}
+          />
+          <Text style={styles.subHeadingStyling}>
+            Tyler Durden 5 Minute Read
+          </Text>
+        </View>
+        <Text numberOfLines={10} style={styles.contentStyling}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a t It has survived not only five centuries, but
+          also the leap into theke a t It has survived not only five centuries,
+          but make a t It has survived not only five centuries, but also the
+          leap into theke a t It has survived not only five centuries, but also
+          the leap into theIt has survived not only five centuries, but also the
+          leap into theke
+        </Text>
+        <View style={styles.cardNavbarStyling}>
+          <Text style={styles.likeStyling}>Like</Text>
+          <Text style={styles.commentStyling}>Comment</Text>
+          <Text style={styles.shareStyling}>Share</Text>
+        </View>
+      </View>
+    </>
+  );
+};
+
+My.defaultProps = {};
+
+export default My;
+
+export {styles};
