@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   categoryCardTextContainer: {
-    //backgroundColor: 'rgba(77, 86, 210, 1)',
     flex: 2,
     alignSelf: 'center',
   },
@@ -55,10 +54,9 @@ const styles = StyleSheet.create({
     overflow: 'visible',
     flexWrap: 'wrap',
     zIndex: -1000,
-    left: 15,
+    left: 10,
   },
   categoryImageContainer: {
-    //backgroundColor: 'rgba(77, 86, 210, 1)',
     flex: 1,
     alignSelf: 'center',
     justifyContent: 'center',
@@ -82,7 +80,6 @@ const styles = StyleSheet.create({
   },
   categoryCardContainer: {
     width: 180,
-    //backgroundColor: 'rgba(54, 208, 54, 1)',
     height: 120,
     borderRadius: 20,
     flexDirection: 'row',

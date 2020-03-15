@@ -14,6 +14,7 @@ import Login from './Screens/Login.js';
 import Categories from './Screens/Categories.js';
 import Register from './Screens/Register1.js';
 import Card from './Components/Card.js';
+import Header from './Components/Header.js';
 
 const App: () => React$Node = () => {
   return (
