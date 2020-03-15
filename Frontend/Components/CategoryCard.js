@@ -52,9 +52,10 @@ const styles = StyleSheet.create({
     borderStyle: 'dotted',
     alignSelf: 'flex-end',
     borderRadius: 5,
-    overflow: 'hidden',
-    position: 'absolute',
-    right: -8,
+    overflow: 'visible',
+    flexWrap: 'wrap',
+    zIndex: -1000,
+    left: 15,
   },
   categoryImageContainer: {
     //backgroundColor: 'rgba(77, 86, 210, 1)',
@@ -63,6 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: -100,
+    overflow: 'hidden',
   },
   categoryCardTextAndImageContainer: {
     flexDirection: 'row',
