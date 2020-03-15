@@ -34,7 +34,6 @@ export default function Reg(props) {
         <Text style={styles.alreadyHaveAccount}>Already Have Account?</Text>
 
       </View>
-
     </>
   );
 }

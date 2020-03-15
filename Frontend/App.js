@@ -11,13 +11,14 @@ import React from 'react';
 import {SafeAreaView, ScrollView} from 'react-native';
 
 import Login from './Screens/Login.js';
+import Categories from './Screens/Categories.js';
 import Register from './Screens/Register1.js';
 import Card from './Components/Card.js';
 
 const App: () => React$Node = () => {
   return (
     <>
-      <Card />
+      <Categories />
     </>
   );
 };
