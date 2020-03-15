@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  ScrollView,
-  StyleSheet,
-} from 'react-native';
-
+import {Text, View, Image, TouchableOpacity, StyleSheet} from 'react-native';
 export default function CategoryCard(props) {
   return (
     <View style={styles.categoryCardMainContainer}>
@@ -24,10 +16,7 @@ export default function CategoryCard(props) {
               </View>
               <View style={styles.categoryImageContainer}>
                 <Image
-                  source={{
-                    uri:
-                      'https://cdn.iconscout.com/icon/free/png-256/c-programming-569564.png',
-                  }}
+                  source={require('../assets/images/CS.png')}
                   style={styles.imageStyle}
                 />
               </View>
@@ -39,26 +28,33 @@ export default function CategoryCard(props) {
   );
 }
 const styles = StyleSheet.create({
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5,
+  },
   categoryCardNameStyle: {
     marginLeft: 10,
-    fontSize: 22,
+    fontSize: 20.5,
     fontFamily: 'Montserrat-SemiBold',
     color: 'white',
   },
   categoryCardTextContainer: {
     //backgroundColor: 'rgba(77, 86, 210, 1)',
-    flex: 1,
+    flex: 2,
     alignSelf: 'center',
   },
   imageStyle: {
-    height: 80,
-    width: 80,
-    transform: [{rotate: '10.67deg'}],
+    height: 65,
+    width: 65,
+    transform: [{rotate: '25.67deg'}],
     borderStyle: 'dotted',
     alignSelf: 'flex-end',
     borderRadius: 5,
-    overflow: 'visible',
-    flexWrap: 'wrap',
+    overflow: 'hidden',
+    position: 'absolute',
+    right: -8,
   },
   categoryImageContainer: {
     //backgroundColor: 'rgba(77, 86, 210, 1)',
@@ -66,6 +62,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: -100,
   },
   categoryCardTextAndImageContainer: {
     flexDirection: 'row',
@@ -83,7 +80,7 @@ const styles = StyleSheet.create({
   },
   categoryCardContainer: {
     width: 180,
-    backgroundColor: 'rgba(54, 208, 54, 1)',
+    //backgroundColor: 'rgba(54, 208, 54, 1)',
     height: 120,
     borderRadius: 20,
     flexDirection: 'row',
@@ -91,12 +88,13 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     flexWrap: 'nowrap',
     margin: 15,
-    shadowOpacity: 1,
-    shadowColor: 'rgba(0, 0, 0, 1)',
-    shadowRadius: 6.93,
+    shadowColor: '#000',
     shadowOffset: {
-      width: 0,
-      height: 0,
+      width: 3,
+      height: 5,
     },
+    shadowOpacity: 0.86,
+    shadowRadius: 6.68,
+    elevation: 11,
   },
 });

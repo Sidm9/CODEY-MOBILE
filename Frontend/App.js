@@ -18,11 +18,11 @@ import Card from './Components/Card.js';
 const App: () => React$Node = () => {
   return (
     <>
-      <Categories />
+      <ScrollView>
+        <Categories />
+      </ScrollView>
     </>
   );
 };
-
-
 
 export default App;

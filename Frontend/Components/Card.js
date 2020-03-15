@@ -72,7 +72,10 @@ const styles = StyleSheet.create({
     width: 380,
     position: 'relative',
     borderRadius: 20,
-    margin: 50,
+    marginTop: 50,
+    marginBottom: -25,
+    marginRight: 50,
+    marginLeft: 50,
     shadowColor: '#000',
     shadowOffset: {
       width: 3,
