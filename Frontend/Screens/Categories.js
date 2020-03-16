@@ -30,32 +30,55 @@ export default function Categories() {
           <View style={styles.categoryCardMainContainer}>
             {/*For Each Rows */}
             <View style={styles.categoryCardGridContainer}>
-              <CategoryCard languageName="C (GCC)" />
+              <CategoryCard
+                languageName="C (GCC)"
+                languageIcon={require('../assets/images/C.png')}
+              />
               <CategoryCard
                 languageName="CPP"
-                imageUrl={'../assets/images/Java.png'}
+                languageIcon={require('../assets/images/C++.png')}
               />
             </View>
             <View style={styles.categoryCardGridContainer}>
-              <CategoryCard languageName="Java" />
-              <CategoryCard languageName="Javascript" />
+              <CategoryCard
+                languageName="Java"
+                languageIcon={require('../assets/images/Java.png')}
+              />
+              <CategoryCard
+                languageName="Javascript"
+                languageIcon={require('../assets/images/JS.png')}
+              />
             </View>
 
             <View style={styles.categoryCardGridContainer}>
-              <CategoryCard languageName="Flutter" />
-              <CategoryCard languageName="React" />
+              <CategoryCard
+                languageName="Flutter"
+                languageIcon={require('../assets/images/Dart.png')}
+              />
+              <CategoryCard
+                languageName="React"
+                languageIcon={require('../assets/images/jsx.png')}
+              />
             </View>
             <View style={styles.categoryCardGridContainer}>
-              <CategoryCard languageName="Golang" />
-              <CategoryCard languageName="Python" />
+              <CategoryCard
+                languageName="Golang"
+                languageIcon={require('../assets/images/Golang.png')}
+              />
+              <CategoryCard
+                languageName="Python"
+                languageIcon={require('../assets/images/Python.png')}
+              />
             </View>
             <View style={styles.categoryCardGridContainer}>
-              <CategoryCard languageName="C (GCC)" />
-              <CategoryCard languageName="CPP" />
-            </View>
-            <View style={styles.categoryCardGridContainer}>
-              <CategoryCard languageName="Java" />
-              <CategoryCard languageName="Javascript" />
+              <CategoryCard
+                languageName="C#"
+                languageIcon={require('../assets/images/CS.png')}
+              />
+              <CategoryCard
+                languageName="Vue"
+                languageIcon={require('../assets/images/Vue.png')}
+              />
             </View>
             {/* End */}
           </View>

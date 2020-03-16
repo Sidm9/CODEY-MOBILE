@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text, View, StyleSheet} from 'react-native';
+import {Image, Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
 const styles = StyleSheet.create({
   imageStyling: {
@@ -72,10 +72,10 @@ const styles = StyleSheet.create({
     width: 380,
     position: 'relative',
     borderRadius: 20,
-    marginTop: 50,
-    marginBottom: -25,
-    marginRight: 50,
-    marginLeft: 50,
+    marginTop: 5,
+    marginBottom: 15,
+    marginRight: 40,
+    marginLeft: 40,
     shadowColor: '#000',
     shadowOffset: {
       width: 3,
@@ -120,9 +120,15 @@ const My = props => {
           leap into theke
         </Text>
         <View style={styles.cardNavbarStyling}>
-          <Text style={styles.likeStyling}>Like</Text>
-          <Text style={styles.commentStyling}>Comment</Text>
-          <Text style={styles.shareStyling}>Share</Text>
+          <TouchableOpacity style={styles.likeStyling}>
+            <Image source={require('../assets/icons/LikeLight.png')} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.commentStyling}>
+            <Image source={require('../assets/icons/commentDark.png')} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.shareStyling}>
+            <Image source={require('../assets/icons/shareDark.png')} />
+          </TouchableOpacity>
         </View>
       </View>
     </>

@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     width: 375,
     height: 1,
+    alignItems : "center",
   },
   headerImage: {
     width: 220,
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
   login: {
     color: '#121212',
     fontSize: 30,
-    marginTop: 100,
+    marginTop: 320,
     marginLeft: 35,
     marginRight : 35,
     fontFamily: 'Montserrat-Bold',

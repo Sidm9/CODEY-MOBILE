@@ -20,7 +20,7 @@ const App: () => React$Node = () => {
   return (
     <>
       <ScrollView>
-        <Categories />
+        <Categories/>
       </ScrollView>
     </>
   );

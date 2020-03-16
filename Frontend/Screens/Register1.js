@@ -25,7 +25,7 @@ export default function Reg(props) {
       </View>
 
       <View style={{ flex: 2 }}>
-        <Text style={styles.login}>Reg</Text>
+        <Text style={styles.register}>Register</Text>
 
         <PlaceHolders placeHolder="Enter Email" />
         <PlaceHolders placeHolder="Enter Passoword" />
@@ -58,10 +58,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  login: {
+  register: {
     color: '#121212',
     fontSize: 30,
-    marginTop: 100,
+    marginTop: 320,
     marginLeft: 35,
     marginRight : 35,
     fontFamily: 'Montserrat-Bold',

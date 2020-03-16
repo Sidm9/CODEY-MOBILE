@@ -15,10 +15,7 @@ export default function CategoryCard(props) {
                 </Text>
               </View>
               <View style={styles.categoryImageContainer}>
-                <Image
-                  source={require('../assets/images/CS.png')}
-                  style={styles.imageStyle}
-                />
+                <Image source={props.languageIcon} style={styles.imageStyle} />
               </View>
             </View>
           </TouchableOpacity>
@@ -35,10 +32,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   categoryCardNameStyle: {
-    marginLeft: 10,
-    fontSize: 20.5,
+    marginLeft: 5,
+    fontSize: 21.7,
     fontFamily: 'Montserrat-SemiBold',
     color: 'white',
+    textAlign: 'center',
+    //borderWidth: 1,
   },
   categoryCardTextContainer: {
     flex: 2,
@@ -46,33 +45,36 @@ const styles = StyleSheet.create({
   },
   imageStyle: {
     height: 65,
-    width: 65,
+    width: 60,
     transform: [{rotate: '25.67deg'}],
-    borderStyle: 'dotted',
     alignSelf: 'flex-end',
-    borderRadius: 5,
+    borderRadius: 0,
     overflow: 'visible',
     flexWrap: 'wrap',
     zIndex: -1000,
-    left: 10,
+    left: 14,
+    top: -28,
   },
   categoryImageContainer: {
     flex: 1,
-    alignSelf: 'center',
+    alignSelf: 'stretch',
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: -100,
     overflow: 'hidden',
+    //borderWidth: 1,
+    borderRadius: 20,
   },
   categoryCardTextAndImageContainer: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-around',
+    alignItems: 'stretch',
+    justifyContent: 'space-evenly',
     alignSelf: 'auto',
     flex: 1,
   },
   categoryCardButtonStyle: {
-    backgroundColor: 'rgba(235, 58, 58, 1)',
+    backgroundColor:
+      'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(85,201,55,1) 0%, rgba(0,212,255,1) 100%)',
     width: 0,
     height: 120,
     borderRadius: 20,
@@ -89,11 +91,12 @@ const styles = StyleSheet.create({
     margin: 15,
     shadowColor: '#000',
     shadowOffset: {
-      width: 3,
-      height: 5,
+      width: 0,
+      height: 3,
     },
-    shadowOpacity: 0.86,
-    shadowRadius: 6.68,
-    elevation: 11,
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+
+    elevation: 7,
   },
 });
