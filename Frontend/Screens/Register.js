@@ -5,7 +5,7 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
-  KeyboardAvoidingView,
+  TouchableOpacity,
 } from 'react-native';
 import PlaceHolders from '../Components/PlaceHolders';
 import codeyLogo from '../assets/images/CodeyDark.png';
@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   heading: {
+    //color: 'rgba(255, 255, 255, 1)',
     fontSize: 45,
     fontFamily: 'Montserrat-Bold',
     margin: 10,
@@ -26,6 +27,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   footer: {
+    //color: 'rgba(255, 255, 255, 1)',
     fontSize: 20,
     fontFamily: 'Montserrat-SemiBold',
     margin: 5,
@@ -41,11 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'stretch',
     alignItems: 'stretch',
-    //borderWidth: 8,
     justifyContent: 'flex-start',
-  },
-  keyContainer: {
-    flex: 1,
   },
 });
 
@@ -57,11 +55,14 @@ export default function login() {
           style={styles.backgroundImage}
           source={require('../assets/images/3272176.jpg')}>
           <Image source={codeyLogo} style={styles.logo} />
-          <Text style={styles.heading}>Login</Text>
+          <Text style={styles.heading}>Register</Text>
           <PlaceHolders placeholder={'Enter Email'} />
           <PlaceHolders placeholder={'Enter Password'} />
-          <LoginButton text="Login" />
-          <Text style={styles.footer}>New Account?</Text>
+          <PlaceHolders placeholder={'Enter Password Again'} />
+          <LoginButton text="Continue ▶▶" />
+          <TouchableOpacity>
+            <Text style={styles.footer}>Already Have Account?</Text>
+          </TouchableOpacity>
         </ImageBackground>
       </View>
     </>

@@ -5,7 +5,7 @@ import PlaceHolders from '../Components/PlaceHolders';
 import GoogleButton from '../Components/GoogleButton';
 import SignUpButton from '../Components/Button';
 //import LinearGradient from 'react-native-linear-gradient';
-export default function Reg(props) {
+export default function Login(props) {
   return (
     // <LinearGradient
     //   style={styles.container}
@@ -25,15 +25,16 @@ export default function Reg(props) {
       </View>
 
       <View style={{ flex: 2 }}>
-        <Text style={styles.register}>Register</Text>
+        <Text style={styles.login}>Login</Text>
 
         <PlaceHolders placeHolder="Enter Email" />
         <PlaceHolders placeHolder="Enter Passoword" />
 
-        <SignUpButton style={styles.buttonStyle} text="Reg" />
-        <Text style={styles.alreadyHaveAccount}>Already Have Account?</Text>
+        <SignUpButton style={styles.buttonStyle} text="Login" />
+        <Text style={styles.newAccount}>New Account?</Text>
 
       </View>
+
     </>
   );
 }
@@ -46,6 +47,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     width: 375,
     height: 1,
+    alignItems : 'center',
   },
   headerImage: {
     width: 220,
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  register: {
+  login: {
     color: '#121212',
     fontSize: 30,
     marginTop: 320,
@@ -73,7 +75,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
   },
-  alreadyHaveAccount: {
+  newAccount: {
     color: '#121212',
     fontSize: 15,
     fontFamily: 'Montserrat-Regular',
