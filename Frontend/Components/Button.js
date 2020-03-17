@@ -6,7 +6,7 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 export default function ButtonTemp(props) {
     return (
         <TouchableOpacity style={styles.buttonStyle}>
-            <Text style={styles.ButtonText}> {props.text} </Text>
+            <Text style={styles.buttonText}> {props.text} </Text>
         </TouchableOpacity>
     );
 }
@@ -14,21 +14,19 @@ export default function ButtonTemp(props) {
 const styles = StyleSheet.create({
     buttonStyle: {
         flexDirection: 'row',
-
-        height: 40,
-        marginLeft: 25,
-        marginRight: 25,
+        height: 45,
+        marginLeft: 35,
+        marginRight: 35,
         marginTop: 30,
-
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#0A8EF3',
-        borderRadius: 35,
+        backgroundColor: 'black',
+        borderRadius: 8,
     },
-    ButtonText: {
+    buttonText: {
         alignItems: "center",
         justifyContent: 'center',
-        color: "white",
+        color: 'white',
         fontFamily: "Montserrat-Bold",
     },
 });

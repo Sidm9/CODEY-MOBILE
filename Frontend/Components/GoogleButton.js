@@ -1,10 +1,10 @@
 /* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-trailing-spaces */
-import React, { Component } from 'react';
-import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-function GoogleButton(props) {
+function GoogleButton() {
     return (
         <TouchableOpacity>
             <Image

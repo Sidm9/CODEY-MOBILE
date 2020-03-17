@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/self-closing-comp */
 /**
  * Sample React Native App
@@ -15,13 +16,11 @@ import Categories from './Screens/Categories.js';
 import Register from './Screens/Register1.js';
 import Card from './Components/Card.js';
 import Header from './Components/Header.js';
-
+import Lalala from './Components/lalala.js';
 const App: () => React$Node = () => {
   return (
     <>
-      <ScrollView>
-        <Categories/>
-      </ScrollView>
+      <Lalala />
     </>
   );
 };

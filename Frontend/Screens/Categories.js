@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text, View, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import CategoryCard from '../Components/CategoryCard';
 import Header from '../Components/Header';
 const styles = StyleSheet.create({
   categoryCardGridContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   categoryCardMainContainer: {
@@ -36,7 +36,7 @@ export default function Categories() {
               />
               <CategoryCard
                 languageName="CPP"
-                languageIcon={require('../assets/images/C++.png')}
+                languageIcon={require('../assets/images/C+.png')}
               />
             </View>
             <View style={styles.categoryCardGridContainer}>

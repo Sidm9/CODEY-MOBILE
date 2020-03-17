@@ -6,8 +6,8 @@ export default function PlaceHolders(props) {
     <>
       <TextInput
         style={styles.inputStyle}
-        placeholder={props.placeHolder}
-        placeholderTextColor="#000000"
+        placeholder={props.placeholder}
+        placeholderTextColor="black"
       />
     </>
   );
