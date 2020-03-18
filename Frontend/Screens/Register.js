@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function login() {
+export default function login({navigation}) {
   return (
     <>
       <View style={styles.container}>
@@ -68,7 +68,7 @@ export default function login() {
             icon={require('../assets/icons/whiteVisible.png')}
           />
           <LoginButton text="Continue ▶▶" />
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
             <Text style={styles.footer}>Already Have Account?</Text>
           </TouchableOpacity>
         </ImageBackground>

@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     width: 250,
     marginLeft: 15,
     marginTop: 20,
-    marginBottom: -10,
+    marginBottom: 10,
     fontSize: 40,
     height: 60,
     fontFamily: 'Montserrat-Bold',

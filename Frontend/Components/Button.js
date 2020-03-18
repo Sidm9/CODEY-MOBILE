@@ -3,10 +3,10 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 
-export default function ButtonTemp(props) {
+export default function Button(props) {
     return (
-        <TouchableOpacity style={styles.buttonStyle}>
-            <Text style={styles.buttonText}> {props.text} </Text>
+        <TouchableOpacity style={styles.buttonStyle} onPress={props.click}>
+            <Text style={styles.buttonText} > {props.text} </Text>
         </TouchableOpacity>
     );
 }

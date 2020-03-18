@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  Image,
-  View,
-  Text,
-  StyleSheet,
-  ImageBackground,
-  KeyboardAvoidingView,
-} from 'react-native';
+import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
 import PlaceHolders from '../Components/PlaceHolders';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 const styles = StyleSheet.create({
   logo: {
     width: 200,
@@ -41,15 +35,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'stretch',
     alignItems: 'stretch',
-    //borderWidth: 8,
     justifyContent: 'flex-start',
-  },
-  keyContainer: {
-    flex: 1,
   },
 });
 
-export default function login(props) {
+export default function login({navigation}) {
   return (
     <>
       <View style={styles.container}>
@@ -64,8 +54,13 @@ export default function login(props) {
             password={true}
             icon={require('../assets/icons/whiteVisible.png')}
           />
-          <LoginButton text="Login" />
-          <Text style={styles.footer}>New Account?</Text>
+          <LoginButton
+            text="Login"
+            click={() => navigation.navigate('Posts')}
+          />
+          <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+            <Text style={styles.footer}>New Account?</Text>
+          </TouchableOpacity>
         </ImageBackground>
       </View>
     </>
