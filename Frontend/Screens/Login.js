@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Bold',
     margin: 10,
     marginTop: 120,
-    marginLeft: 32,
+    marginLeft: 40,
     textAlign: 'left',
   },
   footer: {

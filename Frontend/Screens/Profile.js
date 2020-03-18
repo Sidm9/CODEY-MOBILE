@@ -3,6 +3,7 @@ import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
 import ImageHolder from '../Components/ImageHolder';
 import Header from '../Components/Header';
 import Card from '../Components/Card';
+import SearchBar from '../Components/SearchBar';
 const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
@@ -93,7 +94,7 @@ export default function Profile(props) {
   return (
     <ImageBackground
       style={styles.container}
-      source={require('../assets/images/AVector.jpg')}>
+      source={require('../assets/images/86373.jpg')}>
       <Header title="Profile" />
       <View style={styles.containerUpper}>
         <View style={styles.imageContainer}>
@@ -130,7 +131,9 @@ export default function Profile(props) {
           </View>
         </View>
       </View>
-      <View style={styles.containerLower} />
+      <View style={styles.containerLower}>
+        <SearchBar />
+      </View>
     </ImageBackground>
   );
 }

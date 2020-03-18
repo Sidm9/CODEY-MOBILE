@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Bold',
     margin: 10,
     marginTop: 120,
-    marginLeft: 32,
+    marginLeft: 40,
     textAlign: 'left',
   },
   footer: {
@@ -57,8 +57,16 @@ export default function login() {
           <Image source={codeyLogo} style={styles.logo} />
           <Text style={styles.heading}>Register</Text>
           <PlaceHolders placeholder={'Enter Email'} />
-          <PlaceHolders placeholder={'Enter Password'} />
-          <PlaceHolders placeholder={'Enter Password Again'} />
+          <PlaceHolders
+            placeholder={'Enter Password'}
+            password={true}
+            icon={require('../assets/icons/whiteVisible.png')}
+          />
+          <PlaceHolders
+            placeholder={'Enter Password Again'}
+            password={true}
+            icon={require('../assets/icons/whiteVisible.png')}
+          />
           <LoginButton text="Continue ▶▶" />
           <TouchableOpacity>
             <Text style={styles.footer}>Already Have Account?</Text>

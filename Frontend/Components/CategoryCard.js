@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'stretch',
-    flexWrap: 'nowrap',
     margin: 8,
     shadowColor: '#000',
     shadowOffset: {
@@ -80,25 +79,21 @@ const styles = StyleSheet.create({
 
 export default function CategoryCard(props) {
   return (
-    <View style={styles.categoryCardMainContainer}>
-      <View style={styles.categoryCardGridContainer}>
-        <View style={styles.categoryCardContainer}>
-          <TouchableOpacity
-            onPress={() => {}}
-            style={styles.categoryCardButtonStyle}>
-            <View style={styles.categoryCardTextAndImageContainer}>
-              <View style={styles.categoryCardTextContainer}>
-                <Text style={styles.categoryCardNameStyle}>
-                  {props.languageName}
-                </Text>
-              </View>
-              <View style={styles.categoryImageContainer}>
-                <Image source={props.languageIcon} style={styles.imageStyle} />
-              </View>
-            </View>
-          </TouchableOpacity>
+    <View style={styles.categoryCardContainer}>
+      <TouchableOpacity
+        onPress={() => {}}
+        style={styles.categoryCardButtonStyle}>
+        <View style={styles.categoryCardTextAndImageContainer}>
+          <View style={styles.categoryCardTextContainer}>
+            <Text style={styles.categoryCardNameStyle}>
+              {props.languageName}
+            </Text>
+          </View>
+          <View style={styles.categoryImageContainer}>
+            <Image source={props.languageIcon} style={styles.imageStyle} />
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }

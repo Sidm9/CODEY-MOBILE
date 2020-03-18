@@ -7,7 +7,7 @@
  * @format
  * @flow
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import {SafeAreaView, ScrollView} from 'react-native';
 
@@ -18,10 +18,11 @@ import Card from './Components/Card.js';
 import Header from './Components/Header.js';
 import Profile from './Screens/Profile.js';
 import ImageHolder from './Components/ImageHolder.js';
+import SearchBar from './Components/SearchBar.js';
 const App: () => React$Node = () => {
   return (
     <>
-      <Login />
+      <Profile />
     </>
   );
 };
