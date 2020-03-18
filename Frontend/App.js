@@ -16,10 +16,12 @@ import Categories from './Screens/Categories.js';
 import Register from './Screens/Register.js';
 import Card from './Components/Card.js';
 import Header from './Components/Header.js';
+import Profile from './Screens/Profile.js';
+import ImageHolder from './Components/ImageHolder.js';
 const App: () => React$Node = () => {
   return (
     <>
-      <Login />
+      <Profile />
     </>
   );
 };
