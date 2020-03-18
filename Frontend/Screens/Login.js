@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function login() {
+export default function login(props) {
   return (
     <>
       <View style={styles.container}>
@@ -59,7 +59,11 @@ export default function login() {
           <Image source={codeyLogo} style={styles.logo} />
           <Text style={styles.heading}>Login</Text>
           <PlaceHolders placeholder={'Enter Email'} />
-          <PlaceHolders placeholder={'Enter Password'} />
+          <PlaceHolders
+            placeholder={'Enter Password'}
+            password={true}
+            icon={require('../assets/icons/whiteVisible.png')}
+          />
           <LoginButton text="Login" />
           <Text style={styles.footer}>New Account?</Text>
         </ImageBackground>

@@ -133,5 +133,4 @@ export default function Card(props) {
       </View>
     </>
   );
-};
-
+}

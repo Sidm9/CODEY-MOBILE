@@ -21,7 +21,7 @@ import ImageHolder from './Components/ImageHolder.js';
 const App: () => React$Node = () => {
   return (
     <>
-      <Profile />
+      <Login />
     </>
   );
 };
