@@ -1,9 +1,8 @@
 import React from 'react';
-import {Image, View, Text, StyleSheet, ScrollView, ImageBackground} from 'react-native';
+import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
 import ImageHolder from '../Components/ImageHolder';
 import Header from '../Components/Header';
 import Card from '../Components/Card';
-import Categories from './Categories';
 const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
@@ -90,9 +89,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const Playground = props => {
+export default function Profile(props) {
   return (
-    <ImageBackground style={styles.container} source={require('../assets/images/AVector.jpg')} >
+    <ImageBackground
+      style={styles.container}
+      source={require('../assets/images/AVector.jpg')}>
       <Header title="Profile" />
       <View style={styles.containerUpper}>
         <View style={styles.imageContainer}>
@@ -132,10 +133,4 @@ const Playground = props => {
       <View style={styles.containerLower} />
     </ImageBackground>
   );
-};
-
-Playground.defaultProps = {};
-
-export default Playground;
-
-export {styles};
+}

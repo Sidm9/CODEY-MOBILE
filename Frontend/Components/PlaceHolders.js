@@ -1,17 +1,6 @@
 import React from 'react';
 import {TextInput, StyleSheet} from 'react-native';
 
-export default function PlaceHolders(props) {
-  return (
-    <>
-      <TextInput
-        style={styles.inputStyle}
-        placeholder={props.placeholder}
-        placeholderTextColor="black"
-      />
-    </>
-  );
-}
 const styles = StyleSheet.create({
   inputStyle: {
     fontFamily: 'Montserrat-Regular',
@@ -23,3 +12,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
 });
+
+export default function PlaceHolders(props) {
+  return (
+    <>
+      <TextInput
+        style={styles.inputStyle}
+        placeholder={props.placeholder}
+        placeholderTextColor="black"
+      />
+    </>
+  );
+}
+

@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const My = props => {
+export default function Card(props) {
   return (
     <>
       <View style={styles.container}>
@@ -135,8 +135,3 @@ const My = props => {
   );
 };
 
-My.defaultProps = {};
-
-export default My;
-
-export {styles};

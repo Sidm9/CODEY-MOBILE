@@ -4,18 +4,6 @@
 import React from 'react';
 import { StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-function GoogleButton() {
-    return (
-        <TouchableOpacity>
-            <Image
-                source={require('../assets/images/btn_google_signin_dark_normal_web.png')}
-                resizeMode="cover"
-                style={styles.headerImage}
-            />
-        </TouchableOpacity>
-    );
-}
-
 const styles = StyleSheet.create({
     container: {
         width: 207,
@@ -29,5 +17,19 @@ const styles = StyleSheet.create({
 
     },
 });
+
+function GoogleButton() {
+    return (
+        <TouchableOpacity>
+            <Image
+                source={require('../assets/images/btn_google_signin_dark_normal_web.png')}
+                resizeMode="cover"
+                style={styles.headerImage}
+            />
+        </TouchableOpacity>
+    );
+}
+
+
 
 export default GoogleButton;

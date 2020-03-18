@@ -1,29 +1,6 @@
 import React from 'react';
 import {Text, View, Image, TouchableOpacity, StyleSheet} from 'react-native';
-export default function CategoryCard(props) {
-  return (
-    <View style={styles.categoryCardMainContainer}>
-      <View style={styles.categoryCardGridContainer}>
-        <View style={styles.categoryCardContainer}>
-          <TouchableOpacity
-            onPress={() => {}}
-            style={styles.categoryCardButtonStyle}>
-            <View style={styles.categoryCardTextAndImageContainer}>
-              <View style={styles.categoryCardTextContainer}>
-                <Text style={styles.categoryCardNameStyle}>
-                  {props.languageName}
-                </Text>
-              </View>
-              <View style={styles.categoryImageContainer}>
-                <Image source={props.languageIcon} style={styles.imageStyle} />
-              </View>
-            </View>
-          </TouchableOpacity>
-        </View>
-      </View>
-    </View>
-  );
-}
+
 const styles = StyleSheet.create({
   linearGradient: {
     flex: 1,
@@ -100,3 +77,28 @@ const styles = StyleSheet.create({
     elevation: 7,
   },
 });
+
+export default function CategoryCard(props) {
+  return (
+    <View style={styles.categoryCardMainContainer}>
+      <View style={styles.categoryCardGridContainer}>
+        <View style={styles.categoryCardContainer}>
+          <TouchableOpacity
+            onPress={() => {}}
+            style={styles.categoryCardButtonStyle}>
+            <View style={styles.categoryCardTextAndImageContainer}>
+              <View style={styles.categoryCardTextContainer}>
+                <Text style={styles.categoryCardNameStyle}>
+                  {props.languageName}
+                </Text>
+              </View>
+              <View style={styles.categoryImageContainer}>
+                <Image source={props.languageIcon} style={styles.imageStyle} />
+              </View>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  );
+}
