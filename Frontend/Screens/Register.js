@@ -67,8 +67,11 @@ export default function login({navigation}) {
             password={true}
             icon={require('../assets/icons/whiteVisible.png')}
           />
-          <LoginButton text="Continue ▶▶" />
-          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+          <LoginButton
+            text="Continue ▶▶"
+            click={() => navigation.navigate('Profile')}
+          />
+          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
             <Text style={styles.footer}>Already Have Account?</Text>
           </TouchableOpacity>
         </ImageBackground>

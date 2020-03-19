@@ -45,7 +45,10 @@ export default function({navigation}) {
           />
           <Button text="Login" click={() => navigation.navigate('Login')} />
 
-          <Button text="Register" />
+          <Button
+            text="Register"
+            click={() => navigation.navigate('Register')}
+          />
 
           <Text style={styles.footer}>POWERED BY A7A</Text>
         </ImageBackground>
