@@ -2,7 +2,10 @@ import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
 import CategoryCard from '../Components/CategoryCard';
 import Header from '../Components/Header';
+import Heading from '../Components/Heading';
 import SearchBar from '../Components/SearchBar';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+
 const styles = StyleSheet.create({
   categoryCardGridContainer: {
     flexDirection: 'row',
@@ -34,9 +37,10 @@ export default function Categories() {
             <SearchBar />
             {/*For Each Rows */}
             <ScrollView>
+              <Heading title="Low Level " />
               <View style={styles.categoryCardGridContainer}>
                 <CategoryCard
-                  languageName="C (GCC)"
+                  languageName="C"
                   languageIcon={require('../assets/images/C.png')}
                 />
                 <CategoryCard
@@ -44,6 +48,7 @@ export default function Categories() {
                   languageIcon={require('../assets/images/C+.png')}
                 />
               </View>
+              <Heading title="High Level" />
               <View style={styles.categoryCardGridContainer}>
                 <CategoryCard
                   languageName="Java"
@@ -56,22 +61,23 @@ export default function Categories() {
               </View>
               <View style={styles.categoryCardGridContainer}>
                 <CategoryCard
-                  languageName="Flutter"
-                  languageIcon={require('../assets/images/Dart.png')}
-                />
-                <CategoryCard
-                  languageName="React"
-                  languageIcon={require('../assets/images/jsx.png')}
-                />
-              </View>
-              <View style={styles.categoryCardGridContainer}>
-                <CategoryCard
                   languageName="Golang"
                   languageIcon={require('../assets/images/Golang.png')}
                 />
                 <CategoryCard
                   languageName="Python"
                   languageIcon={require('../assets/images/Python.png')}
+                />
+              </View>
+              <Heading title="Hybrid" />
+              <View style={styles.categoryCardGridContainer}>
+                <CategoryCard
+                  languageName="Flutter"
+                  languageIcon={require('../assets/images/Dart.png')}
+                />
+                <CategoryCard
+                  languageName="React"
+                  languageIcon={require('../assets/images/jsx.png')}
                 />
               </View>
               <View style={styles.categoryCardGridContainer}>

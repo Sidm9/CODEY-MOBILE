@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
 import Button from '../Components/Button.js';
-import sample from '../assets/images/FreeSmokeYoutube.mov';
 const styles = StyleSheet.create({
   logo: {
     width: 350,

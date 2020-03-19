@@ -18,6 +18,7 @@ import Posts from './Screens/Posts.js';
 import {createStackNavigator} from '@react-navigation/stack';
 import Playground from './Screens/Playground.js';
 import BottomNavBar from './Components/BottomNavBar.js';
+import TopBar from './Components/TopBar.js';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 
 const Stack = createStackNavigator();
@@ -27,6 +28,7 @@ const App: () => React$Node = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name="TopBar" component={TopBar} />
           <Stack.Screen name="BottomNavBar" component={BottomNavBar} />
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Login" component={Login} />
@@ -35,7 +37,6 @@ const App: () => React$Node = () => {
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Posts" component={Posts} />
           <Stack.Screen name="Playground" component={Playground} />
-         
         </Stack.Navigator>
       </NavigationContainer>
     </>
