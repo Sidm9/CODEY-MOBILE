@@ -51,7 +51,7 @@ export default function SearchBar(props) {
           style={styles.inputStyle}
           //placeholder={props.placeholder}
           placeholderTextColor="black"
-          placeholder="Search Anything"
+          placeholder={props.title}
         />
       </View>
     </>

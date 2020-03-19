@@ -18,7 +18,7 @@ import Posts from './Screens/Posts.js';
 import {createStackNavigator} from '@react-navigation/stack';
 import Playground from './Screens/Playground.js';
 import BottomNavBar from './Components/BottomNavBar.js';
-import TopBar from './Components/TopBar.js';
+import TopBar from './Screens/TopBar.js';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 
 const Stack = createStackNavigator();

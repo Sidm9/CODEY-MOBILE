@@ -3,7 +3,7 @@ import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   HeaderStyle: {
-    width: 250,
+    width: 270,
     marginLeft: 15,
     marginTop: 20,
     marginBottom: 10,

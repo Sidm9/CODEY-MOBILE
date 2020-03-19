@@ -4,6 +4,7 @@ import CategoryCard from '../Components/CategoryCard';
 import Header from '../Components/Header';
 import Heading from '../Components/Heading';
 import SearchBar from '../Components/SearchBar';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 
 const styles = StyleSheet.create({
   categoryCardGridContainer: {
@@ -25,25 +26,15 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Categories() {
+export default function HighLevel() {
   return (
     <>
       <View style={styles.MainContainer}>
         <View style={styles.CategorySectionContainer}>
           <View style={styles.categoryCardMainContainer}>
-            <SearchBar />
+            <SearchBar title="Search Languages.." />
             {/*For Each Rows */}
             <ScrollView>
-              <View style={styles.categoryCardGridContainer}>
-                <CategoryCard
-                  languageName="C"
-                  languageIcon={require('../assets/images/C.png')}
-                />
-                <CategoryCard
-                  languageName="CPP"
-                  languageIcon={require('../assets/images/C+.png')}
-                />
-              </View>
               <View style={styles.categoryCardGridContainer}>
                 <CategoryCard
                   languageName="Java"
@@ -63,23 +54,6 @@ export default function Categories() {
                   languageName="Python"
                   languageIcon={require('../assets/images/Python.png')}
                 />
-              </View>
-              <View style={styles.categoryCardGridContainer}>
-                <CategoryCard
-                  languageName="C#"
-                  languageIcon={require('../assets/images/CS.png')}
-                />
-                <CategoryCard
-                  languageName="Vue"
-                  languageIcon={require('../assets/images/Vue.png')}
-                />
-              </View>
-              <View style={styles.categoryCardGridContainer}>
-              <CategoryCard
-              languageName="Vue"
-              languageIcon={require('../assets/images/Vue.png')}
-            />
-            <Text>                           I just use space </Text>
               </View>
             </ScrollView>
             {/* End */}

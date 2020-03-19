@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
+import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import CategoryCard from '../Components/CategoryCard';
 import Header from '../Components/Header';
 import Heading from '../Components/Heading';
@@ -26,33 +26,24 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Categories() {
+export default function LowLevel() {
   return (
     <>
       <View style={styles.MainContainer}>
         <View style={styles.CategorySectionContainer}>
+
           <View style={styles.categoryCardMainContainer}>
-            <SearchBar />
+            <SearchBar title = "Search Languages.." />
             {/*For Each Rows */}
             <ScrollView>
               <View style={styles.categoryCardGridContainer}>
                 <CategoryCard
-                  languageName="Golang"
-                  languageIcon={require('../assets/images/Golang.png')}
+                  languageName="C"
+                  languageIcon={require('../assets/images/C.png')}
                 />
                 <CategoryCard
-                  languageName="Python"
-                  languageIcon={require('../assets/images/Python.png')}
-                />
-              </View>
-              <View style={styles.categoryCardGridContainer}>
-                <CategoryCard
-                  languageName="C#"
-                  languageIcon={require('../assets/images/CS.png')}
-                />
-                <CategoryCard
-                  languageName="Vue"
-                  languageIcon={require('../assets/images/Vue.png')}
+                  languageName="CPP"
+                  languageIcon={require('../assets/images/C+.png')}
                 />
               </View>
             </ScrollView>
