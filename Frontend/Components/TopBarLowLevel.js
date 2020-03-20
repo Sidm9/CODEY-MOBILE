@@ -1,9 +1,16 @@
 import * as React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Header from './Header.js';
+import {StyleSheet} from 'react-native';
 import LowLevel from './LowLevel.js';
 import HighLevel from './HighLevel.js';
+import {View} from 'react-native';
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 const Tab = createMaterialTopTabNavigator();
 
 export default function TopBarLowLevel() {

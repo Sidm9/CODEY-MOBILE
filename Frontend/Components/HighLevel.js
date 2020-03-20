@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
   },
   MainContainer: {
     flex: 1,
+    borderWidth: 4,
+    borderColor: 'black',
   },
 });
 

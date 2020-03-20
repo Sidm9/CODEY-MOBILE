@@ -1,10 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView} from 'react-native';
-import CategoryCard from './CategoryCard';
-import Header from './Header';
-import Heading from './Heading';
-import SearchBar from './SearchBar';
-import BottomNavBar from './BottomNavBar';
+import {View, StyleSheet, ScrollView} from 'react-native';
 import TopBarLowLevel from './TopBarLowLevel';
 
 const styles = StyleSheet.create({
