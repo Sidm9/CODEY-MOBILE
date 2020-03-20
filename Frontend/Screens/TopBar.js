@@ -19,7 +19,7 @@ export default function App() {
           tabStyle: {width: 180, elevation: 0, shadowOpacity: 0},
           style: {
             elevation: 0, //for android
-            backgroundColor: 'transparent',
+             backgroundColor: 'transparent',
             shadowOpacity: 0, //for ios
           },
         }}>

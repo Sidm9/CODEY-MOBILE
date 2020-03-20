@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
-import CategoryCard from './CategoryCard';
+import CategoryCard from './CategoryScreenComponents/CategoryCard';
 import SearchBar from './SearchBar';
 
 const styles = StyleSheet.create({

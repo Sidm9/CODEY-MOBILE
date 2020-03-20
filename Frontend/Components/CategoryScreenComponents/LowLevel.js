@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
-import CategoryCard from '../Components/CategoryCard';
-import SearchBar from '../Components/SearchBar';
+import {View, StyleSheet} from 'react-native';
+import CategoryCard from './CategoryCard';
+import SearchBar from '../SearchBar';
 
 const styles = StyleSheet.create({
   categoryCardGridContainer: {
@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
   },
   MainContainer: {
     flex: 1,
-    borderWidth: 4,
+    // borderWidth: 4,
     borderColor: 'black',
-    flexGrow : 1,
+    flexGrow: 1,
   },
 });
 
@@ -38,11 +38,11 @@ export default function LowLevel() {
             <View style={styles.categoryCardGridContainer}>
               <CategoryCard
                 languageName="C"
-                languageIcon={require('../assets/images/C.png')}
+                languageIcon={require('../../assets/images/C.png')}
               />
               <CategoryCard
                 languageName="CPP"
-                languageIcon={require('../assets/images/C+.png')}
+                languageIcon={require('../../assets/images/C+.png')}
               />
             </View>
 

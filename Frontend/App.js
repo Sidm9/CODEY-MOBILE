@@ -14,6 +14,8 @@ import Categories from './Screens/Categories.js';
 import Register from './Screens/Register.js';
 import Profile from './Screens/Profile.js';
 import Main from './Screens/Main.js';
+import NewCategory from './Screens/Categories/NewCategory.js';
+import CategoryFramework from './Screens/Categories/CategoryFramework.js';
 import Posts from './Screens/Posts.js';
 import {createStackNavigator} from '@react-navigation/stack';
 import Playground from './Screens/Playground.js';
@@ -28,7 +30,11 @@ const App: () => React$Node = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false}}>
-          <Stack.Screen name="TopBar" component={TopBar} />
+          <Stack.Screen name="NewCategory" component={NewCategory} />
+          <Stack.Screen
+            name="CategoryFramework"
+            component={CategoryFramework}
+          />
           <Stack.Screen name="BottomNavBar" component={BottomNavBar} />
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Login" component={Login} />

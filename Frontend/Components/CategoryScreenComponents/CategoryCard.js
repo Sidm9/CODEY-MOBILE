@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, View, Image, TouchableOpacity, StyleSheet} from 'react-native';
-
+// CATEGORY CARD IS THE SIMPLEST COMPONENT CONTAING CARDS BLUEPRINT (IN SET OF 2)
 const styles = StyleSheet.create({
   linearGradient: {
     flex: 1,

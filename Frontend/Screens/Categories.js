@@ -1,11 +1,10 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
-import CategoryCard from '../Components/CategoryCard';
+import CategoryCard from '../Components/CategoryScreenComponents/CategoryCard';
 import Header from '../Components/Header';
 import Heading from '../Components/Heading';
 import SearchBar from '../Components/SearchBar';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-
 const styles = StyleSheet.create({
   categoryCardGridContainer: {
     flexDirection: 'row',

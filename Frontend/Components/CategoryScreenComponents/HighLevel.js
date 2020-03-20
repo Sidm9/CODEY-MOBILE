@@ -1,10 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView} from 'react-native';
-import CategoryCard from '../Components/CategoryCard';
-import Header from '../Components/Header';
-import Heading from '../Components/Heading';
-import SearchBar from '../Components/SearchBar';
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import {View, StyleSheet, ScrollView} from 'react-native';
+import CategoryCard from './CategoryCard';
+import SearchBar from '../SearchBar';
 
 const styles = StyleSheet.create({
   categoryCardGridContainer: {
@@ -23,7 +20,7 @@ const styles = StyleSheet.create({
   },
   MainContainer: {
     flex: 1,
-    borderWidth: 4,
+   // borderWidth: 4,
     borderColor: 'black',
   },
 });
@@ -40,21 +37,21 @@ export default function HighLevel() {
               <View style={styles.categoryCardGridContainer}>
                 <CategoryCard
                   languageName="Java"
-                  languageIcon={require('../assets/images/Java.png')}
+                  languageIcon={require('../../assets/images/Java.png')}
                 />
                 <CategoryCard
                   languageName="Javascript"
-                  languageIcon={require('../assets/images/JS.png')}
+                  languageIcon={require('../../assets/images/JS.png')}
                 />
               </View>
               <View style={styles.categoryCardGridContainer}>
                 <CategoryCard
                   languageName="Golang"
-                  languageIcon={require('../assets/images/Golang.png')}
+                  languageIcon={require('../../assets/images/Golang.png')}
                 />
                 <CategoryCard
                   languageName="Python"
-                  languageIcon={require('../assets/images/Python.png')}
+                  languageIcon={require('../../assets/images/Python.png')}
                 />
               </View>
             </ScrollView>

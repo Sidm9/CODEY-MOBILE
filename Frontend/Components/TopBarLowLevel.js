@@ -2,8 +2,8 @@ import * as React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Header from './Header.js';
 import {StyleSheet} from 'react-native';
-import LowLevel from './LowLevel.js';
-import HighLevel from './HighLevel.js';
+import LowLevel from './CategoryScreenComponents/LowLevel.js';
+import HighLevel from './CategoryScreenComponents/HighLevel.js';
 import {View} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -24,7 +24,7 @@ export default function TopBarLowLevel() {
           },
           tabStyle: {width: 180, elevation: 0, shadowOpacity: 0},
           style: {
-            elevation: 0, //for android
+            elevation: 0, //for android.
             backgroundColor: 'transparent',
             shadowOpacity: 0, //for ios
           },

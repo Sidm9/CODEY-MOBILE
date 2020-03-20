@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   categoryCardMainContainer: {
     flex: 2,
     flexDirection: 'column',
-    marginTop: 20,
+    marginTop: 1,
   },
   CategorySectionContainer: {
     flex: 1,
