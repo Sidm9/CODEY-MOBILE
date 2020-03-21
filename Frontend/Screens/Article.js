@@ -12,34 +12,32 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Bold',
   },
   imageB: {
-    borderBottomLeftRadius: 25,
-    borderBottomRightRadius: 25,
-    width: '100%',
-    height: '100%',
-    zIndex: 1000,
+    flex: 1,
+    width: null,
+    height: null,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'flex-end',
+    resizeMode: 'contain',
   },
   imageContainer: {
     width: '100%',
     height: 300,
-    borderBottomLeftRadius: 25,
-    borderBottomRightRadius: 25,
-    elevation: 5,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'flex-end',
     backgroundColor: 'rgba(52, 52, 52, 0.008)',
-    shadowOpacity: 1,
-    shadowColor: 'rgba(0, 0, 0, 1)',
-    shadowRadius: 43.15,
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 0,
+      height: 12,
     },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+    elevation: 24,
   },
-
   byLine: {
     fontSize: 15,
     marginBottom: 10,
@@ -50,6 +48,7 @@ const styles = StyleSheet.create({
   minuteDuration: {
     marginBottom: 10,
     margin: 10,
+    fontSize: 15,
     fontFamily: 'Montserrat-Medium',
   },
   byLineMinuteRead: {
@@ -72,7 +71,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderColor: 'rgba(17, 17, 241, 1)',
     borderWidth: 2,
-    marginLeft: 20,
+    marginLeft: 10,
   },
   byLineAndMinuteReadContainer: {
     width: '100%',
@@ -83,8 +82,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-  sc5420fc4: {
-    // backgroundColor: 'rgba(65, 187, 65, 1)',
+  articleContentContainer: {
     flex: 1,
     zIndex: -100,
     justifyContent: 'flex-start',
@@ -107,13 +105,20 @@ export default function Article(props) {
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.imageContainer}>
-          <ImageBackground source={bg} style={styles.imageB}>
+          <ImageBackground
+            source={bg}
+            style={styles.imageB}
+            // eslint-disable-next-line react-native/no-inline-styles
+            imageStyle={{
+              borderBottomLeftRadius: 30,
+              borderBottomRightRadius: 30,
+            }}>
             <Text style={styles.Title_Heading}>
               IpSumTHis is Lorem IpSumTHi
             </Text>
           </ImageBackground>
         </View>
-        <View style={styles.sc5420fc4}>
+        <View style={styles.articleContentContainer}>
           <View style={styles.byLineMinuteRead}>
             <Text style={styles.byLine}>By : Hokoona Matata</Text>
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
