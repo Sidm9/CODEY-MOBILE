@@ -20,6 +20,7 @@ import Posts from './Screens/Posts.js';
 import {createStackNavigator} from '@react-navigation/stack';
 import Playground from './Screens/Playground.js';
 import BottomNavBar from './Components/BottomNavBar.js';
+import Article from './Screens/Article.js';
 import TopBar from './Screens/TopBar.js';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 
@@ -29,14 +30,16 @@ const App: () => React$Node = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Navigator
+          screenOptions={{headerShown: false, gestureEnabled: true}}>
+          <Stack.Screen name="Article" component={Article} />
+          <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="NewCategory" component={NewCategory} />
           <Stack.Screen
             name="CategoryFramework"
             component={CategoryFramework}
           />
           <Stack.Screen name="BottomNavBar" component={BottomNavBar} />
-          <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Register" component={Register} />
           <Stack.Screen name="Categories" component={Categories} />

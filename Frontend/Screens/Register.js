@@ -69,7 +69,7 @@ export default function login({navigation}) {
           />
           <LoginButton
             text="Continue ▶▶"
-            click={() => navigation.navigate('Profile')}
+            click={() => navigation.navigate('NewCategory')}
           />
           <TouchableOpacity onPress={() => navigation.navigate('Login')}>
             <Text style={styles.footer}>Already Have Account?</Text>

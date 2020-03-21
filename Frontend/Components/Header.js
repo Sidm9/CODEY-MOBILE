@@ -21,10 +21,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 });
-export default function Header(props) {
+export default function Header( props , {navigation}) {
   return (
     <View style={styles.NavbarContainer}>
-      <TouchableOpacity style={styles.BackIconHeaderStyle}>
+      <TouchableOpacity
+        style={styles.BackIconHeaderStyle}
+        onPress={props.goBack}>
         <Image
           source={require('../assets/icons/baseline_arrow_back_ios_black_18dp.png')}
         />
