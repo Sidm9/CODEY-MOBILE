@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react';
 import {Text, ImageBackground, View, StyleSheet} from 'react-native';
-import bg from '../assets/images/LA.jpg';
+import bg from '../assets/images/qqwe.jpg';
 import {ScrollView} from 'react-native-gesture-handler';
+import Header from '../Components/Header.js';
 
 const styles = StyleSheet.create({
   Title_Heading: {
@@ -20,6 +21,10 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     resizeMode: 'contain',
   },
+  headerStyling : {
+    borderWidth : 3,
+    alignSelf : "center",
+  },  
   imageContainer: {
     width: '100%',
     height: 300,
@@ -113,6 +118,9 @@ export default function Article(props) {
               borderBottomLeftRadius: 30,
               borderBottomRightRadius: 30,
             }}>
+           <View style = {styles.headerStyling}>
+           <Header title="This" />
+           </View>
             <Text style={styles.Title_Heading}>
               IpSumTHis is Lorem IpSumTHi
             </Text>
@@ -128,8 +136,9 @@ export default function Article(props) {
               <Text style={styles.tags}>Coding</Text>
             </View>
             <View style={styles.tagContainer}>
-              <Text style={styles.tags}>I have no life</Text>
+              <Text style={styles.tags}>Codey Rocks</Text>
             </View>
+            <Text>grgr</Text>
           </View>
         </View>
       </View>

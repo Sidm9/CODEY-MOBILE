@@ -32,8 +32,8 @@ const App: () => React$Node = () => {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{headerShown: false, gestureEnabled: true}}>
-          <Stack.Screen name="Article" component={Article} />
           <Stack.Screen name="Main" component={Main} />
+          <Stack.Screen name="Article" component={Article} />
           <Stack.Screen name="NewCategory" component={NewCategory} />
           <Stack.Screen
             name="CategoryFramework"
