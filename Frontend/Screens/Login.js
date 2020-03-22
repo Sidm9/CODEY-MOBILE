@@ -58,6 +58,17 @@ export default function login({navigation}) {
             text="Login"
             click={() => navigation.navigate('Posts')}
           />
+          <TouchableOpacity style={styles.footer}>
+            <Image
+              style={{
+                alignSelf: 'center',
+                height: 45,
+                borderRadius: 1,
+                width: 350,
+              }}
+              source={require('../assets/images/google2.png')}
+            />
+          </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('Register')}>
             <Text style={styles.footer}>New Account?</Text>
           </TouchableOpacity>
