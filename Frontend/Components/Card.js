@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   content: {
     flexWrap: 'wrap',
     margin: 15,
-    fontFamily: 'Montserrat-Regular',
+    fontFamily: 'Montserrat-Medium',
   },
   cardNavbar: {
     backgroundColor: 'rgba(224, 233, 240, 1)',
@@ -95,6 +95,11 @@ const styles = StyleSheet.create({
 });
 
 export default function Card(props) {
+  const title = 'White Text with black background works with every background';
+
+  const content =
+    "Cognitive load refers here to the amount of brain power required to use the app. The human brain has a limited amount of processing power, and when an app provides too much information at once, it might overwhelm the user and make them abandon the task. Generally, this is what you want. But it's possible that in some circumstances that you want to customize the back button more than you can through the options mentioned above, in which case you can set the headerLeft option to a React Element that will be rendered, just as we did with headerRight. Alternatively, the headerLeft option also accepts a React Component, which can be used, for example, for overriding the onPress behavior of the back button. Read more about this in the api reference.";
+
   const [toggleStateLike, settoggleStateLike] = useState(0);
   function likeToggle() {
     settoggleStateLike(toggleStateLike === 0 ? 1 : 0);
@@ -115,46 +120,39 @@ export default function Card(props) {
   return (
     <>
       <View style={styles.container}>
-        <Image
-          style={styles.image}
-          source={require('../assets/images/qqwe.jpg')}
-        />
-        <Text style={styles.heading}>
-          I am the one, don't weigh a ton Don't need a gun to get respect up on
-          the street !!!
-        </Text>
-        <View style={styles.byLineContainer}>
+        <TouchableOpacity onPress={props.open}>
           <Image
-            style={styles.imageWhoHasPostedThisPostHeadShot}
-            source={require('../assets/images/tyler.jpg')}
+            style={styles.image}
+            source={require('../assets/images/qqwe.jpg')}
           />
-          <Text style={styles.subHeading}>Tyler Durden 5 Minute Read</Text>
-        </View>
-        <Text numberOfLines={10} style={styles.content}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a t It has survived not only five centuries, but
-          also the leap into theke a t It has survived not only five centuries,
-          but make a t It has survived not only five centuries, but also the
-          leap into theke a t It has survived not only five centuries, but also
-          the leap into theIt has survived not only five centuries, but also the
-          leap into theke
-        </Text>
-        <View style={styles.cardNavbar}>
-          <TouchableOpacity style={styles.like} onPress={likeToggle}>
-            <Image source={require('../assets/icons/LikeLight.png')} />
-            <Text style={styles.countNumber}> {toggleStateLike} </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.comment} onPress={commentToggle} >
-            <Image source={require('../assets/icons/commentDark.png')} />
-            <Text style={styles.countNumber}> {toggleStateComment} </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.share} onPress={shareToggle}>
-            <Image source={require('../assets/icons/shareDark.png')} />
-            <Text style={styles.countNumber}> {toggleStateShare} </Text>
-          </TouchableOpacity>
-        </View>
+          <Text style={styles.heading}>{title}</Text>
+          <View style={styles.byLineContainer}>
+            <Image
+              style={styles.imageWhoHasPostedThisPostHeadShot}
+              source={require('../assets/images/tyler.jpg')}
+            />
+
+            <Text style={styles.subHeading}>Tyler Durden 5 Minute Read</Text>
+          </View>
+          <Text numberOfLines={10} style={styles.content}>
+            {content}
+          </Text>
+
+          <View style={styles.cardNavbar}>
+            <TouchableOpacity style={styles.like} onPress={likeToggle}>
+              <Image source={require('../assets/icons/LikeLight.png')} />
+              <Text style={styles.countNumber}> {toggleStateLike} </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.comment} onPress={commentToggle}>
+              <Image source={require('../assets/icons/commentDark.png')} />
+              <Text style={styles.countNumber}> {toggleStateComment} </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.share} onPress={shareToggle}>
+              <Image source={require('../assets/icons/shareDark.png')} />
+              <Text style={styles.countNumber}> {toggleStateShare} </Text>
+            </TouchableOpacity>
+          </View>
+        </TouchableOpacity>
       </View>
     </>
   );

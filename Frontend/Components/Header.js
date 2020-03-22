@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 });
-export default function Header( props , {navigation}) {
+export default function Header(props, {navigation}) {
   return (
     <View style={styles.NavbarContainer}>
       <TouchableOpacity

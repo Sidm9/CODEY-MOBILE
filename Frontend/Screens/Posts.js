@@ -9,18 +9,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-export default function Posts({navigation}) {
+export default function Posts({navigation}, props) {
   return (
     <>
       <View style={styles.container}>
-        <Header title="Feed" />
+        <Header title="Feed" goBack ={() => navigation.navigate('Login')} />
         <ScrollView>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card open={() => navigation.navigate('Article')} />
+          <Card open={() => navigation.navigate('Article')} />
+          <Card open={() => navigation.navigate('Article')} />
+          <Card open={() => navigation.navigate('Article')} />
+          <Card open={() => navigation.navigate('Article')} />
+          <Card open={() => navigation.navigate('Article')} />
         </ScrollView>
       </View>
     </>
