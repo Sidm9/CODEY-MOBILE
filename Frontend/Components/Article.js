@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
-import {Text, ImageBackground, View, StyleSheet} from 'react-native';
+import {Text, ImageBackground, View, StyleSheet, Image} from 'react-native';
 import bg from '../assets/images/qqwe.jpg';
-import {ScrollView} from 'react-native-gesture-handler';
+import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import Header from './Header.js';
 
 const styles = StyleSheet.create({
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   minuteDuration: {
     marginBottom: 10,
-    margin: 10,
+    margin: 5,
     fontSize: 15,
     fontFamily: 'Montserrat-Medium',
   },
@@ -80,9 +80,20 @@ const styles = StyleSheet.create({
   },
   tagContainer: {
     borderRadius: 50,
-    backgroundColor: 'rgba(17, 17, 241, 1)',
-    borderWidth: 2,
+    backgroundColor: 'blue',
     marginLeft: 10,
+  },
+  tagContainer2: {
+    borderRadius: 50,
+    backgroundColor: 'red',
+    marginLeft: 10,
+  },
+  shareButton: {
+    marginLeft: 130,
+    flexWrap: 'wrap',
+    alignSelf: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
   },
   byLineAndMinuteReadContainer: {
     width: '100%',
@@ -144,28 +155,30 @@ export default function Article(props) {
             <View style={styles.tagContainer}>
               <Text style={styles.tags}>Coding</Text>
             </View>
-            <View style={styles.tagContainer}>
+            <View style={styles.tagContainer2}>
               <Text style={styles.tags}>Codey Rocks</Text>
             </View>
+            <TouchableOpacity style={styles.shareButton}>
+              <Image source={require('../assets/icons/shareDark.png')} />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
       <View style={styles.s8a286441}>
         <Text style={styles.s001b12f2}>
-          EVER SEEN MEMES ? THEY USE THE SAME TECHNOUE {'\n'}
-          {'\n'} IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
-          IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem I
-          IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
-          IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem I IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
-          IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
-          IpSumTHis is Lorem I IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis
-          is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
-          IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSum
+          Cognitive load refers here to the amount of brain power required to
+          use the app. The human brain has a limited amount of processing power,
+          and when an app provides too much information at once, it might
+          overwhelm the user and make them abandon the task.
+          {'\n'} {'\n'}
+          Generally, this is what you want. But it's possible that in some
+          circumstances that you want to customize the back button more than you
+          can through the options mentioned above, in which case you can set the
+          headerLeft option to a React Element that will be rendered, just as we
+          did with headerRight. Alternatively, the headerLeft option also
+          accepts a React Component, which can be used, for example, for
+          overriding the onPress behavior of the back button. Read more about
+          this in the api reference.
         </Text>
       </View>
     </ScrollView>
