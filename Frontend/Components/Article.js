@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {Text, ImageBackground, View, StyleSheet} from 'react-native';
 import bg from '../assets/images/qqwe.jpg';
 import {ScrollView} from 'react-native-gesture-handler';
-import Header from '../Components/Header.js';
+import Header from './Header.js';
 
 const styles = StyleSheet.create({
   Title_Heading: {
@@ -11,20 +11,24 @@ const styles = StyleSheet.create({
     zIndex: 100,
     color: 'white',
     fontFamily: 'Montserrat-Bold',
+    textShadowColor: '#000000',
+    textShadowOffset: {width: 5, height: 5},
+    textShadowRadius: 10,
   },
   imageB: {
     flex: 1,
-    width: null,
+    width: '100%',
     height: null,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'flex-end',
     resizeMode: 'contain',
   },
-  headerStyling : {
-    borderWidth : 3,
-    alignSelf : "center",
-  },  
+  headerStyling: {
+    borderWidth: 3,
+    borderColor: 'green',
+    alignSelf: 'center',
+  },
   imageContainer: {
     width: '100%',
     height: 300,
@@ -68,13 +72,15 @@ const styles = StyleSheet.create({
   tags: {
     margin: 5,
     fontSize: 12,
+    color: 'white',
+    textTransform: 'uppercase',
     textAlign: 'center',
     fontFamily: 'Montserrat-Medium',
     // color: 'rgba(248, 248, 248, 1)',
   },
   tagContainer: {
     borderRadius: 50,
-    borderColor: 'rgba(17, 17, 241, 1)',
+    backgroundColor: 'rgba(17, 17, 241, 1)',
     borderWidth: 2,
     marginLeft: 10,
   },
@@ -91,6 +97,11 @@ const styles = StyleSheet.create({
     flex: 1,
     zIndex: -100,
     justifyContent: 'flex-start',
+  },
+  headerContainer: {
+    flex: 1,
+    alignSelf: 'baseline',
+    zIndex: -10000,
   },
   container: {
     flex: 1,
@@ -117,18 +128,16 @@ export default function Article(props) {
             imageStyle={{
               borderBottomLeftRadius: 30,
               borderBottomRightRadius: 30,
+              flex: 1,
             }}>
-           <View style = {styles.headerStyling}>
-           <Header title="This" />
-           </View>
             <Text style={styles.Title_Heading}>
-              IpSumTHis is Lorem IpSumTHi
+              White Text with black background works with every background
             </Text>
           </ImageBackground>
         </View>
         <View style={styles.articleContentContainer}>
           <View style={styles.byLineMinuteRead}>
-            <Text style={styles.byLine}>By : Hokoona Matata</Text>
+            <Text style={styles.byLine}>Hokoona Matata</Text>
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
           </View>
           <View style={styles.byLineAndMinuteReadContainer}>
@@ -138,27 +147,25 @@ export default function Article(props) {
             <View style={styles.tagContainer}>
               <Text style={styles.tags}>Codey Rocks</Text>
             </View>
-            <Text>grgr</Text>
           </View>
         </View>
       </View>
       <View style={styles.s8a286441}>
         <Text style={styles.s001b12f2}>
-          THis is Lorem IpSum is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
+          EVER SEEN MEMES ? THEY USE THE SAME TECHNOUE {'\n'}
+          {'\n'} IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
+          IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
+          Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem I
           IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
           Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
           IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem IpSumTHis is Lorem I IpSumTHis is Lorem IpSumTHis is Lorem
+          Lorem I IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
           IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
           Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
-          IpSumTHis is Lorem IpSumTHis is Lorem I IpSumTHis is Lorem IpSumTHis
+          IpSumTHis is Lorem I IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis
           is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
           IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem IpSumTHis is Lorem IpSumTHis is Lorem I IpSumTHis is Lorem
-          IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem
-          IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSumTHis is
-          Lorem IpSum
+          Lorem IpSumTHis is Lorem IpSumTHis is Lorem IpSum
         </Text>
       </View>
     </ScrollView>
