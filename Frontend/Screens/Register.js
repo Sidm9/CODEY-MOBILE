@@ -10,6 +10,10 @@ import {
 import PlaceHolders from '../Components/PlaceHolders';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
+import GoogleButton from '../Components/GoogleButton';
+import Google from '../assets/icons/G.png';
+import Github from '../assets/icons/git.png';
+import Facebook from '../assets/icons/facebook.png';
 const styles = StyleSheet.create({
   logo: {
     width: 200,
@@ -18,16 +22,22 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   heading: {
-    //color: 'rgba(255, 255, 255, 1)',
     fontSize: 45,
     fontFamily: 'Montserrat-Bold',
     margin: 10,
-    marginTop: 120,
+    marginTop: 30,
     marginLeft: 40,
     textAlign: 'left',
   },
+  subheading: {
+    fontSize: 20,
+    fontFamily: 'Montserrat-SemiBold',
+    margin: 5,
+    marginTop: 25,
+    marginLeft: 0,
+    textAlign: 'center',
+  },
   footer: {
-    //color: 'rgba(255, 255, 255, 1)',
     fontSize: 20,
     fontFamily: 'Montserrat-SemiBold',
     margin: 5,
@@ -38,6 +48,14 @@ const styles = StyleSheet.create({
   backgroundImage: {
     width: '100%',
     height: '100%',
+  },
+  registerWithContainer: {
+    marginLeft: 35,
+    marginRight: 35,
+    marginTop: 20,
+    alignItems: 'center',
+    flexDirection: 'row',
+    alignContent: 'space-around',
   },
   container: {
     flex: 1,
@@ -71,6 +89,12 @@ export default function login({navigation}) {
             text="Continue ▶▶"
             click={() => navigation.navigate('NewCategory')}
           />
+          <Text style={styles.subheading}>Or Register via </Text>
+          <View style={styles.registerWithContainer}>
+          <GoogleButton text={'Google'} image={Google} />
+          <GoogleButton text={'Github'} image={Github} />
+          <GoogleButton text={'Facebook'} image={Facebook} />
+        </View>
           <TouchableOpacity onPress={() => navigation.navigate('Login')}>
             <Text style={styles.footer}>Already Have Account?</Text>
           </TouchableOpacity>

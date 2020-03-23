@@ -5,9 +5,9 @@ import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import GoogleButton from '../Components/GoogleButton';
-import Google from '../assets/images/Googlea.png';
-import Github from '../assets/images/git.png';
-import Facebook from '../assets/images/facebook.png';
+import Google from '../assets/icons/G.png';
+import Github from '../assets/icons/git.png';
+import Facebook from '../assets/icons/facebook.png';
 const styles = StyleSheet.create({
   logo: {
     width: 200,

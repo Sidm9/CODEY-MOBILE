@@ -21,7 +21,7 @@ export default function ArticleHeader({navigation}) {
         options={{
           headerRight: () => (
             <Button
-              onPress={() => alert('This is a button!')}s
+              onPress={() => alert('This is a button!')}
               title="Info"
               color="#00cc00"
             />
