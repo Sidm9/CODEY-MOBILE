@@ -52,6 +52,7 @@
 		617CF97CB0804D42899E972D /* MontserratAlternates-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A706A5DB7F84AC098F47D72 /* MontserratAlternates-SemiBoldItalic.otf */; };
 		05640911CD504080956DBD4D /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 851B94BE7E984269A1703D4D /* MontserratAlternates-Thin.otf */; };
 		73A08DE3A6B54C979EE4E049 /* MontserratAlternates-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B53D92A44CA84E17A951783C /* MontserratAlternates-ThinItalic.otf */; };
+		8383BE07E6EF40198081832B /* Roboto-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99148696FFD048719804EE39 /* Roboto-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		1A706A5DB7F84AC098F47D72 /* MontserratAlternates-SemiBoldItalic.otf */ = {isa = PBXFileReference; name = "MontserratAlternates-SemiBoldItalic.otf"; path = "../assets/fonts/MontserratAlternates-SemiBoldItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		851B94BE7E984269A1703D4D /* MontserratAlternates-Thin.otf */ = {isa = PBXFileReference; name = "MontserratAlternates-Thin.otf"; path = "../assets/fonts/MontserratAlternates-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B53D92A44CA84E17A951783C /* MontserratAlternates-ThinItalic.otf */ = {isa = PBXFileReference; name = "MontserratAlternates-ThinItalic.otf"; path = "../assets/fonts/MontserratAlternates-ThinItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99148696FFD048719804EE39 /* Roboto-Medium.otf */ = {isa = PBXFileReference; name = "Roboto-Medium.otf"; path = "../assets/fonts/Roboto-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				1A706A5DB7F84AC098F47D72 /* MontserratAlternates-SemiBoldItalic.otf */,
 				851B94BE7E984269A1703D4D /* MontserratAlternates-Thin.otf */,
 				B53D92A44CA84E17A951783C /* MontserratAlternates-ThinItalic.otf */,
+				99148696FFD048719804EE39 /* Roboto-Medium.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				617CF97CB0804D42899E972D /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
 				05640911CD504080956DBD4D /* MontserratAlternates-Thin.otf in Resources */,
 				73A08DE3A6B54C979EE4E049 /* MontserratAlternates-ThinItalic.otf in Resources */,
+				8383BE07E6EF40198081832B /* Roboto-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

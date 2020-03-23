@@ -4,6 +4,10 @@ import PlaceHolders from '../Components/PlaceHolders';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import GoogleButton from '../Components/GoogleButton';
+import Google from '../assets/images/Googlea.png';
+import Github from '../assets/images/git.png';
+import Facebook from '../assets/images/facebook.png';
 const styles = StyleSheet.create({
   logo: {
     width: 200,
@@ -15,7 +19,7 @@ const styles = StyleSheet.create({
     fontSize: 45,
     fontFamily: 'Montserrat-Bold',
     margin: 10,
-    marginTop: 120,
+    marginTop: 70,
     marginLeft: 40,
     textAlign: 'left',
   },
@@ -27,9 +31,25 @@ const styles = StyleSheet.create({
     marginLeft: 0,
     textAlign: 'center',
   },
+  subheading: {
+    fontSize: 20,
+    fontFamily: 'Montserrat-SemiBold',
+    margin: 5,
+    marginTop: 25,
+    marginLeft: 0,
+    textAlign: 'center',
+  },
   backgroundImage: {
     width: '100%',
     height: '100%',
+  },
+  signUpWithContainer: {
+    marginLeft: 35,
+    marginRight: 35,
+    marginTop: 20,
+    alignItems: 'center',
+    flexDirection: 'row',
+    alignContent: 'space-around',
   },
   container: {
     flex: 1,
@@ -58,19 +78,14 @@ export default function login({navigation}) {
             text="Login"
             click={() => navigation.navigate('Posts')}
           />
-          <TouchableOpacity style={styles.footer}>
-            <Image
-              style={{
-                alignSelf: 'center',
-                height: 45,
-                borderRadius: 1,
-                width: 350,
-              }}
-              source={require('../assets/images/google2.png')}
-            />
-          </TouchableOpacity>
+          <Text style={styles.subheading}>Or Sign In With </Text>
+          <View style={styles.signUpWithContainer}>
+            <GoogleButton text={'Google'} image={Google} />
+            <GoogleButton text={'Github'} image={Github} />
+            <GoogleButton text={'Facebook'} image={Facebook} />
+          </View>
           <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-            <Text style={styles.footer}>New Account?</Text>
+            <Text style={styles.footer}>Don't Have An Account? </Text>
           </TouchableOpacity>
         </ImageBackground>
       </View>

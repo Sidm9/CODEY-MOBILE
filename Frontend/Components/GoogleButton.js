@@ -1,35 +1,38 @@
-/* eslint-disable quotes */
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-trailing-spaces */
-import React from 'react';
-import { StyleSheet, Image, TouchableOpacity } from 'react-native';
-
+import React, {Fragment} from 'react';
+import {Image, View, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 const styles = StyleSheet.create({
-    container: {
-        width: 207,
-        height: 40,
-        borderColor: '#707070',
-        borderWidth: 1,
-        alignContent: "center",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: 'blue',
-
-    },
+  buttonStyle: {
+    width: 65,
+    borderRadius: 16,
+    height: 65,
+    overflow: 'hidden',
+  },
+  container: {
+    flexDirection: 'column',
+    width: '33.3%',
+    alignContent: 'center',
+    alignItems: 'center',
+  },
+  logoText: {
+    fontFamily: 'Montserrat-SemiBold',
+    alignSelf: 'center',
+  },
 });
 
-function GoogleButton() {
-    return (
+export default function GoogleButton(props) {
+  return (
+    <>
+      <View style={styles.container}>
         <TouchableOpacity>
-            <Image
-                source={require('../assets/images/btn_google_signin_dark_normal_web.png')}
-                resizeMode="cover"
-                style={styles.headerImage}
-            />
+          <Image
+            style={styles.buttonStyle}
+            source={props.image}
+            resizeMode={'stretch'}
+          />
+          <Text style={styles.logoText}>{props.text}</Text>
         </TouchableOpacity>
-    );
+      </View>
+    </>
+  );
 }
-
-
-
-export default GoogleButton;
