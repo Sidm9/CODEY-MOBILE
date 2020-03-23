@@ -4,10 +4,11 @@ import PlaceHolders from '../Components/PlaceHolders';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import GoogleButton from '../Components/GoogleButton';
+import Oauth from '../Components/GoogleButton';
 import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
 import Facebook from '../assets/icons/facebook.png';
+import TextHere from '../Components/--TextHere---';
 const styles = StyleSheet.create({
   logo: {
     width: 200,
@@ -28,14 +29,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-SemiBold',
     margin: 5,
     marginTop: 35,
-    marginLeft: 0,
-    textAlign: 'center',
-  },
-  subheading: {
-    fontSize: 20,
-    fontFamily: 'Montserrat-SemiBold',
-    margin: 5,
-    marginTop: 25,
     marginLeft: 0,
     textAlign: 'center',
   },
@@ -78,11 +71,11 @@ export default function login({navigation}) {
             text="Login"
             click={() => navigation.navigate('Posts')}
           />
-          <Text style={styles.subheading}>Or Sign In With </Text>
+          <TextHere text={'OR'} />
           <View style={styles.signUpWithContainer}>
-            <GoogleButton text={'Google'} image={Google} />
-            <GoogleButton text={'Github'} image={Github} />
-            <GoogleButton text={'Facebook'} image={Facebook} />
+            <Oauth text={'Google'} image={Google} />
+            <Oauth text={'Github'} image={Github} />
+            <Oauth text={'Facebook'} image={Facebook} />
           </View>
           <TouchableOpacity onPress={() => navigation.navigate('Register')}>
             <Text style={styles.footer}>Don't Have An Account? </Text>

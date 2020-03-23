@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
 import ImageHolder from '../Components/ImageHolder';
-import Header from '../Components/Header';
+import Header from '../Components/Navbar';
 import Card from '../Components/Card';
 import SearchBar from '../Components/SearchBar';
 const styles = StyleSheet.create({

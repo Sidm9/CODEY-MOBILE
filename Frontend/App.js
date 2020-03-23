@@ -25,6 +25,7 @@ import Article from './Components/Article.js';
 import GoogleButton from './Components/GoogleButton.js';
 import TopBar from './Screens/TopBar.js';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
+import TextHere from './Components/--TextHere---.js';
 
 const Stack = createStackNavigator();
 
@@ -47,7 +48,6 @@ const App: () => React$Node = () => {
           <Stack.Screen name="Categories" component={Categories} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Posts" component={Posts} />
-          <Stack.Screen name="Playground" component={Playground} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

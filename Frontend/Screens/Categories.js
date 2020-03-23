@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
 import CategoryCard from '../Components/CategoryScreenComponents/CategoryCard';
-import Header from '../Components/Header';
+import Header from '../Components/Navbar';
 import Heading from '../Components/Heading';
 import SearchBar from '../Components/SearchBar';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';

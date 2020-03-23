@@ -38,11 +38,11 @@ const styles = StyleSheet.create({
 
 export default function PlaceHolders(props) {
   const [toggler, passToggle] = useState(true);
-  console.log(toggler);
-  console.log('---FRESH!!!---');
-  function toggle() {
-    passToggle(!props.password);
-  }
+  // console.log(toggler);
+  // console.log('---FRESH!!!---');
+  // function toggle() {
+  //   passToggle(!props.password);
+  //}
   return (
     <>
       <View style={styles.inputContainer}>
@@ -52,7 +52,7 @@ export default function PlaceHolders(props) {
           placeholderTextColor="black"
           secureTextEntry={props.password}
         />
-        <TouchableOpacity onPress={toggle}>
+        <TouchableOpacity >
           <Image style={styles.icon} source={props.icon} />
         </TouchableOpacity>
       </View>

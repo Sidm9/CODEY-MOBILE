@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import Header from '../Components/Header';
+import Header from '../Components/Navbar';
 const styles = StyleSheet.create({
   container: {
     flex: 1,

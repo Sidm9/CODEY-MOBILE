@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import Header from './Header.js';
+import Header from './Navbar.js';
 import {StyleSheet} from 'react-native';
 import LowLevel from './CategoryScreenComponents/LowLevel.js';
 import HighLevel from './CategoryScreenComponents/HighLevel.js';

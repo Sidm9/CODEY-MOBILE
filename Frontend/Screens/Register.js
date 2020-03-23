@@ -10,10 +10,11 @@ import {
 import PlaceHolders from '../Components/PlaceHolders';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
-import GoogleButton from '../Components/GoogleButton';
+import OAuth from '../Components/GoogleButton';
 import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
 import Facebook from '../assets/icons/facebook.png';
+import TextHere from '../Components/--TextHere---';
 const styles = StyleSheet.create({
   logo: {
     width: 200,
@@ -28,14 +29,6 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginLeft: 40,
     textAlign: 'left',
-  },
-  subheading: {
-    fontSize: 20,
-    fontFamily: 'Montserrat-SemiBold',
-    margin: 5,
-    marginTop: 25,
-    marginLeft: 0,
-    textAlign: 'center',
   },
   footer: {
     fontSize: 20,
@@ -89,12 +82,12 @@ export default function login({navigation}) {
             text="Continue ▶▶"
             click={() => navigation.navigate('NewCategory')}
           />
-          <Text style={styles.subheading}>Or Register via </Text>
+          <TextHere text={'OR'} />
           <View style={styles.registerWithContainer}>
-          <GoogleButton text={'Google'} image={Google} />
-          <GoogleButton text={'Github'} image={Github} />
-          <GoogleButton text={'Facebook'} image={Facebook} />
-        </View>
+            <OAuth text={'Google'} image={Google} />
+            <OAuth text={'Github'} image={Github} />
+            <OAuth text={'Facebook'} image={Facebook} />
+          </View>
           <TouchableOpacity onPress={() => navigation.navigate('Login')}>
             <Text style={styles.footer}>Already Have Account?</Text>
           </TouchableOpacity>

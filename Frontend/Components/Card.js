@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
 });
 
 export default function Card(props) {
-  const title = 'White Text with black background works with every background';
+  const title = 'White Text with black outline works with every background';
 
   const content =
     "Cognitive load refers here to the amount of brain power required to use the app. The human brain has a limited amount of processing power, and when an app provides too much information at once, it might overwhelm the user and make them abandon the task. Generally, this is what you want. But it's possible that in some circumstances that you want to customize the back button more than you can through the options mentioned above, in which case you can set the headerLeft option to a React Element that will be rendered, just as we did with headerRight. Alternatively, the headerLeft option also accepts a React Component, which can be used, for example, for overriding the onPress behavior of the back button. Read more about this in the api reference.";

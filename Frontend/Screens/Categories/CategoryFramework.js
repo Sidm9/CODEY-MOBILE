@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import Header from '../../Components/Header';
+import Header from '../../Components/Navbar';
 
 const styles = StyleSheet.create({
   sf26c0311: {

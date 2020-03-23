@@ -2,7 +2,7 @@ import * as React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Languages from '../Components/Languages.js';
 import Frameworks from '../Components/Frameworks.js';
-import Header from '../Components/Header.js';
+import Header from '../Components/Navbar.js';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -19,7 +19,7 @@ export default function App() {
           tabStyle: {width: 180, elevation: 0, shadowOpacity: 0},
           style: {
             elevation: 0, //for android
-             backgroundColor: 'transparent',
+            backgroundColor: 'transparent',
             shadowOpacity: 0, //for ios
           },
         }}>

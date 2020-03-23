@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {Text, ImageBackground, View, StyleSheet, Image} from 'react-native';
 import bg from '../assets/images/qqwe.jpg';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
-import Header from './Header.js';
+import Header from './Navbar.js';
 
 const styles = StyleSheet.create({
   Title_Heading: {
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   s8a286441: {
     flex: 1,
   },
-  s001b12f2: {
+  s001b12f2: {  
     margin: 15,
     fontFamily: 'Montserrat-Medium',
     fontSize: 18,
@@ -142,7 +142,7 @@ export default function Article(props) {
               flex: 1,
             }}>
             <Text style={styles.Title_Heading}>
-              White Text with black background works with every background
+              White Text with black outline works with every background
             </Text>
           </ImageBackground>
         </View>
