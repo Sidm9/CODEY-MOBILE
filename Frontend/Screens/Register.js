@@ -80,7 +80,7 @@ export default function login({navigation}) {
           />
           <LoginButton
             text="Continue ▶▶"
-            click={() => navigation.navigate('NewCategory')}
+            click={() => navigation.navigate('BottomNavBar')}
           />
           <TextHere text={'OR'} />
           <View style={styles.registerWithContainer}>

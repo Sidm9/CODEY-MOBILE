@@ -27,12 +27,13 @@ const styles = StyleSheet.create({
     borderBottomColor: 'black',
     width: 350,
     //backgroundColor: 'rgba(242, 224, 224, 1)',
-    height: 40,
+    //height: 40,
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'space-between',
     alignSelf: 'center',
     flexDirection: 'row',
+    overflow: 'hidden'
   },
 });
 

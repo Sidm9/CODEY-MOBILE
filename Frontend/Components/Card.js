@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Image, Text, View, StyleSheet, TouchableOpacity} from 'react-native';
-
+import Thumb from './ICONS/Thumb.js';
 const styles = StyleSheet.create({
   image: {
     width: 380,
@@ -110,7 +110,6 @@ export default function Card(props) {
     settoggleStateComment(toggleStateComment === 0 ? 1 : 0);
     return toggleStateComment;
   }
-
   const [toggleStateShare, settoggleStateShare] = useState(0);
   function shareToggle() {
     settoggleStateShare(toggleStateShare === 0 ? 1 : 0);
@@ -131,7 +130,6 @@ export default function Card(props) {
               style={styles.imageWhoHasPostedThisPostHeadShot}
               source={require('../assets/images/tyler.jpg')}
             />
-
             <Text style={styles.subHeading}>Tyler Durden 5 Minute Read</Text>
           </View>
           <Text numberOfLines={10} style={styles.content}>
@@ -141,6 +139,7 @@ export default function Card(props) {
           <View style={styles.cardNavbar}>
             <TouchableOpacity style={styles.like} onPress={likeToggle}>
               <Image source={require('../assets/icons/LikeLight.png')} />
+              <Thumb />
               <Text style={styles.countNumber}> {toggleStateLike} </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.comment} onPress={commentToggle}>
