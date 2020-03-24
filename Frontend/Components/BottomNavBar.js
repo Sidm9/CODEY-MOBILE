@@ -1,32 +1,47 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Categories from '../Screens/Categories';
-import {Image} from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import Posts from '../Screens/Posts';
 import Playground from '../Screens/Playground';
-import homeBlack from '../assets/icons/outline_home_black_36dp.png';
-import {homewhite} from '../assets/icons/outline_home_white_36dp.png';
-import Thumb from '../Components/ICONS/Thumb'
-const Tab = createBottomTabNavigator();
+import CategoriesIcon from '../assets/icons/list.png';
+import HomeIcon from '../assets/icons/Home.png';
+import PlaygroundIcon from '../assets/icons/data.png';
 
+const Tab = createBottomTabNavigator();
+const styles = StyleSheet.create({
+  image: {
+    width: 30,
+    height: 30,
+  },
+});
 export default function BottomNavBar() {
   return (
     <>
       <Tab.Navigator
-        screenOptions={({route}) => ({
-          tabBarIcon: ({focused, color, size}) => {
-            let iconName;
-            console.log(route.name, focused,color, size)
-            if (route.name === 'Home') { 
-              iconName = focused ? {homeBlack} : {homewhite};
-            } else if (route.name === 'Settings') {
-              iconName = focused ? {homeBlack} : {homewhite};
+        screenOptions={({ route }) => ({
+
+          tabBarIcon: ({ focused, color, size }) => {
+
+            if ( route.name === 'Home') {
+            return <Image source={HomeIcon}
+              style={styles.image} />;
             }
-            // You can return any component that you like here!
-            return  <Image source={homeBlack}
-            style={{width: 40, height: 40}} 
-                  />
+
+            else if ( route.name === 'Categories') {
+              return <Image source={CategoriesIcon}
+                style={styles.image} />;
+              }
+
+              else if ( route.name === 'Playground') {
+                return <Image source={PlaygroundIcon}
+                  style={styles.image} />;
+                }
+
+              
           },
         })}
         tabBarOptions={{
