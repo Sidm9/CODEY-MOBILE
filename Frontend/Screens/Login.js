@@ -1,16 +1,25 @@
-import React , {useState} from 'react';
-import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
+/* eslint-disable prettier/prettier */
+import React, { useState } from 'react';
+import {
+  Image,
+  AsyncStorage,
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+} from 'react-native';
 import PlaceHolders from '../Components/PlaceHolders';
 import PasswordInput from '../Components/PasswordInput';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Oauth from '../Components/GoogleButton';
 import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
 import Facebook from '../assets/icons/facebook.png';
 import TextHere from '../Components/--TextHere---';
 
+AuthContext = React.createContext();
 const styles = StyleSheet.create({
   logo: {
     width: 200,
@@ -54,17 +63,13 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function login({navigation}, props) {
-  const [passwordShow, setpasswordShow] = useState(true);
-  function showPass(params) {
-   let logoToshow
-  }
+export default function login({ navigation }, props) {
   return (
     <>
       <View style={styles.container}>
         <ImageBackground
           style={styles.backgroundImage}
-          source={{uri :'https://cdn.wallpapersafari.com/8/59/aJLZpO.jpg'}}>
+          source={require('../assets/images/3272176.jpg')}>
           <Image source={codeyLogo} style={styles.logo} />
           <Text style={styles.heading}>Login</Text>
           <PlaceHolders placeholder={'Enter Email'} />

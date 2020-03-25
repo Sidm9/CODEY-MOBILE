@@ -1,19 +1,27 @@
-import React, {Fragment} from 'react';
-import {Text, ImageBackground, View, StyleSheet, Image} from 'react-native';
+/* eslint-disable no-undef */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+import React, { useState } from 'react';
+import { Text, ImageBackground, View, StyleSheet, Image } from 'react-native';
 import bg from '../assets/images/qqwe.jpg';
-import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Header from './Navbar.js';
 
 const styles = StyleSheet.create({
   Title_Heading: {
     fontSize: 30,
-    margin: 20,
+    margin: 15,
+    zIndex: 100,
+    color: 'black',
+    fontFamily: 'Montserrat-Bold',
+  },
+  Title_HeadingDark : {
+    fontSize: 30,
+    margin: 15,
     zIndex: 100,
     color: 'white',
     fontFamily: 'Montserrat-Bold',
-    textShadowColor: '#000000',
-    textShadowOffset: {width: 5, height: 5},
-    textShadowRadius: 10,
   },
   imageB: {
     flex: 1,
@@ -47,12 +55,19 @@ const styles = StyleSheet.create({
     shadowRadius: 16.0,
     elevation: 24,
   },
+  socialButtonsContainer : {
+    borderWidth: 1,
+    width: '100%',
+    height: 45,
+    flexDirection: 'row' ,
+    alignItems : 'center' ,
+    alignContent :'flex-start',
+  },
   byLine: {
     fontSize: 15,
     marginBottom: 10,
     margin: 5,
     fontFamily: 'Montserrat-Medium',
-    zIndex: 100,
   },
   minuteDuration: {
     marginBottom: 10,
@@ -76,7 +91,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     textAlign: 'center',
     fontFamily: 'Montserrat-Medium',
-    // color: 'rgba(248, 248, 248, 1)',
   },
   tagContainer: {
     borderRadius: 50,
@@ -117,10 +131,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  s8a286441: {
+  PostContentContainer: {
     flex: 1,
   },
-  s001b12f2: {  
+  PostContent: {
     margin: 15,
     fontFamily: 'Montserrat-Medium',
     fontSize: 18,
@@ -128,27 +142,28 @@ const styles = StyleSheet.create({
 });
 
 export default function Article(props) {
+  const [darkmode, setdarkmode] = useState(false);
+function darkmodeSetter() {
+  setdarkmode(!darkmode);
+  console.log(darkmode.toString());
+}
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.imageContainer}>
           <ImageBackground
             source={bg}
-            style={styles.imageB}
-            // eslint-disable-next-line react-native/no-inline-styles
-            imageStyle={{
-              borderBottomLeftRadius: 30,
-              borderBottomRightRadius: 30,
-              flex: 1,
-            }}>
-            <Text style={styles.Title_Heading}>
-              White Text with black outline works with every background
-            </Text>
-          </ImageBackground>
+            style={styles.imageB} />
+        </View>
+        <Text style={ (darkmode === false) ?  styles.Title_Heading : styles.Title_HeadingDark }>
+          White Text with black outline works with every background
+      </Text>
+        <View style={styles.socialButtonsContainer}>
+          <View style={{ borderWidth: 2, width: 20, height: 20 }}></View>
         </View>
         <View style={styles.articleContentContainer}>
           <View style={styles.byLineMinuteRead}>
-            <Text style={styles.byLine}>Hokoona Matata</Text>
+            <Text style={styles.byLine}>{darkmode}</Text>
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
           </View>
           <View style={styles.byLineAndMinuteReadContainer}>
@@ -158,14 +173,14 @@ export default function Article(props) {
             <View style={styles.tagContainer2}>
               <Text style={styles.tags}>Codey Rocks</Text>
             </View>
-            <TouchableOpacity style={styles.shareButton}>
+            <TouchableOpacity style={styles.shareButton} onPress = {darkmodeSetter}>
               <Image source={require('../assets/icons/shareDark.png')} />
             </TouchableOpacity>
           </View>
         </View>
       </View>
-      <View style={styles.s8a286441}>
-        <Text style={styles.s001b12f2}>
+      <View style={styles.PostContentContainer}>
+        <Text style={styles.PostContent}>
           Cognitive load refers here to the amount of brain power required to
           use the app. The human brain has a limited amount of processing power,
           and when an app provides too much information at once, it might

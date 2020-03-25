@@ -9,7 +9,7 @@ import HomeIcon from '../assets/icons/Home.png';
 import PlaygroundIcon from '../assets/icons/data.png';
 import HomeIconFocused from '../assets/icons/HomePressed.png';
 import CategoriesIconFocused from '../assets/icons/listPressed.png';
-import PlaygroundIconFocused from '../assets/icons/HomePressed.png';
+import PlaygroundIconFocused from '../assets/icons/dataPressed.png';
 
 const Tab = createBottomTabNavigator();
 const styles = StyleSheet.create({
@@ -51,8 +51,8 @@ export default function BottomNavBar() {
         })}
         tabBarOptions={{
           activeTintColor: 'blue',
-          inactiveTintColor: 'grey',
-          labelStyle: {fontFamily: 'Montserrat-Medium' , fontSize : 13},
+          inactiveTintColor: 'black',
+          labelStyle: {fontFamily: 'Montserrat-Medium', fontSize: 13},
           showIcon: true,
         }}>
         <Tab.Screen name="Home" component={Posts} />

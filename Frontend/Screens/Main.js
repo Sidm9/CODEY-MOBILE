@@ -1,13 +1,14 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
 import Button from '../Components/Button.js';
+
 const styles = StyleSheet.create({
   logo: {
     width: 350,
     height: 250,
     marginTop: 100,
     marginBottom: 20,
-    marginRight: 20,
     alignContent: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
