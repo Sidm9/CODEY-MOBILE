@@ -19,7 +19,7 @@ import CategoryFramework from './Screens/Categories/CategoryFramework.js';
 import Posts from './Screens/Posts.js';
 import {createStackNavigator} from '@react-navigation/stack';
 import Playground from './Screens/Playground.js';
-import BottomNavBar from './Components/BottomNavBar.js';
+import BottomNavBar from './Screens/BottomNavBar.js';
 import ArticleHeader from './Screens/ArticleHeader.js';
 import Article from './Components/Article.js';
 import GoogleButton from './Components/GoogleButton.js';

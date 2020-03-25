@@ -2,8 +2,6 @@
 import React from 'react';
 import {StyleSheet, View, Image} from 'react-native';
 import Header from '../Components/Navbar';
-import Thumb from '../Components/ICONS/Thumb'
-import Svg from '../assets/icons/thumb.svg';
 const styles = StyleSheet.create({
   container: {
     flex: 1,

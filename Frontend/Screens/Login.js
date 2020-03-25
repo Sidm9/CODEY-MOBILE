@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
 import PlaceHolders from '../Components/PlaceHolders';
+import PasswordInput from '../Components/PasswordInput';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function login({navigation}) {
+export default function login({navigation}, props) {
   return (
     <>
       <View style={styles.container}>
@@ -62,9 +63,8 @@ export default function login({navigation}) {
           <Image source={codeyLogo} style={styles.logo} />
           <Text style={styles.heading}>Login</Text>
           <PlaceHolders placeholder={'Enter Email'} />
-          <PlaceHolders
+          <PasswordInput
             placeholder={'Enter Password'}
-            password={true}
             icon={require('../assets/icons/whiteVisible.png')}
           />
           <LoginButton

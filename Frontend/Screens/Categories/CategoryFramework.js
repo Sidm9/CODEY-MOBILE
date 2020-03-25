@@ -10,14 +10,14 @@ const styles = StyleSheet.create({
   },
   Button1: {
     margin: 10,
-    marginLeft: 40,
-    fontSize : 20,
+    marginLeft: 10,
+    fontSize : 28,
     fontFamily: 'Montserrat-Regular',
   },
   Button2: {
     margin: 10,
     fontFamily: 'Montserrat-Bold',
-    fontSize : 20,
+    fontSize : 28,
   },
   s1c3ee819: {
     //backgroundColor: 'rgba(230, 230, 30, 1)',

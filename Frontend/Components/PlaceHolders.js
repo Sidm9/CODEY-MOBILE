@@ -33,17 +33,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignSelf: 'center',
     flexDirection: 'row',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
 });
 
 export default function PlaceHolders(props) {
-  const [toggler, passToggle] = useState(true);
-  // console.log(toggler);
-  // console.log('---FRESH!!!---');
-  // function toggle() {
-  //   passToggle(!props.password);
-  //}
+  const [showPass, set] = useState(true);
+
   return (
     <>
       <View style={styles.inputContainer}>
@@ -51,9 +47,8 @@ export default function PlaceHolders(props) {
           style={styles.inputStyle}
           placeholder={props.placeholder}
           placeholderTextColor="black"
-          secureTextEntry={props.password}
         />
-        <TouchableOpacity >
+        <TouchableOpacity>
           <Image style={styles.icon} source={props.icon} />
         </TouchableOpacity>
       </View>

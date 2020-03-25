@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import PlaceHolders from '../Components/PlaceHolders';
+import PasswordInput from '../Components/PasswordInput';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
 import OAuth from '../Components/GoogleButton';
@@ -68,14 +69,12 @@ export default function login({navigation}) {
           <Image source={codeyLogo} style={styles.logo} />
           <Text style={styles.heading}>Register</Text>
           <PlaceHolders placeholder={'Enter Email'} />
-          <PlaceHolders
+          <PasswordInput
             placeholder={'Enter Password'}
-            password={true}
             icon={require('../assets/icons/whiteVisible.png')}
           />
-          <PlaceHolders
+          <PasswordInput
             placeholder={'Enter Password Again'}
-            password={true}
             icon={require('../assets/icons/whiteVisible.png')}
           />
           <LoginButton

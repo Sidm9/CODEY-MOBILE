@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Image, Text, View, StyleSheet, TouchableOpacity} from 'react-native';
-import Thumb from './ICONS/Thumb.js';
 const styles = StyleSheet.create({
   image: {
     width: 380,
@@ -139,7 +138,6 @@ export default function Card(props) {
           <View style={styles.cardNavbar}>
             <TouchableOpacity style={styles.like} onPress={likeToggle}>
               <Image source={require('../assets/icons/LikeLight.png')} />
-              <Thumb />
               <Text style={styles.countNumber}> {toggleStateLike} </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.comment} onPress={commentToggle}>
