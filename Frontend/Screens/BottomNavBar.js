@@ -9,13 +9,13 @@ import HomeIcon from '../assets/icons/Home.png';
 import PlaygroundIcon from '../assets/icons/data.png';
 import HomeIconFocused from '../assets/icons/HomePressed.png';
 import CategoriesIconFocused from '../assets/icons/listPressed.png';
-import PlaygroundIconFocused from '../assets/icons/dataPressed.png';
+import PlaygroundIconFocused from '../assets/icons/HomePressed.png';
 
 const Tab = createBottomTabNavigator();
 const styles = StyleSheet.create({
   image: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
   },
 });
 export default function BottomNavBar() {
@@ -52,10 +52,8 @@ export default function BottomNavBar() {
         tabBarOptions={{
           activeTintColor: 'blue',
           inactiveTintColor: 'grey',
+          labelStyle: {fontFamily: 'Montserrat-Medium' , fontSize : 13},
           showIcon: true,
-        }}
-        tabBarLabelOptions={{
-          size: 40,
         }}>
         <Tab.Screen name="Home" component={Posts} />
         <Tab.Screen name="Categories" component={Categories} />

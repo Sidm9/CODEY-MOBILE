@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   TextInput,
   View,
   StyleSheet,
   Image,
   TouchableOpacity,
-  ToastAndroid,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -26,8 +25,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: 'black',
     width: 350,
-    //backgroundColor: 'rgba(242, 224, 224, 1)',
-    //height: 40,
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -38,7 +35,6 @@ const styles = StyleSheet.create({
 });
 
 export default function PlaceHolders(props) {
-  const [showPass, set] = useState(true);
 
   return (
     <>

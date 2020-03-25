@@ -5,8 +5,8 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-  ToastAndroid,
 } from 'react-native';
+import Button from './Button';
 
 const styles = StyleSheet.create({
   inputStyle: {
@@ -26,8 +26,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: 'black',
     width: 350,
-    //backgroundColor: 'rgba(242, 224, 224, 1)',
-    //height: 40,
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -38,7 +36,11 @@ const styles = StyleSheet.create({
 });
 
 export default function PasswordInput(props) {
-  const [showPass, setPass] = useState(true);
+  var [showPass, setPass] = useState(true);
+
+  function set() {
+    setPass(!showPass);
+  }
   return (
     <>
       <View style={styles.inputContainer}>
@@ -48,7 +50,7 @@ export default function PasswordInput(props) {
           placeholderTextColor="black"
           secureTextEntry={showPass}
         />
-        <TouchableOpacity onPress={() => setPass(!setPass)}>
+        <TouchableOpacity onPress={set}>
           <Image style={styles.icon} source={props.icon} />
         </TouchableOpacity>
       </View>

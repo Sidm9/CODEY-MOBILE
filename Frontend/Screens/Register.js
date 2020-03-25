@@ -19,7 +19,7 @@ import TextHere from '../Components/--TextHere---';
 const styles = StyleSheet.create({
   logo: {
     width: 200,
-    height: 120,
+    height: 110,
     marginTop: 50,
     alignSelf: 'center',
   },
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     fontSize: 45,
     fontFamily: 'Montserrat-Bold',
     margin: 10,
-    marginTop: 30,
+    marginTop: 20,
     marginLeft: 40,
     textAlign: 'left',
   },
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Montserrat-SemiBold',
     margin: 5,
-    marginTop: 35,
+    marginTop: 15,
     marginLeft: 0,
     textAlign: 'center',
   },
