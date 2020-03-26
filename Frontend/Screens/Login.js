@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import {
   Image,
-  AsyncStorage,
   View,
   Text,
   StyleSheet,
@@ -16,10 +15,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Oauth from '../Components/GoogleButton';
 import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
-import Facebook from '../assets/icons/facebook.png';
+  import Facebook from '../assets/icons/facebook.png';
 import TextHere from '../Components/--TextHere---';
-
-AuthContext = React.createContext();
 const styles = StyleSheet.create({
   logo: {
     width: 200,
@@ -63,7 +60,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function login({ navigation }, props) {
+export default function login({ route , navigation }, props ) {
+  // const {toggle} = route.params;
   return (
     <>
       <View style={styles.container}>
@@ -75,7 +73,6 @@ export default function login({ navigation }, props) {
           <PlaceHolders placeholder={'Enter Email'} />
           <PasswordInput
             placeholder={'Enter Password'}
-            icon={require('../assets/icons/whiteVisible.png')}
           />
           <LoginButton
             text="Login"

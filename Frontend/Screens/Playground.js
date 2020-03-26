@@ -8,31 +8,32 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'green',
+    backgroundColor: 'white',
   },
   text: {
     fontSize: 50,
     padding: 50,
-    color: 'white',
+    color: 'black',
+    fontFamily : 'Montserrat-Medium',
   },
 });
 
 export default function Playground() {
   const [state, setstate] = useState(false);
-  const [as, setas] = useState(styles)
+  const [as, setas] = useState(styles);
   function handler() {
     setstate(!state);
-    state === true ? setas(styles) : setas(Dark);
+    state === true ? setas(Dark) : setas(styles);
     console.log(as);
   }
   return (
     <>
-      <Header title="PlayGround" />
+      <Header title="Playground" />
       <View style={as.container}>
-        <Text style={styles.text}>
+        <Text style={as.text}>
           TEST ME!
       </Text>
-        <Button text="Dark Mode Test" click={handler} />
+        <Button text="  Dark Mode Test  " click={handler} />
       </View>
     </>
   );

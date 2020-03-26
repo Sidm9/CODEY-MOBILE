@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 });
 
 export default function PlaceHolders(props) {
-
+ 
   return (
     <>
       <View style={styles.inputContainer}>

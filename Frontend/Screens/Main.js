@@ -1,5 +1,6 @@
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React , {useState} from 'react';
 import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
 import Button from '../Components/Button.js';
 
@@ -14,13 +15,14 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   footer: {
-    marginTop: 180,
+    marginTop: 110,
     fontSize: 20,
     letterSpacing: 5,
     textAlign: 'center',
     textAlignVertical: 'center',
     fontFamily: 'Montserrat-Bold',
   },
+
   backgroundImage: {
     width: '100%',
     height: '100%',
@@ -32,16 +34,57 @@ const styles = StyleSheet.create({
   },
 });
 
+const darkStyles = StyleSheet.create({
+  logo: {
+    width: 350,
+    height: 250,
+    marginTop: 100,
+    marginBottom: 20,
+    alignContent: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+
+  backgroundImage: {
+    width: '100%',
+    height: '100%',
+  },
+  container: {
+    flex: 1,
+    alignSelf: 'stretch',
+    alignItems: 'stretch',
+  },
+  footer: {
+    marginTop: 110,
+    fontSize: 20,
+    letterSpacing: 5,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontFamily: 'Montserrat-Bold',
+    color : 'white',
+  },
+})
+
 export default function({navigation}) {
+  let bgWhite = require('../assets/images/BG.jpg');
+  let bgDark = require('../assets/images/bgDark.png');
+  let codeyDark = require('../assets/images/CodeyDark.png');
+  let codeyWhite = require('../assets/images/CodeyWhiteBG.png');
+  const [toggle, setToggle] = useState(true);
+  function handler() {
+    setToggle(!toggle);
+    console.log(toggle);
+  }
+
   return (
     <>
       <View style={styles.container}>
         <ImageBackground
           style={styles.backgroundImage}
-          source={require('../assets/images/BG.jpg')}>
+          source={toggle === true ? bgDark : bgWhite}>
           <Image
             style={styles.logo}
-            source={require('../assets/images/CodeyDark.png')}
+            source={toggle === true ? codeyWhite : codeyDark}
           />
           <Button text="Login" click={() => navigation.navigate('Login')} />
 
@@ -50,7 +93,11 @@ export default function({navigation}) {
             click={() => navigation.navigate('Register')}
           />
 
-          <Text style={styles.footer}>POWERED BY A7A</Text>
+          <Button 
+            text="Dark mode 💡"
+            click={handler} 
+          />
+          <Text style={darkStyles.footer}>POWERED BY A7A</Text>
         </ImageBackground>
       </View>
     </>

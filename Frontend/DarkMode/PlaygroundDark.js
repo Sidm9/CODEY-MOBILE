@@ -10,5 +10,6 @@ export default StyleSheet.create({
     fontSize: 50,
     padding: 50,
     color: 'white',
+    fontFamily : "Montserrat-Medium",
   },
 });

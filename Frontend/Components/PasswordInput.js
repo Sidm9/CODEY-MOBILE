@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+/* eslint-disable prettier/prettier */
+import React, { useState } from 'react';
 import {
   TextInput,
   View,
@@ -7,7 +8,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Button from './Button';
-
 const styles = StyleSheet.create({
   inputStyle: {
     width: 300,
@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
 
 export default function PasswordInput(props) {
   var [showPass, setPass] = useState(true);
-
+  const closed = require('../assets/icons/icons8-closed-eye-96.png');
+  const open = require('../assets/icons/icons8-eye-96.png');
   function set() {
     setPass(!showPass);
   }
@@ -51,7 +52,7 @@ export default function PasswordInput(props) {
           secureTextEntry={showPass}
         />
         <TouchableOpacity onPress={set}>
-          <Image style={styles.icon} source={props.icon} />
+          <Image style={styles.icon} source={showPass === true ? closed : open } />
         </TouchableOpacity>
       </View>
     </>
