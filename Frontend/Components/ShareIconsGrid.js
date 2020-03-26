@@ -6,16 +6,17 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
     socialButtonsContainer: {
-        width: '100%',
-        height: 35,
+        width: '95%',
+        height: 40,
         flexDirection: 'row',
         alignItems: 'center',
-        alignContent: 'flex-start',
+        alignSelf :"center",
+        justifyContent :"center",
         marginLeft : 15,
         marginRight : 15,
     },
     socialButtons: {
-        width: 35,
+        width: 45,
         height: '100%',
         margin: 3,
         justifyContent: 'center',

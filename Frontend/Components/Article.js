@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable no-unused-vars */
 /* eslint-disableno-undef */
 /* eslint-disable react/self-closing-comp */
@@ -5,7 +6,7 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { Text, ImageBackground, View, StyleSheet, Image } from 'react-native';
-import bg from '../assets/images/qqwe.jpg';
+import bg from '../assets/images/123.jpg';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Header from './Navbar.js';
 import ShareIconsGrid from './ShareIconsGrid';
@@ -15,19 +16,11 @@ import ImageHolder from './ImageHolder';
 const styles = StyleSheet.create({
   Title_Heading: {
     fontSize: 30,
-    marginRight: 15,
-    marginLeft: 15,
+    marginRight: 25,
+    marginLeft: 25,
     marginTop: 10,
     marginBottom: 10,
-    zIndex: 100,
     color: 'black',
-    fontFamily: 'Montserrat-Bold',
-  },
-  Title_HeadingDark: {
-    fontSize: 30,
-    margin: 15,
-    zIndex: 100,
-    color: 'white',
     fontFamily: 'Montserrat-Bold',
   },
   imageB: {
@@ -65,26 +58,28 @@ const styles = StyleSheet.create({
   byLine: {
     fontSize: 20,
     marginBottom: 10,
-    margin: 5,
+    margin: 10,
     fontFamily: 'Montserrat-SemiBold',
+    textAlign: 'center',
   },
   minuteDuration: {
     marginBottom: 10,
-    margin: 5,
-    marginLeft: 10,
+    marginTop : 10,
+    marginRight: 10,
+    marginLeft: 5,
     fontSize: 16,
     fontFamily: 'Montserrat-Medium',
   },
-  byLineMinuteReadCon: {
-    flex : 1,
-    alignSelf: 'stretch',
-    justifyContent: 'flex-start',
+  byCon: {
+    flex: 1,
+    alignSelf: 'center',
+    justifyContent: 'center',
     flexDirection: 'row',
     alignItems: 'center',
     zIndex: -1000,
     marginTop: 10,
     marginLeft: 10,
-    marginRight : 10,
+    marginRight: 10,
   },
   tags: {
     margin: 5,
@@ -93,44 +88,45 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     textAlign: 'center',
     fontFamily: 'Montserrat-SemiBold',
-    elevation :5,
   },
   tagContainer: {
     borderRadius: 50,
-    backgroundColor: 'steelblue',
-    marginLeft: 10,
-    overflow: "hidden",
+    backgroundColor: 'black',
+    marginLeft: 5,
+    marginTop: 10,
+    overflow: 'hidden',
   },
   tagContainer2: {
     borderRadius: 50,
     backgroundColor: 'red',
     marginLeft: 10,
   },
-  logo : {
-    width :50,
+  logo: {
+    width: 50,
     height: 50,
-    margin : 5,
-    borderRadius : 10,
+    borderRadius: 30,
   },
   ShareIconsContainer: {
     width: '90%',
     borderTopWidth: 1,
     margin: 10,
+    alignContent: "space-between",
     alignSelf: 'center',
   },
   byLineAndMinuteReadContainer: {
-    width: '100%',
     zIndex: -100,
     flexDirection: 'row',
-    height: 50,
+    height: null,
     marginTop: 5,
+    alignSelf: "center",
     alignItems: 'center',
     justifyContent: 'flex-start',
-    
   },
   articleContentContainer: {
     flex: 1,
     zIndex: -100,
+    padding: 15,
+
     justifyContent: 'flex-start',
   },
   headerContainer: {
@@ -143,23 +139,27 @@ const styles = StyleSheet.create({
   },
   PostContentContainer: {
     flex: 1,
+    alignSelf: 'center'
   },
   PostContent: {
-    margin: 15,
+    paddingRight: 25,
+    paddingLeft: 25,
     fontFamily: 'Montserrat-Medium',
     fontSize: 18,
+    alignSelf: 'center',
+    textAlign: "justify",
+    color: 'rgba(0,0,0,0.8)',
   },
 });
 
-export default function Article(props) {
+export default function Article({ navigation }) {
   const TwitterDarkBG = require('../assets/icons/TwitterWhiteBG.png');
   const [darkmode, setdarkmode] = useState(false);
-  const colors = ['red','green','blue'];
+  const colors = ['red', 'green', 'blue'];
   function darkmodeSetter() {
     setdarkmode(!darkmode);
     console.log(darkmode.toString());
   }
-  //var x = colors.map((color) =>{color});
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -169,26 +169,29 @@ export default function Article(props) {
             source={bg}
             style={styles.imageB} />
         </View>
-        <Text style={(darkmode === false) ? styles.Title_Heading : styles.Title_HeadingDark}>
+        <Text style={styles.Title_Heading}>
           White Text with black outline works with every background
       </Text>
         <View style={styles.ShareIconsContainer} />
         <ShareIconsGrid />
         <View style={styles.articleContentContainer}>
-          <View style={styles.byLineMinuteReadCon}>
-            <Image style={styles.logo} source={require('../assets/images/tyler.jpg')} />
+          <View style={styles.byCon}>
+            <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+              <Image style={styles.logo} source={require('../assets/images/tyler.jpg')} />
+            </TouchableOpacity>
             <Text style={styles.byLine}>Tyler Durdern</Text>
+            <Image source={require('../assets/icons/clockWhiteBG.png')} style={{ width: 20, height: 20 ,marginTop : 5}} />
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
           </View>
           <View style={styles.byLineAndMinuteReadContainer}>
             <View style={styles.tagContainer}>
-              <Text style={styles.tags}>what is reality</Text>
+              <Text style={styles.tags}>what </Text>
             </View>
             <View style={styles.tagContainer}>
-              <Text style={styles.tags}>what is reality</Text>
+              <Text style={styles.tags}>is this </Text>
             </View>
             <View style={styles.tagContainer}>
-              <Text style={styles.tags}>what is reality</Text>
+              <Text style={styles.tags}>reality</Text>
             </View>
           </View>
         </View>

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/self-closing-comp */
 /**
@@ -25,7 +26,7 @@ import Article from './Components/Article.js';
 import TopBar from './Screens/TopBar.js';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import TextHere from './Components/--TextHere---.js';
-
+import Settings from './Screens/Settings';
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
@@ -34,6 +35,7 @@ const App: () => React$Node = () => {
       <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false}}>
           <Stack.Screen name="Main" component={Main} />
+          <Stack.Screen name="Settings" component={Settings} />
           <Stack.Screen name="Article" component={Article} />
           <Stack.Screen name="ArticleHeader" component={ArticleHeader} />
           <Stack.Screen name="NewCategory" component={NewCategory} />

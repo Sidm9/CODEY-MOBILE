@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Image, View, Text, StyleSheet, ImageBackground } from 'react-native';
+import { Image, View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
 import ImageHolder from '../Components/ImageHolder';
 import Header from '../Components/Navbar';
 import Card from '../Components/Card';
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Profile(props) {
+export default function Profile({navigation} , props) {
   return (
     <ImageBackground
       style={styles.container}
@@ -93,9 +94,11 @@ export default function Profile(props) {
       <Header title="Profile" />
       <View style={styles.containerUpper}>
         <View style={styles.imageContainer}>
+        <TouchableOpacity onPress ={() => navigation.navigate('Settings')}>
           <ImageHolder
             displayPic={require('../assets/images/tyler.jpg')}
           />
+          </TouchableOpacity>
         </View>
         <View style={styles.profileContainer}>
           <Text style={styles.userName}>Tyler Durden</Text>
