@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disableno-undef */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
@@ -8,19 +9,21 @@ import bg from '../assets/images/qqwe.jpg';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Header from './Navbar.js';
 import ShareIconsGrid from './ShareIconsGrid';
-
+import TextHere from './--TextHere---';
+import Heading from '../Components/Heading';
+import ImageHolder from './ImageHolder';
 const styles = StyleSheet.create({
   Title_Heading: {
     fontSize: 30,
     marginRight: 15,
-    marginLeft : 15,
-    marginTop : 10 ,
-    marginBottom : 10,
+    marginLeft: 15,
+    marginTop: 10,
+    marginBottom: 10,
     zIndex: 100,
     color: 'black',
     fontFamily: 'Montserrat-Bold',
   },
-  Title_HeadingDark : {
+  Title_HeadingDark: {
     fontSize: 30,
     margin: 15,
     zIndex: 100,
@@ -60,18 +63,20 @@ const styles = StyleSheet.create({
     elevation: 24,
   },
   byLine: {
-    fontSize: 15,
+    fontSize: 20,
     marginBottom: 10,
     margin: 5,
-    fontFamily: 'Montserrat-Medium',
+    fontFamily: 'Montserrat-SemiBold',
   },
   minuteDuration: {
     marginBottom: 10,
     margin: 5,
-    fontSize: 15,
+    marginLeft: 10,
+    fontSize: 16,
     fontFamily: 'Montserrat-Medium',
   },
   byLineMinuteReadCon: {
+    flex : 1,
     alignSelf: 'stretch',
     justifyContent: 'flex-start',
     flexDirection: 'row',
@@ -79,6 +84,7 @@ const styles = StyleSheet.create({
     zIndex: -1000,
     marginTop: 10,
     marginLeft: 10,
+    marginRight : 10,
   },
   tags: {
     margin: 5,
@@ -86,24 +92,31 @@ const styles = StyleSheet.create({
     color: 'white',
     textTransform: 'uppercase',
     textAlign: 'center',
-    fontFamily: 'Montserrat-Medium',
+    fontFamily: 'Montserrat-SemiBold',
+    elevation :5,
   },
   tagContainer: {
     borderRadius: 50,
-    backgroundColor: 'blue',
+    backgroundColor: 'steelblue',
     marginLeft: 10,
+    overflow: "hidden",
   },
   tagContainer2: {
     borderRadius: 50,
     backgroundColor: 'red',
     marginLeft: 10,
   },
-  shareButton: {
-    marginLeft: 130,
-    flexWrap: 'wrap',
+  logo : {
+    width :50,
+    height: 50,
+    margin : 5,
+    borderRadius : 10,
+  },
+  ShareIconsContainer: {
+    width: '90%',
+    borderTopWidth: 1,
+    margin: 10,
     alignSelf: 'center',
-    alignContent: 'center',
-    alignItems: 'center',
   },
   byLineAndMinuteReadContainer: {
     width: '100%',
@@ -113,6 +126,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     alignItems: 'center',
     justifyContent: 'flex-start',
+    
   },
   articleContentContainer: {
     flex: 1,
@@ -140,37 +154,42 @@ const styles = StyleSheet.create({
 export default function Article(props) {
   const TwitterDarkBG = require('../assets/icons/TwitterWhiteBG.png');
   const [darkmode, setdarkmode] = useState(false);
-function darkmodeSetter() {
-  setdarkmode(!darkmode);
-  console.log(darkmode.toString());
-}
+  const colors = ['red','green','blue'];
+  function darkmodeSetter() {
+    setdarkmode(!darkmode);
+    console.log(darkmode.toString());
+  }
+  //var x = colors.map((color) =>{color});
   return (
     <ScrollView>
       <View style={styles.container}>
+        {/*  <Heading title = "Article"/>*/}
         <View style={styles.imageContainer}>
           <ImageBackground
             source={bg}
             style={styles.imageB} />
         </View>
-        <Text style={ (darkmode === false) ?  styles.Title_Heading : styles.Title_HeadingDark }>
+        <Text style={(darkmode === false) ? styles.Title_Heading : styles.Title_HeadingDark}>
           White Text with black outline works with every background
       </Text>
-        <ShareIconsGrid/>
+        <View style={styles.ShareIconsContainer} />
+        <ShareIconsGrid />
         <View style={styles.articleContentContainer}>
           <View style={styles.byLineMinuteReadCon}>
+            <Image style={styles.logo} source={require('../assets/images/tyler.jpg')} />
             <Text style={styles.byLine}>Tyler Durdern</Text>
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
           </View>
           <View style={styles.byLineAndMinuteReadContainer}>
             <View style={styles.tagContainer}>
-              <Text style={styles.tags}>Coding</Text>
+              <Text style={styles.tags}>what is reality</Text>
             </View>
-            <View style={styles.tagContainer2}>
-              <Text style={styles.tags}>Codey Rocks</Text>
+            <View style={styles.tagContainer}>
+              <Text style={styles.tags}>what is reality</Text>
             </View>
-            <TouchableOpacity style={styles.shareButton} onPress = {darkmodeSetter}>
-              <Image source={require('../assets/icons/shareDark.png')} />
-            </TouchableOpacity>
+            <View style={styles.tagContainer}>
+              <Text style={styles.tags}>what is reality</Text>
+            </View>
           </View>
         </View>
       </View>

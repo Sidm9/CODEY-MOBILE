@@ -10,7 +10,7 @@ import PlaygroundIcon from '../assets/icons/data.png';
 import HomeIconFocused from '../assets/icons/HomePressed.png';
 import CategoriesIconFocused from '../assets/icons/listPressed.png';
 import PlaygroundIconFocused from '../assets/icons/dataPressed.png';
-
+import Profile from '../Screens/Profile';
 const Tab = createBottomTabNavigator();
 const styles = StyleSheet.create({
   image: {
@@ -57,7 +57,7 @@ export default function BottomNavBar() {
         }}>
         <Tab.Screen name="Home" component={Posts} />
         <Tab.Screen name="Categories" component={Categories} />
-        <Tab.Screen name="Playground" component={Playground} />
+        <Tab.Screen name="Playground" component={Profile} />
       </Tab.Navigator>
     </>
   );

@@ -1,31 +1,29 @@
+/* eslint-disable no-unused-vars */
 //THIS IS VERY SIMILAR TO HEADER.js EXCEPT THIS HAS NO BACK BUTTON
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  HeaderStyle: {
+  HeadingStyle: {
     width: 250,
-    marginLeft: 15,
-    marginTop: 20,
-    marginBottom: 10,
-    fontSize: 40,
-    height: 60,
+    marginLeft: 10,
+    marginTop: 5,
+    marginBottom: 1,
+    fontSize: 30,
+    height: null,
     fontFamily: 'Montserrat-Bold',
   },
-  BackIconHeaderStyle: {
-    width: 20,
-    height: 20,
-    marginLeft: 20,
-    marginTop: 32,
-  },
   NavbarContainer: {
+    flex : 1,
     flexDirection: 'row',
+    alignItems: 'baseline',
+    justifyContent: 'flex-start',
   },
 });
-export default function Header(props) {
+export default function Heading(props) {
   return (
     <View style={styles.NavbarContainer}>
-      <Text style={styles.HeaderStyle}>{props.title}</Text>
+      <Text style={styles.HeadingStyle}>{props.title}</Text>
     </View>
   );
 }

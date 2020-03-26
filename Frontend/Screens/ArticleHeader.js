@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 import * as React from 'react';
 import {View, Text, Button, Image, StyleSheet} from 'react-native';

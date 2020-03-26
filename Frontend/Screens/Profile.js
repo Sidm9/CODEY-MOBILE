@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {Image, View, Text, StyleSheet, ImageBackground} from 'react-native';
+import { Image, View, Text, StyleSheet, ImageBackground } from 'react-native';
 import ImageHolder from '../Components/ImageHolder';
 import Header from '../Components/Navbar';
 import Card from '../Components/Card';
@@ -51,12 +52,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-  s9bdf4940: {
-    textAlign: 'center',
-  },
-  s37d5ba06: {
-    textAlign: 'center',
-  },
   connectionContainer: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
@@ -98,7 +93,9 @@ export default function Profile(props) {
       <Header title="Profile" />
       <View style={styles.containerUpper}>
         <View style={styles.imageContainer}>
-          <ImageHolder displayPic={require('../assets/images/tyler.jpg')} />
+          <ImageHolder
+            displayPic={require('../assets/images/tyler.jpg')}
+          />
         </View>
         <View style={styles.profileContainer}>
           <Text style={styles.userName}>Tyler Durden</Text>

@@ -22,7 +22,6 @@ import Playground from './Screens/Playground.js';
 import BottomNavBar from './Screens/BottomNavBar.js';
 import ArticleHeader from './Screens/ArticleHeader.js';
 import Article from './Components/Article.js';
-import GoogleButton from './Components/GoogleButton.js';
 import TopBar from './Screens/TopBar.js';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import TextHere from './Components/--TextHere---.js';

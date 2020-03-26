@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
@@ -31,6 +32,8 @@ export default function ShareIconsGrid() {
     const WhatsappWhiteBG = require('../assets/icons/WhatsappWhiteBG.png');
     const ShareWhiteBG = require('../assets/icons/ShareWhiteBG.png');
     const ShareDarkBG = require('../assets/icons/ShareDarkBG.png');
+    const FacebookDarkBG = require('../assets/icons/FacebookDarkBG.png');
+    const FacebookWhiteBG = require('../assets/icons/FacebookWhiteBG.png');
     return (
         <>
             <View style={styles.socialButtonsContainer}>
@@ -42,6 +45,11 @@ export default function ShareIconsGrid() {
                 <TouchableOpacity>
                     <View style={styles.socialButtons}>
                         <Image source={LinkWhiteBG} style={styles.socialButtons} />
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <View style={styles.socialButtons}>
+                        <Image source={FacebookWhiteBG} style={styles.socialButtons} />
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity>

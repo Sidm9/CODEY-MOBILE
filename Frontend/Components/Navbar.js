@@ -27,9 +27,7 @@ export default function Header(props, {navigation}) {
       <TouchableOpacity
         style={styles.BackIconHeaderStyle}
         onPress={props.goBack}>
-        <Image
-          source={require('../assets/icons/baseline_arrow_back_ios_black_18dp.png')}
-        />
+        <Image source={props.img} />
       </TouchableOpacity>
       <Text style={styles.HeaderStyle}>{props.title}</Text>
     </View>
