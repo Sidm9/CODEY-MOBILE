@@ -7,11 +7,15 @@ import { Text, ImageBackground, View, StyleSheet, Image } from 'react-native';
 import bg from '../assets/images/qqwe.jpg';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Header from './Navbar.js';
+import ShareIconsGrid from './ShareIconsGrid';
 
 const styles = StyleSheet.create({
   Title_Heading: {
     fontSize: 30,
-    margin: 15,
+    marginRight: 15,
+    marginLeft : 15,
+    marginTop : 10 ,
+    marginBottom : 10,
     zIndex: 100,
     color: 'black',
     fontFamily: 'Montserrat-Bold',
@@ -55,14 +59,6 @@ const styles = StyleSheet.create({
     shadowRadius: 16.0,
     elevation: 24,
   },
-  socialButtonsContainer : {
-    borderWidth: 1,
-    width: '100%',
-    height: 45,
-    flexDirection: 'row' ,
-    alignItems : 'center' ,
-    alignContent :'flex-start',
-  },
   byLine: {
     fontSize: 15,
     marginBottom: 10,
@@ -75,7 +71,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontFamily: 'Montserrat-Medium',
   },
-  byLineMinuteRead: {
+  byLineMinuteReadCon: {
     alignSelf: 'stretch',
     justifyContent: 'flex-start',
     flexDirection: 'row',
@@ -142,6 +138,7 @@ const styles = StyleSheet.create({
 });
 
 export default function Article(props) {
+  const TwitterDarkBG = require('../assets/icons/TwitterWhiteBG.png');
   const [darkmode, setdarkmode] = useState(false);
 function darkmodeSetter() {
   setdarkmode(!darkmode);
@@ -158,12 +155,10 @@ function darkmodeSetter() {
         <Text style={ (darkmode === false) ?  styles.Title_Heading : styles.Title_HeadingDark }>
           White Text with black outline works with every background
       </Text>
-        <View style={styles.socialButtonsContainer}>
-          <View style={{ borderWidth: 2, width: 20, height: 20 }}></View>
-        </View>
+        <ShareIconsGrid/>
         <View style={styles.articleContentContainer}>
-          <View style={styles.byLineMinuteRead}>
-            <Text style={styles.byLine}>{darkmode}</Text>
+          <View style={styles.byLineMinuteReadCon}>
+            <Text style={styles.byLine}>Tyler Durdern</Text>
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
           </View>
           <View style={styles.byLineAndMinuteReadContainer}>
