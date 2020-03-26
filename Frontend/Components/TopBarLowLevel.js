@@ -16,22 +16,24 @@ const Tab = createMaterialTopTabNavigator();
 export default function TopBarLowLevel() {
   return (
     <>
-      <Tab.Navigator
-        tabBarOptions={{
-          labelStyle: {
-            fontSize: 16,
-            fontFamily: 'Montserrat-Bold',
-          },
-          tabStyle: {width: 180, elevation: 0, shadowOpacity: 0},
-          style: {
-            elevation: 0, //for android.
-            backgroundColor: 'transparent',
-            shadowOpacity: 0, //for ios
-          },
-        }}>
-        <Tab.Screen name="LowLevel" component={LowLevel} />
-        <Tab.Screen name="High Level" component={HighLevel} />
-      </Tab.Navigator>
+      <View style={styles.container}>
+        <Tab.Navigator
+          tabBarOptions={{
+            labelStyle: {
+              fontSize: 16,
+              fontFamily: 'Montserrat-Bold',
+            },
+           // tabStyle: {width: 210, elevation: 0, shadowOpacity: 0},
+            style: {
+              elevation: 0, //for android.
+              backgroundColor: 'transparent',
+              shadowOpacity: 0, //for ios
+            },
+          }}>
+          <Tab.Screen name="LowLevel" component={LowLevel} />
+          <Tab.Screen name="High Level" component={HighLevel} />
+        </Tab.Navigator>
+      </View>
     </>
   );
 }

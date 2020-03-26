@@ -106,8 +106,8 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 30,
   },
-  ShareIconsContainer: {
-    width: '90%',
+  line: {
+    width: '60%',
     borderTopWidth: 1,
     margin: 10,
     alignContent: "space-between",
@@ -172,7 +172,7 @@ export default function Article({ navigation }) {
         <Text style={styles.Title_Heading}>
           White Text with black outline works with every background
       </Text>
-        <View style={styles.ShareIconsContainer} />
+        <View style={styles.line} />
         <ShareIconsGrid />
         <View style={styles.articleContentContainer}>
           <View style={styles.byCon}>
@@ -183,6 +183,7 @@ export default function Article({ navigation }) {
             <Image source={require('../assets/icons/clockWhiteBG.png')} style={{ width: 20, height: 20 ,marginTop : 5}} />
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
           </View>
+          <View><Text style = {{alignSelf :"center" , fontFamily : 'Montserrat-Medium' }}> Mar 26 2020 23:05:30</Text></View>
           <View style={styles.byLineAndMinuteReadContainer}>
             <View style={styles.tagContainer}>
               <Text style={styles.tags}>what </Text>

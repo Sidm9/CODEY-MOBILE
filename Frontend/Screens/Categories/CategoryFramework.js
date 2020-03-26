@@ -4,23 +4,23 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import Header from '../../Components/Navbar';
 
 const styles = StyleSheet.create({
-  sf26c0311: {
-    padding: 10,
-    fontSize: 25,
-  },
   Button1: {
     margin: 10,
     marginLeft: 10,
     fontSize : 28,
     fontFamily: 'Montserrat-Regular',
+    color: 'grey',
   },
   Button2: {
     margin: 10,
     fontFamily: 'Montserrat-Bold',
     fontSize : 28,
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -2, height: 1},
+    textShadowRadius: 3,
   },
-  s1c3ee819: {
-    //backgroundColor: 'rgba(230, 230, 30, 1)',
+  topBarContainer: {
+    backgroundColor: 'rgba(230, 230, 30, 0.1)',
     flexDirection: 'row',
     width: '100%',
     height: 40,
@@ -38,12 +38,12 @@ export default function CategoryFrameWork({navigation}) {
   return (
     <Fragment>
       <View style={styles.container}>
-      <Header title="Categories " />
-        <View style={styles.s1c3ee819}>
+     {/* <Header title="Categories " />*/ }
+        <View style={styles.topBarContainer}>
           <TouchableOpacity onPress={() => navigation.navigate('NewCategory')}>
-            <Text style={styles.Button1}>Language</Text>
+            <Text style={styles.Button1}>Languages</Text>
           </TouchableOpacity>
-          <Text style={styles.Button2}>FrameWorks</Text>
+          <Text style={styles.Button2}>Frameworks</Text>
         </View>
       </View>
     </Fragment>

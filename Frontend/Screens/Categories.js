@@ -30,8 +30,7 @@ export default function Categories() {
     <>
       <View style={styles.MainContainer}>
         <View style={styles.CategorySectionContainer}>
-          <Header title="Categories" />
-
+       {/**    <Header title="Categories" />  */}
           <View style={styles.categoryCardMainContainer}>
             <SearchBar />
             {/*For Each Rows */}

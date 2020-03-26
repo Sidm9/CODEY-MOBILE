@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Categories from './Categories/NewCategory';
+import newCategories from './Categories/NewCategory';
 import {Image, StyleSheet} from 'react-native';
 import Posts from './Posts';
 import Playground from './Playground';
@@ -56,7 +56,7 @@ export default function BottomNavBar() {
           showIcon: true,
         }}>
         <Tab.Screen name="Home" component={Posts} />
-        <Tab.Screen name="Categories" component={Categories} />
+        <Tab.Screen name="Categories" component={newCategories} />
         <Tab.Screen name="Playground" component={Profile} />
       </Tab.Navigator>
     </>

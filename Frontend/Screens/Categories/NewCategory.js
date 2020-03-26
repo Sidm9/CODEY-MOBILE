@@ -14,11 +14,15 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 28,
     fontFamily: 'Montserrat-Bold',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -2, height: 1},
+    textShadowRadius: 3,
   },
   Button2: {
     margin: 10,
     fontFamily: 'Montserrat-Regular',
     fontSize: 28,
+    color: 'grey',
   },
   staticButtonsContainer: {
     flexDirection: 'row',
@@ -30,7 +34,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-
   },
 });
 
@@ -38,12 +41,12 @@ export default function NewCategory({navigation}) {
   return (
     <>
       <View style={styles.container}>
-        <Header title="Categories " />
+        {/*  <Header title="Categories " /> */}
         <View style={styles.staticButtonsContainer}>
-          <Text style={styles.Button1}>Language</Text>
+          <Text style={styles.Button1}>Languages</Text>
           <TouchableOpacity
             onPress={() => navigation.navigate('CategoryFramework')}>
-            <Text style={styles.Button2}>FrameWorks</Text>
+            <Text style={styles.Button2}>Frameworks</Text>
           </TouchableOpacity>
         </View>
         <TopBarLowLevel />
