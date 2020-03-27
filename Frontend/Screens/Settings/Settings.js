@@ -5,13 +5,13 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import ImageHolder from '../../Components/ImageHolder';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 import Heading from '../../Components/Heading';
 import Header from '../../Components/Navbar';
 import List from '../../Components/SettingsComponents/List.js';
 const styles = StyleSheet.create({
   settingsHeader: {
-    backgroundColor: `rgba(222, 159, 159, 1)`,
+    backgroundColor: `#ffffff`,
     width: `100%`,
     height: null,
     padding: 15,
@@ -19,12 +19,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignSelf: "center",
     flexDirection: "column",
-    borderWidth: 4,
     flex: 0.4,
   },
   container: {
     flex: 1,
-    backgroundColor: `rgba(208, 31, 74, 1)`,
   },
   name: {
     fontFamily: 'Montserrat-Bold',
@@ -32,12 +30,16 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   editImageContainer: {
+    position: 'absolute',
+    // no no it is in center i delibreaty added it look
+    zIndex: 4,
     width: 40,
     height: 40,
     borderWidth: 1,
     alignSelf: `flex-end`
   },
   imageContainer: {
+    position: 'relative',
     width: 100,
     borderWidth: 2,
     height: 100,
@@ -70,29 +72,34 @@ const styles = StyleSheet.create({
 });
 
 export default function Settings() {
-  const a = require('../../assets/images/qqwe.jpg');
+  const a = require('../../assets/images/tyler.jpg');
   const b = require('../../assets/icons/editWhiteBG.png');
   const c = require('../../assets/icons/editDarkBG.png');
   return (
     <>
+    <ScrollView>
       <View style={styles.container}>
         <View style={styles.settingsHeader}>
           <View style={styles.imageContainer}>
             <Image source={a} style={styles.image} />
             <View style={styles.editImageContainer}>
-              <Image source={a} style={styles.editImage} />
+              <Image source={c} style={styles.editImage} />
             </View>
           </View>
           <TouchableOpacity style={styles.editNameButtonContainer}>
             <Text style={styles.name}>Tyler Durden</Text>
-            <Image source={c} style={styles.editButton} />
+            <Image source={b} style={styles.editButton} />
           </TouchableOpacity>
         </View>
-        <View style = {{flex : 1 ,borderWidth :6, flexDirection : "column" , alignItems: `center`,
-        justifyContent: `flex-start`}}>
-        <List/>
+        <View style={{
+          flex: 1, flexDirection: "column", alignItems: `center`,
+          justifyContent: `flex-start` , backgroundColor :'white'}}>
+          <List title={'Account'} brief={'Manage Major Settings'} img = {require('../../assets/icons/icons8-account-100.png')} />
+          <List title={'Notifications'} brief={'Priority notifications & Push notfications'} />
+          <List title={'Appearance'} brief={'Dark Theme & Light Tofhuwoefrasdasdasdadasdsa '} />
         </View>
       </View>
+      </ScrollView>
     </>
   );
 };

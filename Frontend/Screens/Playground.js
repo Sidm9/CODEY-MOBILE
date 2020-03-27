@@ -43,10 +43,6 @@ export default function Playground() {
         <CategoryCard/>
         <CategoryCard/>
       </View>
-    
-
-
-
     </>
   );
 }
