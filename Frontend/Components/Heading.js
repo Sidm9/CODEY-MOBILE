@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 //THIS IS VERY SIMILAR TO HEADER.js EXCEPT THIS HAS NO BACK BUTTON
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, } from 'react-native';
 
 const styles = StyleSheet.create({
   HeadingStyle: {
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 50,
     marginRight : 20,
+    marginTop : 6,
     width: 50,
     height: 50,
     borderWidth : 0.5,
@@ -38,7 +39,8 @@ export default function Heading(props) {
   return (
     <View style={styles.NavbarContainer}>
       <Text style={styles.HeadingStyle}>{props.title}</Text>
-      <Image source={require('../assets/images/tyler.jpg')} style={styles.image} />
+  
+     <Image source={require('../assets/images/tyler.jpg')} style={styles.image} />
     </View>
   );
 }

@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -5,23 +7,17 @@ import TopBarLowLevel from '../../Components/TopBarLowLevel';
 import Header from '../../Components/Navbar';
 
 const styles = StyleSheet.create({
-  sf26c0311: {
-    padding: 10,
-    fontSize: 25,
-  },
   Button1: {
-    margin: 10,
+    marginTop: 10,
+    marginBottom : 10,
     marginLeft: 10,
-    fontSize: 28,
+    fontSize: 24,
     fontFamily: 'Montserrat-Bold',
-    textShadowColor: 'rgba(0, 0, 0, 0.75)',
-    textShadowOffset: {width: -2, height: 1},
-    textShadowRadius: 3,
   },
   Button2: {
     margin: 10,
-    fontFamily: 'Montserrat-Regular',
-    fontSize: 28,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 24,
     color: 'grey',
   },
   staticButtonsContainer: {
@@ -30,6 +26,7 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 2,
     alignItems: 'center',
+    alignContent :"flex-start",
     justifyContent: 'flex-start',
   },
   container: {

@@ -16,7 +16,7 @@ export default function Posts({navigation}, props) {
     <>
       <View style={styles.container}>
         <ScrollView>
-        <Heading title="Feed" goBack={() => navigation.navigate('Login')} /> 
+        <Heading title="Feed" click={() => navigation.navigate('Profile')} /> 
           <Card open={() => navigation.navigate('Article')} />
           <Card open={() => navigation.navigate('Article')} />
           <Card open={() => navigation.navigate('Article')} />
