@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
   },
 });
 
+
 export default function login({ route , navigation }, props ) {
   // const {toggle} = route.params;
   return (

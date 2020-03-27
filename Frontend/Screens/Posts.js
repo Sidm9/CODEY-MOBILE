@@ -11,12 +11,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+const Darkstyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor : 'black',
+  },
+});
 export default function Posts({navigation}, props) {
   return (
     <>
-      <View style={styles.container}>
+      <View style={ colorScheme === 'dark' ?  Darkstyles.container : styles.container}>
         <ScrollView>
-        <Heading title="Feed" click={() => navigation.navigate('Profile')} /> 
+        <Heading title="Feed" click={(a) => navigation.navigate('Profile')} /> 
           <Card open={() => navigation.navigate('Article')} />
           <Card open={() => navigation.navigate('Article')} />
           <Card open={() => navigation.navigate('Article')} />

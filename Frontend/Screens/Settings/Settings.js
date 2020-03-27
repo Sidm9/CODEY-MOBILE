@@ -3,12 +3,13 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable quotes */
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, Appearance  } from 'react-native';
 import ImageHolder from '../../Components/ImageHolder';
 import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 import Heading from '../../Components/Heading';
 import Header from '../../Components/Navbar';
 import List from '../../Components/SettingsComponents/List.js';
+ 
 const styles = StyleSheet.create({
   settingsHeader: {
     backgroundColor: `#ffffff`,
@@ -70,6 +71,7 @@ const styles = StyleSheet.create({
     zIndex: -10,
   },
 });
+
 
 export default function Settings() {
   const a = require('../../assets/images/tyler.jpg');
