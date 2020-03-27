@@ -5,8 +5,8 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 
 export default function Button(props) {
     return (
-        <TouchableOpacity style={darkStyles.buttonStyle} onPress={props.click}>
-            <Text style={darkStyles.buttonText} > {props.text} </Text>
+        <TouchableOpacity style={styles.buttonStyle} onPress={props.click}>
+            <Text style={styles.buttonText}> {props.text} </Text>
         </TouchableOpacity>
     );
 }

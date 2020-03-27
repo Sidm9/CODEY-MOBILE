@@ -1,21 +1,15 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {Text, View, Image, TouchableOpacity, StyleSheet} from 'react-native';
 // CATEGORY CARD IS THE SIMPLEST COMPONENT CONTAING CARDS BLUEPRINT (IN SET OF 2)
 const styles = StyleSheet.create({
-  linearGradient: {
-    flex: 1,
-    paddingLeft: 15,
-    paddingRight: 15,
-    borderRadius: 4,
-  },
   categoryCardNameStyle: {
     marginLeft: 5,
-    fontSize: 21.7,
+    fontSize: 20,
     fontFamily: 'Montserrat-SemiBold',
     color: 'white',
-    textAlign: 'center',
-    //borderWidth: 1,
-    //borderColor: '#fffff',
+    textAlign: "center",
+
   },
   categoryCardTextContainer: {
     flex: 2,
@@ -39,13 +33,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     zIndex: -100,
     overflow: 'hidden',
-    //borderWidth: 1,
     borderRadius: 4,
   },
   categoryCardTextAndImageContainer: {
     flexDirection: 'row',
     alignItems: 'stretch',
-    justifyContent: 'space-evenly',
+    justifyContent: 'flex-start',
     alignSelf: 'auto',
     flex: 1,
   },
@@ -58,13 +51,15 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   categoryCardContainer: {
-    width: 180,
-    height: 100,
+    // width: 180,
+    // height: 100,
+  
     borderRadius: 20,
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'stretch',
-    margin: 8,
+    alignSelf: 'flex-start',
+    flex: 0.5,
+    maxWidth: '50%',
+    margin: 12,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -72,7 +67,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
-
     elevation: 7,
   },
 });
@@ -85,7 +79,7 @@ export default function CategoryCard(props) {
         style={styles.categoryCardButtonStyle}>
         <View style={styles.categoryCardTextAndImageContainer}>
           <View style={styles.categoryCardTextContainer}>
-            <Text style={styles.categoryCardNameStyle}>
+            <Text numberOfLines={1} ellipsizeMode="tail" style={styles.categoryCardNameStyle}>
               {props.languageName}
             </Text>
           </View>

@@ -18,22 +18,23 @@ import Main from './Screens/Main.js';
 import NewCategory from './Screens/Categories/NewCategory.js';
 import CategoryFramework from './Screens/Categories/CategoryFramework.js';
 import Posts from './Screens/Posts.js';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import Playground from './Screens/Playground.js';
 import BottomNavBar from './Screens/BottomNavBar.js';
 import ArticleHeader from './Screens/ArticleHeader.js';
 import Article from './Components/Article.js';
+import List from './Components/SettingsComponents/List.js';
 import TopBar from './Screens/TopBar.js';
-import {NavigationContainer, StackActions} from '@react-navigation/native';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
 import TextHere from './Components/--TextHere---.js';
-import Settings from './Screens/Settings';
+import Settings from './Screens/Settings/Settings';
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Settings" component={Settings} />
           <Stack.Screen name="Article" component={Article} />

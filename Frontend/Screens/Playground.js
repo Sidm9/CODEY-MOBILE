@@ -4,10 +4,14 @@ import { StyleSheet, View, Image, Text } from 'react-native';
 import Header from '../Components/Navbar';
 import Button from '../Components/Button';
 import Dark from '../DarkMode/PlaygroundDark';
+import CategoryCard from '../Components/CategoryScreenComponents/CategoryCard';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    borderWidth : 3,
+    justifyContent : "space-evenly",
+    flexDirection: "row",
+    flexWrap : "wrap",
     backgroundColor: 'white',
   },
   text: {
@@ -28,13 +32,21 @@ export default function Playground() {
   }
   return (
     <>
-      <Header title="Playground" />
-      <View style={as.container}>
-        <Text style={as.text}>
+  <Header title="Playground" />
+      <View style={styles.container}>
+    {/*       <Text style={as.text}>
           TEST ME!
       </Text>
-        <Button text="  Dark Mode Test  " click={handler} />
+        <Button text="  Dark Mode Test  " click={handler} />  */}
+
+        <CategoryCard/>
+        <CategoryCard/>
+        <CategoryCard/>
       </View>
+    
+
+
+
     </>
   );
 }

@@ -3,7 +3,7 @@ import {Image, View, StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     // backgroundColor: 'rgba(191, 191, 110, 1)',
-    borderRadius: 20,
+    borderRadius: 28,
     alignSelf: 'center',
     justifyContent: 'center',
     height: 100,
@@ -24,14 +24,14 @@ const styles = StyleSheet.create({
     height: 90,
     // tintColor: 'rgba(7, 241, 241, 1)',
     backgroundColor: 'rgba(1, 254, 1, 1)',
-    borderRadius: 8,
+    borderRadius: 28,
   },
 });
 export default function ImageHolder(props) {
   return (
     <>
       <View style={styles.container}>
-        <Image style={styles.image} source={props.displayPic} />
+        <Image style={styles.image} source={props.img} />
       </View>
     </>
   );
