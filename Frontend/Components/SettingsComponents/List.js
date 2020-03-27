@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import {Text, View, StyleSheet, Image} from 'react-native';
 import {
   TouchableOpacity,
   TouchableNativeFeedback,
@@ -44,19 +44,19 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
-  iconLeft : {
+  iconLeft: {
     alignSelf: 'center',
     width: 40,
     height: 40,
-    marginRight : 5,
+    marginRight: 5,
   },
   iconLeftContainer: {
     width: 50,
     height: 60,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight : 5,
-  }
+    marginRight: 5,
+  },
 });
 
 export default function List(props) {
@@ -64,10 +64,7 @@ export default function List(props) {
     <>
       <TouchableOpacity style={styles.listItemsContainer}>
         <View style={styles.iconLeftContainer}>
-            <Image
-              source={require('../../assets/icons/icons8-account-100.png')}
-              style={styles.iconLeft}
-            />
+          <Image source={props.img} style={styles.iconLeft} />
         </View>
         <View style={styles.listText}>
           <Text style={styles.textStyle}>{props.title}</Text>

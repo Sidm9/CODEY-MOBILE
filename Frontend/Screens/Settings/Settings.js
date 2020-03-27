@@ -36,14 +36,14 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderWidth: 1,
-    alignSelf: `flex-end`
+    alignSelf: `flex-end`,
   },
   imageContainer: {
     position: 'relative',
     width: 100,
     borderWidth: 2,
     height: 100,
-    justifyContent: `flex-end`
+    justifyContent: `flex-end`,
   },
   editNameButtonContainer: {
     flexDirection: "row",
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     zIndex: -10,
-  }
+  },
 });
 
 export default function Settings() {
@@ -95,11 +95,13 @@ export default function Settings() {
           flex: 1, flexDirection: "column", alignItems: `center`,
           justifyContent: `flex-start` , backgroundColor :'white'}}>
           <List title={'Account'} brief={'Manage Major Settings'} img = {require('../../assets/icons/icons8-account-100.png')} />
-          <List title={'Notifications'} brief={'Priority notifications & Push notfications'} />
-          <List title={'Appearance'} brief={'Dark Theme & Light Tofhuwoefrasdasdasdadasdsa '} />
+          <List title={'Notifications'} brief={'Priority notifications & Push notfications'} img = {require('../../assets/icons/notidWhiteBG.png')} />
+          <List title={'Appearance'} brief={'Dark Theme & Light Tofhuwoefrasdasdasdadasdsa '} img = {require('../../assets/icons/lightwhite.png')}/>
+          <List title={'Security'} brief={'Manage Security'} img = {require('../../assets/icons/securitywhite.png')}/>
+          <List title={'About'} brief={'Know What is Codey '} img = {require('../../assets/icons/aboutblack.png')}/>
         </View>
       </View>
       </ScrollView>
     </>
   );
-};
+}
