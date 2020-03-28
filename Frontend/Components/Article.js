@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   headerStyling: {
-    borderWidth: 3,
     borderColor: 'green',
     alignSelf: 'center',
   },
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
   },
   minuteDuration: {
     marginBottom: 10,
-    marginTop : 10,
+    marginTop: 10,
     marginRight: 10,
     marginLeft: 5,
     fontSize: 16,
@@ -77,10 +76,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     alignItems: 'center',
-    zIndex: -1000,
-    marginTop: 10,
-    marginLeft: 10,
-    marginRight: 10,
+    marginTop: '1%',
+    marginLeft: '4%',
+    marginRight: '4%',
   },
   tags: {
     margin: 5,
@@ -94,7 +92,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     backgroundColor: 'black',
     marginLeft: 5,
-    marginRight : 5,
+    marginRight: 5,
     marginTop: 10,
     overflow: 'hidden',
   },
@@ -104,8 +102,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   logo: {
-    width: 50,
-    height: 50,
+    width: 45,
+    height: 45,
     borderRadius: 30,
   },
   line: {
@@ -182,10 +180,10 @@ export default function Article({ navigation }) {
               <Image style={styles.logo} source={require('../assets/images/tyler.jpg')} />
             </TouchableOpacity>
             <Text style={styles.byLine}>Tyler Durdern</Text>
-            <Image source={require('../assets/icons/clockWhiteBG.png')} style={{ width: 20, height: 20 ,marginTop : 5}} />
+            <Image source={require('../assets/icons/clockWhiteBG.png')} style={{ width: 20, height: 20, marginTop: 5 }} />
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
           </View>
-          <View><Text style = {{alignSelf :"center" , fontFamily : 'Montserrat-Medium' }}> Mar 26 2020 23:05:30</Text></View>
+          <View><Text style={{ alignSelf: "center", fontFamily: 'Montserrat-Medium' }}> Mar 26 2020 23:05:30</Text></View>
           <View style={styles.byLineAndMinuteReadContainer}>
             <View style={styles.tagContainer}>
               <Text style={styles.tags}>what </Text>

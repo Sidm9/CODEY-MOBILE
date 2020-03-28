@@ -10,7 +10,7 @@ import {
 import Button from './Button';
 const styles = StyleSheet.create({
   inputStyle: {
-    width: 300,
+    width: '83%',
     fontFamily: 'Montserrat-Regular',
     fontSize: 18,
     marginLeft: 10,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     margin: 10,
     borderBottomWidth: 1,
     borderBottomColor: 'black',
-    width: 350,
+    width: '85%',
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'space-between',

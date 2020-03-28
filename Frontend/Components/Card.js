@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Image, Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 const styles = StyleSheet.create({
   image: {
-    width: 380,
+    width: '100%',
     alignSelf: 'center',
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   cardNavbar: {
     backgroundColor: 'rgba(224, 233, 240, 1)',
-    width: 380,
+    width: '100%',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     flexDirection: 'row',
@@ -75,13 +75,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(237, 240, 243, 1)',
     alignSelf: 'center',
     justifyContent: 'flex-start',
-    width: 380,
+    width: '90%',
     position: 'relative',
     borderRadius: 20,
-    marginTop: 15,
-    marginBottom: 15,
-    marginRight: 40,
-    marginLeft: 40,
+    marginTop: '5%',
+    marginBottom: '5%',
     shadowColor: '#000',
     shadowOffset: {
       width: 3,
@@ -89,7 +87,9 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.86,
     shadowRadius: 1.68,
-    elevation: 1,
+    elevation: 8,
+    borderWidth : 2,
+    flex :1,
   },
 });
 

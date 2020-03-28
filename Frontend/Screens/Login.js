@@ -11,43 +11,55 @@ import PlaceHolders from '../Components/PlaceHolders';
 import PasswordInput from '../Components/PasswordInput';
 import codeyLogo from '../assets/images/CodeyDark.png';
 import LoginButton from '../Components/Button.js';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 import Oauth from '../Components/GoogleButton';
 import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
-  import Facebook from '../assets/icons/facebook.png';
+import Facebook from '../assets/icons/facebook.png';
 import TextHere from '../Components/--TextHere---';
 const styles = StyleSheet.create({
   logo: {
-    width: 200,
-    height: 110,
-    marginTop: 50,
+    width: '70%',
+    height: '80%',
+    borderColor: 'black',
     alignSelf: 'center',
   },
+  logoContainer: {
+    alignSelf: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+    width: '80%',
+    flex: 0.7,
+  },
   heading: {
-    fontSize: 45,
+    fontSize: 35,
     fontFamily: 'Montserrat-Bold',
-    margin: 10,
-    marginTop: 30,
-    marginLeft: 40,
+    marginLeft: '11%',
     textAlign: 'left',
   },
   footer: {
     fontSize: 20,
     fontFamily: 'Montserrat-SemiBold',
-    margin: 5,
-    marginTop: 25,
-    marginLeft: 0,
+    marginTop: '10%',
     textAlign: 'center',
+    alignSelf: 'stretch',
+    marginRight: '10%',
+    marginLeft: '10%',
   },
   backgroundImage: {
     width: '100%',
     height: '100%',
   },
+  entriesContainer: {
+    borderWidth: 0,
+    justifyContent: "center" ,
+    flex: 1.2,
+    alignItems: "flex-start",
+  },
   signUpWithContainer: {
-    marginLeft: 35,
-    marginRight: 35,
-    marginTop: 20,
+    marginLeft: '8%',
+    marginRight: '8%',
+    marginTop: '8%',
     alignItems: 'center',
     flexDirection: 'row',
     alignContent: 'space-around',
@@ -61,7 +73,7 @@ const styles = StyleSheet.create({
 });
 
 
-export default function login({ route , navigation }, props ) {
+export default function login({ route, navigation }, props) {
   // const {toggle} = route.params;
   return (
     <>
@@ -69,25 +81,31 @@ export default function login({ route , navigation }, props ) {
         <ImageBackground
           style={styles.backgroundImage}
           source={require('../assets/images/3272176.jpg')}>
-          <Image source={codeyLogo} style={styles.logo} />
-          <Text style={styles.heading}>Login</Text>
-          <PlaceHolders placeholder={'Enter Email'} />
-          <PasswordInput
-            placeholder={'Enter Password'}
-          />
-          <LoginButton
-            text="Login"
-            click={() => navigation.navigate('Posts')}
-          />
-          <TextHere text={'OR'} />
-          <View style={styles.signUpWithContainer}>
-            <Oauth text={'Google'} image={Google} />
-            <Oauth text={'Github'} image={Github} />
-            <Oauth text={'Facebook'} image={Facebook} />
+          <View style={styles.logoContainer}>
+            <Image source={codeyLogo} style={styles.logo} />
           </View>
-          <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-            <Text style={styles.footer}>Don't Have An Account? </Text>
-          </TouchableOpacity>
+          <View style={styles.entriesContainer}>
+            <Text style={styles.heading}>Login</Text>
+            <PlaceHolders placeholder={'Enter Email'} />
+            <PasswordInput
+              placeholder={'Enter Password'}
+            />
+            <LoginButton
+              text="Login"
+              click={() => navigation.navigate('Posts')}
+            />
+          </View>
+          <View style={{ flex: 1.0 }}>
+            <TextHere text={'OR'} />
+            <View style={styles.signUpWithContainer}>
+              <Oauth text={'Google'} image={Google} />
+              <Oauth text={'Github'} image={Github} />
+              <Oauth text={'Facebook'} image={Facebook} />
+            </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+              <Text style={styles.footer}>Don't Have An Account? </Text>
+            </TouchableOpacity>
+          </View>
         </ImageBackground>
       </View>
     </>

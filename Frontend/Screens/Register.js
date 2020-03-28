@@ -18,24 +18,36 @@ import Facebook from '../assets/icons/facebook.png';
 import TextHere from '../Components/--TextHere---';
 const styles = StyleSheet.create({
   logo: {
-    width: 200,
-    height: 110,
-    marginTop: 50,
+    width: '70%',
+    height: '80%',
     alignSelf: 'center',
   },
+  logoContainer: {
+    alignSelf: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+    width: '80%',
+    flex: 0.7,
+  },
   heading: {
-    fontSize: 45,
+    fontSize: 35,
     fontFamily: 'Montserrat-Bold',
     margin: 10,
     marginTop: 20,
     marginLeft: 40,
     textAlign: 'left',
   },
+  entriesContainer: {
+    borderWidth: 0,
+    justifyContent: 'center',
+    flex: 1.2,
+    alignItems: 'flex-start',
+  },
   footer: {
     fontSize: 20,
     fontFamily: 'Montserrat-SemiBold',
     margin: 5,
-    marginTop: 15,
+    marginTop: '4%',
     marginLeft: 0,
     textAlign: 'center',
   },
@@ -66,30 +78,36 @@ export default function login({navigation}) {
         <ImageBackground
           style={styles.backgroundImage}
           source={require('../assets/images/3272176.jpg')}>
-          <Image source={codeyLogo} style={styles.logo} />
-          <Text style={styles.heading}>Register</Text>
-          <PlaceHolders placeholder={'Enter Email'} />
-          <PasswordInput
-            placeholder={'Enter Password'}
-            icon={require('../assets/icons/whiteVisible.png')}
-          />
-          <PasswordInput
-            placeholder={'Enter Password Again'}
-            icon={require('../assets/icons/whiteVisible.png')}
-          />
-          <LoginButton
-            text="Continue ▶▶"
-            click={() => navigation.navigate('BottomNavBar')}
-          />
-          <TextHere text={'OR'} />
-          <View style={styles.registerWithContainer}>
-            <OAuth text={'Google'} image={Google} />
-            <OAuth text={'Github'} image={Github} />
-            <OAuth text={'Facebook'} image={Facebook} />
+          <View style={styles.logoContainer}>
+            <Image source={codeyLogo} style={styles.logo} />
           </View>
-          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-            <Text style={styles.footer}>Already Have Account?</Text>
-          </TouchableOpacity>
+          <View style={styles.entriesContainer}>
+            <Text style={styles.heading}>Register</Text>
+            <PlaceHolders placeholder={'Enter Email'} />
+            <PasswordInput
+              placeholder={'Enter Password'}
+              icon={require('../assets/icons/whiteVisible.png')}
+            />
+            <PasswordInput
+              placeholder={'Enter Password Again'}
+              icon={require('../assets/icons/whiteVisible.png')}
+            />
+            <LoginButton
+              text="Continue ▶▶"
+              click={() => navigation.navigate('BottomNavBar')}
+            />
+          </View>
+          <View style={{flex: 0.7 ,  borderWidth : 0, borderColor : "green" ,alignItems:"center", justifyContent :"center" }}>
+            <TextHere text={'OR'} />
+            <View style={styles.registerWithContainer}>
+              <OAuth text={'Google'} image={Google} />
+              <OAuth text={'Github'} image={Github} />
+              <OAuth text={'Facebook'} image={Facebook} />
+            </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+              <Text style={styles.footer}>Already Have Account?</Text>
+            </TouchableOpacity>
+          </View>
         </ImageBackground>
       </View>
     </>

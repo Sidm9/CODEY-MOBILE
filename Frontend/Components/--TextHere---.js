@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   leftContainer: {
-    width: 33.3,
+    width: '10%',
     height: '100%',
     flex: 1,
     alignItems: 'center',
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   rightContainer: {
-    width: 33.3,
+    width: '10%',
     height: '100%',
     flex: 1,
     alignItems: 'center',
@@ -37,10 +37,10 @@ const styles = StyleSheet.create({
   },
   container: {
     width: '100%',
-    height: 65,
-    marginTop: 20,
-    paddingRight: 35,
-    paddingLeft: 35,
+    height: '6.3%',
+    marginTop: '5%',
+    paddingRight: '10%',
+    paddingLeft: '10%',
     alignItems: 'center',
     justifyContent: 'space-around',
     flexDirection: 'row',

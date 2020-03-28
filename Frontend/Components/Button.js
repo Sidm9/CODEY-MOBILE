@@ -14,10 +14,12 @@ export default function Button(props) {
 const styles = StyleSheet.create({
     buttonStyle: {
         flexDirection: 'row',
-        height: 45,
+        height: '15%',
+        width :'82%',
         marginLeft: 35,
         marginRight: 35,
         marginTop: 30,
+        alignSelf :"center",
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'black',
@@ -27,25 +29,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center',
         color: 'white',
-        fontFamily: "Montserrat-Bold",
-    },
-});
-const darkStyles = StyleSheet.create({
-    buttonStyle: {
-        flexDirection: 'row',
-        height: 45,
-        marginLeft: 35,
-        marginRight: 35,
-        marginTop: 30,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'white',
-        borderRadius: 8,
-    },
-    buttonText: {
-        alignItems: "center",
-        justifyContent: 'center',
-        color: 'black',
         fontFamily: "Montserrat-Bold",
     },
 });
