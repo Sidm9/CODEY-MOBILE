@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import {
   TouchableOpacity,
   TouchableNativeFeedback,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
 export default function List(props) {
   return (
     <>
-      <TouchableOpacity style={styles.listItemsContainer}>
+      <TouchableOpacity style={styles.listItemsContainer} onPress = {props.click}>
         <View style={styles.iconLeftContainer}>
           <Image source={props.img} style={styles.iconLeft} />
         </View>
@@ -73,7 +73,8 @@ export default function List(props) {
         <View style={styles.iconContainer}>
           <TouchableNativeFeedback
             useForeground={true}
-            background={TouchableNativeFeedback.Ripple('white', true)}>
+            background={TouchableNativeFeedback.Ripple('white', true)}
+            onPress = {props.click}>
             <Image
               source={require('../../assets/icons/arrowWhite.png')}
               style={styles.icon}

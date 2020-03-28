@@ -28,6 +28,11 @@ import TopBar from './Screens/TopBar.js';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import TextHere from './Components/--TextHere---.js';
 import Settings from './Screens/Settings/Settings';
+import Account from './Screens/Settings/Account';
+import Appearance from './Screens/Settings/Appearance';
+import Notification from './Screens/Settings/Notification';
+import Security from './Screens/Settings/Security';
+
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
@@ -36,7 +41,6 @@ const App: () => React$Node = () => {
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Main" component={Main} />
-          <Stack.Screen name="Settings" component={Settings} />
           <Stack.Screen name="Article" component={Article} />
           <Stack.Screen name="ArticleHeader" component={ArticleHeader} />
           <Stack.Screen name="NewCategory" component={NewCategory} />
@@ -50,6 +54,10 @@ const App: () => React$Node = () => {
           <Stack.Screen name="Categories" component={Categories} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Posts" component={Posts} />
+          <Stack.Screen name="Settings" component={Settings} />
+          <Stack.Screen name="Account" component={Account} />
+          <Stack.Screen name="Appearance" component={Appearance} />
+          <Stack.Screen name="Notification" component={Notification} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
