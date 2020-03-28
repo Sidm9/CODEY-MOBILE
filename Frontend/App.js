@@ -48,6 +48,7 @@ const App: () => React$Node = () => {
             name="CategoryFramework"
             component={CategoryFramework}
           />
+          <Stack.Screen name="Security" component={Security}/>
           <Stack.Screen name="BottomNavBar" component={BottomNavBar} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Register" component={Register} />

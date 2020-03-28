@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {Text, View, StyleSheet, Image} from 'react-native';
 import Switch from './Switch.js';
@@ -10,12 +11,13 @@ const styles = StyleSheet.create({
   textStyle: {
     fontSize: 25,
     fontFamily: 'Montserrat-SemiBold',
+    
   },
-  textDescription: {
-    fontFamily: 'Montserrat-Medium',
+  // textDescription: {
+  //   fontFamily: 'Montserrat-Medium',
 
-    fontSize: 14,
-  },
+  //   fontSize: 14,
+  // },
   listText: {
     height: null,
     flex: 1,
@@ -31,14 +33,14 @@ const styles = StyleSheet.create({
   listItemsContainer: {
     width: '95%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     paddingLeft: 10,
-    minHeight: 100,
     maxHeight: 100,
     alignSelf: 'center',
+    alignItems :"center",
+    alignContent: 'center',
     paddingRight: 10,
-    paddingTop: 20,
-    borderBottomWidth: 0.8,
+//    borderBottomWidth: 0.9,
   },
   icon: {
     alignSelf: 'center',
@@ -69,7 +71,6 @@ export default function List(props) {
         </View>  */}
         <View style={styles.listText}>
           <Text style={styles.textStyle}>{props.title}</Text>
-          <Text style={styles.textDescription}>{props.brief}</Text>
         </View>
         <View style={styles.iconContainer}>
           <Switch />
