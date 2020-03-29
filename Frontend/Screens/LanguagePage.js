@@ -1,6 +1,13 @@
-import React, {Fragment} from 'react';
-import {Text, View, ImageBackground, StyleSheet} from 'react-native';
+import React from 'react';
+import {
+  Text,
+  View,
+  ImageBackground,
+  StyleSheet,
+  ScrollView,
+} from 'react-native';
 import LanguageSmallCard from '../Components/LanguageSmallCard';
+import SettingsHeader from './Settings/SettingsHeader';
 
 const styles = StyleSheet.create({
   title: {
@@ -8,12 +15,13 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
     fontSize: 45,
     textAlign: 'center',
-    fontFamily: 'Montserrat-Medium',
+    fontFamily: 'Montserrat-Bold',
+    color: 'white',
+    letterSpacing: 5,
     flex: 1,
   },
   mainHeaderContainer: {
     height: '40%',
-    borderWidth: 2,
     flex: 1,
     alignSelf: 'center',
     justifyContent: 'center',
@@ -25,24 +33,22 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(237, 237, 24, 1)',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
   imageContainer: {
     flex: 0.5,
     width: '100%',
-    borderWidth: 8,
   },
   cards: {
     flex: 1,
-    borderWidth: 4,
     width: '100%',
     alignSelf: 'center',
     alignItems: 'center',
   },
   container: {
-    backgroundColor: 'rgba(255, 0, 67, 1)',
+    backgroundColor: 'white',
     alignItems: 'flex-start',
     flexDirection: 'column',
     flex: 1,
@@ -51,18 +57,22 @@ const styles = StyleSheet.create({
 
 export default function LanguagePost() {
   return (
-    <Fragment>
+    <>
       <View style={styles.container}>
+
         <View style={styles.imageContainer}>
-          <ImageBackground style={styles.image}>
+          <ImageBackground
+            style={styles.image}
+            source={require('../assets/images/JS.jpg')}>
             <View style={styles.mainHeaderContainer}>
               <Text style={styles.title}>Javascript</Text>
             </View>
           </ImageBackground>
         </View>
         <View style={styles.cards}>
+          <SettingsHeader title=" Latest Posts " subtitle="Reccuring Posts" />
           <LanguageSmallCard
-            click={() => {}}
+            click={() => { }}
             image={require('../assets/images/123.jpg')}
             title={
               'this is a heading it could be large or small but very long heading will introduce .... '
@@ -73,7 +83,7 @@ export default function LanguagePost() {
             }
           />
           <LanguageSmallCard
-            click={() => {}}
+            click={() => { }}
             image={require('../assets/images/123.jpg')}
             title={
               'this is a heading it could be large or small but very long heading will introduce .... '
@@ -84,7 +94,7 @@ export default function LanguagePost() {
             }
           />
           <LanguageSmallCard
-            click={() => {}}
+            click={() => { }}
             image={require('../assets/images/123.jpg')}
             title={
               'this is a heading it could be large or small but very long heading will introduce .... '
@@ -95,7 +105,9 @@ export default function LanguagePost() {
             }
           />
         </View>
+
       </View>
-    </Fragment>
+
+    </>
   );
 }
