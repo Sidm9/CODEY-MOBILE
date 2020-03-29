@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
     fontSize: 45,
     textAlign: 'center',
-    fontFamily : 'Montserrat-Medium',
+    fontFamily: 'Montserrat-Medium',
     flex: 1,
   },
   mainHeaderContainer: {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function LanguagePost(){
+export default function LanguagePost() {
   return (
     <Fragment>
       <View style={styles.container}>
@@ -61,12 +61,41 @@ export default function LanguagePost(){
           </ImageBackground>
         </View>
         <View style={styles.cards}>
-          <LanguageSmallCard />
-          <LanguageSmallCard />
-          <LanguageSmallCard />
-
+          <LanguageSmallCard
+            click={() => {}}
+            image={require('../assets/images/123.jpg')}
+            title={
+              'this is a heading it could be large or small but very long heading will introduce .... '
+            }
+            time={'29 March 2020'}
+            content={
+              'Now this is very the magic happens see this post will open article.js  and there the contet will be shown there'
+            }
+          />
+          <LanguageSmallCard
+            click={() => {}}
+            image={require('../assets/images/123.jpg')}
+            title={
+              'this is a heading it could be large or small but very long heading will introduce .... '
+            }
+            time={'29 March 2020'}
+            content={
+              'Now this is very the magic happens see this post will open article.js  and there the contet will be shown there'
+            }
+          />
+          <LanguageSmallCard
+            click={() => {}}
+            image={require('../assets/images/123.jpg')}
+            title={
+              'this is a heading it could be large or small but very long heading will introduce .... '
+            }
+            time={'29 March 2020'}
+            content={
+              'Now this is very the magic happens see this post will open article.js  and there the contet will be shown there'
+            }
+          />
         </View>
       </View>
     </Fragment>
   );
-};
+}

@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.86,
     shadowRadius: 1.68,
     elevation: 8,
-    borderWidth : 2,
-    flex :1,
+    borderWidth: 2,
+    flex: 1,
   },
 });
 
