@@ -115,7 +115,7 @@ export default function Settings({ navigation }) {
               title={'Appearance'}
               brief={'Dark Theme & Light Tofhuwoefrasdasdasdadasdsa '}
               img={require('../../assets/icons/lightwhite.png')}
-              click={() => navigation.navigate('Account')} />
+              click={() => navigation.navigate('Appearance')} />
 
             <List
               title={'Security'}

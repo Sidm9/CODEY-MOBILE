@@ -20,6 +20,7 @@ import CategoryFramework from './Screens/Categories/CategoryFramework.js';
 import Posts from './Screens/Posts.js';
 import { createStackNavigator } from '@react-navigation/stack';
 import Playground from './Screens/Playground.js';
+import LanguagePage from './Screens/LanguagePage.js';
 import BottomNavBar from './Screens/BottomNavBar.js';
 import ArticleHeader from './Screens/ArticleHeader.js';
 import Article from './Components/Article.js';
@@ -40,6 +41,7 @@ const App: () => React$Node = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="LanguagePage" component={LanguagePage} />
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Article" component={Article} />
           <Stack.Screen name="ArticleHeader" component={ArticleHeader} />

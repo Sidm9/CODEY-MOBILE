@@ -7,8 +7,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Switch
-        trackColor={{false: 'grey', true: 'green'}}
-        thumbColor={isEnabled ? 'grey' : 'lightgrey'}
+        trackColor={{false: '#2F80ED', true: '#155799'}}
+        thumbColor={isEnabled ? '#159957' : '#000000'}
         ios_backgroundColor="#3e3e3e"
         onValueChange={toggleSwitch}
         value={isEnabled}
