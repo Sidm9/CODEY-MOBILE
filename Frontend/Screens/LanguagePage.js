@@ -59,7 +59,6 @@ export default function LanguagePost() {
   return (
     <>
       <View style={styles.container}>
-
         <View style={styles.imageContainer}>
           <ImageBackground
             style={styles.image}
@@ -72,7 +71,7 @@ export default function LanguagePost() {
         <View style={styles.cards}>
           <SettingsHeader title=" Latest Posts " subtitle="Reccuring Posts" />
           <LanguageSmallCard
-            click={() => { }}
+            click={() => {}}
             image={require('../assets/images/123.jpg')}
             title={
               'this is a heading it could be large or small but very long heading will introduce .... '
@@ -83,7 +82,7 @@ export default function LanguagePost() {
             }
           />
           <LanguageSmallCard
-            click={() => { }}
+            click={() => {}}
             image={require('../assets/images/123.jpg')}
             title={
               'this is a heading it could be large or small but very long heading will introduce .... '
@@ -94,7 +93,7 @@ export default function LanguagePost() {
             }
           />
           <LanguageSmallCard
-            click={() => { }}
+            click={() => {}}
             image={require('../assets/images/123.jpg')}
             title={
               'this is a heading it could be large or small but very long heading will introduce .... '
@@ -105,9 +104,7 @@ export default function LanguagePost() {
             }
           />
         </View>
-
       </View>
-
     </>
   );
 }

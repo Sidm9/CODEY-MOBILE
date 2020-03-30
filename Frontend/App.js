@@ -33,6 +33,7 @@ import Account from './Screens/Settings/Account';
 import Appearance from './Screens/Settings/Appearance';
 import Notification from './Screens/Settings/Notification';
 import Security from './Screens/Settings/Security';
+import Comment from './Screens/Comment';
 
 const Stack = createStackNavigator();
 
@@ -41,7 +42,6 @@ const App: () => React$Node = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="LanguagePage" component={LanguagePage} />
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Article" component={Article} />
           <Stack.Screen name="ArticleHeader" component={ArticleHeader} />
@@ -49,7 +49,9 @@ const App: () => React$Node = () => {
           <Stack.Screen
             name="CategoryFramework"
             component={CategoryFramework}
-          />
+          /> 
+          <Stack.Screen name="Comment" component={Comment} />
+          <Stack.Screen name="LanguagePage" component={LanguagePage} />
           <Stack.Screen name="Security" component={Security}/>
           <Stack.Screen name="BottomNavBar" component={BottomNavBar} />
           <Stack.Screen name="Login" component={Login} />

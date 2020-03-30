@@ -14,7 +14,7 @@ export default function Button(props) {
 const styles = StyleSheet.create({
     buttonStyle: {
         flexDirection: 'row',
-        height: '15%',
+        height: 45,
         width :'82%',
         marginLeft: 35,
         marginRight: 35,

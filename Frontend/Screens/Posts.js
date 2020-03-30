@@ -23,7 +23,7 @@ export default function Posts({navigation}, props) {
       <View style={ colorScheme === 'dark' ?  Darkstyles.container : styles.container}>
         <ScrollView>
         <Heading title="Feed" click={() => navigation.navigate('Profile')} /> 
-          <Card open={() => navigation.navigate('Article')} />
+          <Card open={() => navigation.navigate('Article')} commentClick = {() => navigation.navigate('Comment')}/>
           <Card open={() => navigation.navigate('Article')} />
           <Card open={() => navigation.navigate('Article')} />
           <Card open={() => navigation.navigate('Article')} />

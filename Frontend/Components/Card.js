@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Card(props) {
+export default function Card(props, {navigation}) {
   const title = 'White Text with black outline works with every background';
 
   const content =
@@ -140,7 +140,9 @@ export default function Card(props) {
               <Image source={require('../assets/icons/LikeLight.png')} />
               <Text style={styles.countNumber}> {toggleStateLike} </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.comment} onPress={commentToggle}>
+            <TouchableOpacity
+              style={styles.comment}
+              onPress={props.commentClick}>
               <Image source={require('../assets/icons/commentDark.png')} />
               <Text style={styles.countNumber}> {toggleStateComment} </Text>
             </TouchableOpacity>

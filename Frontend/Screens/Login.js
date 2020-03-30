@@ -20,8 +20,7 @@ import TextHere from '../Components/--TextHere---';
 const styles = StyleSheet.create({
   logo: {
     width: '70%',
-    height: '80%',
-    borderColor: 'black',
+    height: 150,
     alignSelf: 'center',
   },
   logoContainer: {
@@ -29,6 +28,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     width: '80%',
+    marginTop : '10%',
     flex: 0.7,
   },
   heading: {
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   entriesContainer: {
     borderWidth: 0,
-    justifyContent: "center" ,
+    justifyContent: "center",
     flex: 1.2,
     alignItems: "flex-start",
   },
@@ -81,31 +81,33 @@ export default function login({ route, navigation }, props) {
         <ImageBackground
           style={styles.backgroundImage}
           source={require('../assets/images/3272176.jpg')}>
-          <View style={styles.logoContainer}>
-            <Image source={codeyLogo} style={styles.logo} />
-          </View>
-          <View style={styles.entriesContainer}>
-            <Text style={styles.heading}>Login</Text>
-            <PlaceHolders placeholder={'Enter Email'} />
-            <PasswordInput
-              placeholder={'Enter Password'}
-            />
-            <LoginButton
-              text="Login"
-              click={() => navigation.navigate('Posts')}
-            />
-          </View>
-          <View style={{ flex: 1.0 }}>
-            <TextHere text={'OR'} />
-            <View style={styles.signUpWithContainer}>
-              <Oauth text={'Google'} image={Google} />
-              <Oauth text={'Github'} image={Github} />
-              <Oauth text={'Facebook'} image={Facebook} />
+          <ScrollView>
+            <View style={styles.logoContainer}>
+              <Image source={codeyLogo} style={styles.logo} />
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-              <Text style={styles.footer}>Don't Have An Account? </Text>
-            </TouchableOpacity>
-          </View>
+            <View style={styles.entriesContainer}>
+              <Text style={styles.heading}>Login</Text>
+              <PlaceHolders placeholder={'Enter Email'} />
+              <PasswordInput
+                placeholder={'Enter Password'}
+              />
+              <LoginButton
+                text="Login"
+                click={() => navigation.navigate('Posts')}
+              />
+            </View>
+            <View style={{ flex: 1.0 }}>
+              <TextHere text={'OR'} />
+              <View style={styles.signUpWithContainer}>
+                <Oauth text={'Google'} image={Google} />
+                <Oauth text={'Github'} image={Github} />
+                <Oauth text={'Facebook'} image={Facebook} />
+              </View>
+              <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+                <Text style={styles.footer}>Don't Have An Account? </Text>
+              </TouchableOpacity>
+            </View>
+          </ScrollView>
         </ImageBackground>
       </View>
     </>

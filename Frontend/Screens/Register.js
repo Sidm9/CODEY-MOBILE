@@ -16,10 +16,11 @@ import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
 import Facebook from '../assets/icons/facebook.png';
 import TextHere from '../Components/--TextHere---';
+import { ScrollView } from 'react-native-gesture-handler';
 const styles = StyleSheet.create({
   logo: {
     width: '70%',
-    height: '80%',
+    height: 150,
     alignSelf: 'center',
   },
   logoContainer: {
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: '80%',
     flex: 0.7,
+    marginTop : '10%',
   },
   heading: {
     fontSize: 35,
@@ -68,6 +70,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     alignItems: 'stretch',
     justifyContent: 'flex-start',
+    overflow: "scroll"
   },
 });
 
@@ -75,9 +78,10 @@ export default function login({navigation}) {
   return (
     <>
       <View style={styles.container}>
-        <ImageBackground
+      <ImageBackground
           style={styles.backgroundImage}
           source={require('../assets/images/3272176.jpg')}>
+      <ScrollView>
           <View style={styles.logoContainer}>
             <Image source={codeyLogo} style={styles.logo} />
           </View>
@@ -108,6 +112,7 @@ export default function login({navigation}) {
               <Text style={styles.footer}>Already Have Account?</Text>
             </TouchableOpacity>
           </View>
+        </ScrollView>
         </ImageBackground>
       </View>
     </>

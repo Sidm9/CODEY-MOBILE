@@ -10,7 +10,7 @@ import Button from '../Components/Button.js';
 const styles = StyleSheet.create({
   logo: {
     width: '80%',
-    height: '70%',
+    height: '95%',
     borderColor: 'black',
     alignSelf: 'center',
   },
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     flex: 0.6,
     alignSelf: 'center',
     justifyContent: 'center',
+    marginTop : '20%',
   },
   footer: {
     fontSize: 20,
