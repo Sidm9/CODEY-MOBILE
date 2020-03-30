@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 const styles = StyleSheet.create({
   imageContainer: {
     flex: 0.15,
-    borderWidth: 6,
-    alignSelf: 'center',
+    alignSelf: 'baseline',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 50,
@@ -14,18 +13,22 @@ const styles = StyleSheet.create({
   },
   username: {
     flex: 0.5,
+    padding : 5,
     fontSize: 20,
     height : null,
+    fontFamily : 'Montserrat-Medium',
   },
   comment: {
     flex : 1,
+    padding :5,
     width: '100%',
     height : null,
     flexWrap: 'wrap',
-    borderWidth :1,
+    fontFamily : 'Montserrat-Medium',
+    // borderWidth :1,
   },
   username_container: {
-    borderWidth: 1,
+    // borderWidth: 1,
     flex: 1,
     overflow: 'hidden',
     height: '100%',
@@ -36,25 +39,28 @@ const styles = StyleSheet.create({
     width:'100%',
     height:null,
     justifyContent: 'center',
-    borderWidth: 8,
+    // borderWidth: 8,
     alignItems: 'stretch',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
     alignSelf: 'stretch',
     flexDirection: 'row',
   },
   text: {
     margin: 5,
+    fontFamily : 'Montserrat-Medium',
   },
   comment_bottom_bar: {
     flex: 0.6,
-    borderWidth: 5,
+    margin : 5,
+    borderTopWidth : 1,
+    // borderWidth: 5,
     flexDirection: 'row',
     alignSelf: 'flex-start',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   rightSection: {
-    borderWidth: 1,
+    // borderWidth: 1,
     flex: 1,
     height : null,
     width : null,
@@ -62,10 +68,14 @@ const styles = StyleSheet.create({
   },
   commentCardContainer: {
     flex: 0.25,
+    margin : 2,
+    borderRadius : 8,
     height : null,
-    width : null,
+    width : '100%',
     borderWidth: 1,
     flexDirection: 'row',
+    justifyContent: "center",
+    alignSelf : "center",
   },
 });
 
@@ -74,14 +84,14 @@ const App = props => {
     <>
       <View style={styles.commentCardContainer}>
         <View style={styles.imageContainer}>
-          <View />
+          <Image source = {require("../assets/images/C++.png")} width = '90%' height = "90%" />
         </View>
         <View style={styles.rightSection}>
           <View style={styles.username_comment}>
             <View style={styles.username_container}>
               <Text style={styles.username}>Email ID</Text>
               <Text style={styles.comment}>
-                This is the the comment This is the the thing that we need
+                This is the need
                 to te
           </Text>
             </View>
