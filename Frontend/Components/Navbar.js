@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   HeaderStyle: {
@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
   },
   NavbarContainer: {
     flexDirection: 'row',
-    alignItems: "center",
+    alignItems: 'center',
     // borderWidth: 4,
     flex: 0.3,
   },
 });
-export default function Header(props, { navigation }) {
+export default function Header(props, {navigation}) {
   return (
     <View style={styles.NavbarContainer}>
       <TouchableOpacity

@@ -9,7 +9,7 @@ import Button from '../Components/Button.js';
 
 const styles = StyleSheet.create({
   logo: {
-    width: '80%',
+    width: '90%',
     height: '95%',
     borderColor: 'black',
     alignSelf: 'center',

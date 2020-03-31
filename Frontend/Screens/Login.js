@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     justifyContent: 'center',
     width: '80%',
-    marginTop : '10%',
+    marginTop: '10%',
     flex: 0.7,
   },
   heading: {
@@ -96,7 +96,12 @@ export default function login({ route, navigation }, props) {
                 click={() => navigation.navigate('Posts')}
               />
             </View>
-            <View style={{ flex: 1.0 }}>
+            <View style={{
+              flex: 1.0, borderWidth: 0,
+              borderColor: 'green',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
               <TextHere text={'OR'} />
               <View style={styles.signUpWithContainer}>
                 <Oauth text={'Google'} image={Google} />

@@ -16,7 +16,7 @@ import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
 import Facebook from '../assets/icons/facebook.png';
 import TextHere from '../Components/--TextHere---';
-import { ScrollView } from 'react-native-gesture-handler';
+import {ScrollView} from 'react-native-gesture-handler';
 const styles = StyleSheet.create({
   logo: {
     width: '70%',
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: '80%',
     flex: 0.7,
-    marginTop : '10%',
+    marginTop: '10%',
   },
   heading: {
     fontSize: 35,
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     alignItems: 'stretch',
     justifyContent: 'flex-start',
-    overflow: "scroll"
+    overflow: 'scroll',
   },
 });
 
@@ -78,41 +78,48 @@ export default function login({navigation}) {
   return (
     <>
       <View style={styles.container}>
-      <ImageBackground
+        <ImageBackground
           style={styles.backgroundImage}
           source={require('../assets/images/3272176.jpg')}>
-      <ScrollView>
-          <View style={styles.logoContainer}>
-            <Image source={codeyLogo} style={styles.logo} />
-          </View>
-          <View style={styles.entriesContainer}>
-            <Text style={styles.heading}>Register</Text>
-            <PlaceHolders placeholder={'Enter Email'} />
-            <PasswordInput
-              placeholder={'Enter Password'}
-              icon={require('../assets/icons/whiteVisible.png')}
-            />
-            <PasswordInput
-              placeholder={'Enter Password Again'}
-              icon={require('../assets/icons/whiteVisible.png')}
-            />
-            <LoginButton
-              text="Continue ▶▶"
-              click={() => navigation.navigate('BottomNavBar')}
-            />
-          </View>
-          <View style={{flex: 0.7 ,  borderWidth : 0, borderColor : "green" ,alignItems:"center", justifyContent :"center" }}>
-            <TextHere text={'OR'} />
-            <View style={styles.registerWithContainer}>
-              <OAuth text={'Google'} image={Google} />
-              <OAuth text={'Github'} image={Github} />
-              <OAuth text={'Facebook'} image={Facebook} />
+          <ScrollView>
+            <View style={styles.logoContainer}>
+              <Image source={codeyLogo} style={styles.logo} />
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-              <Text style={styles.footer}>Already Have Account?</Text>
-            </TouchableOpacity>
-          </View>
-        </ScrollView>
+            <View style={styles.entriesContainer}>
+              <Text style={styles.heading}>Register</Text>
+              <PlaceHolders placeholder={'Enter Email'} />
+              <PasswordInput
+                placeholder={'Enter Password'}
+                icon={require('../assets/icons/whiteVisible.png')}
+              />
+              <PasswordInput
+                placeholder={'Enter Password Again'}
+                icon={require('../assets/icons/whiteVisible.png')}
+              />
+              <LoginButton
+                text="Continue ▶▶"
+                click={() => navigation.navigate('BottomNavBar')}
+              />
+            </View>
+            <View
+              style={{
+                flex: 0.7,
+                borderWidth: 0,
+                borderColor: 'green',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <TextHere text={'OR'} />
+              <View style={styles.registerWithContainer}>
+                <OAuth text={'Google'} image={Google} />
+                <OAuth text={'Github'} image={Github} />
+                <OAuth text={'Facebook'} image={Facebook} />
+              </View>
+              <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                <Text style={styles.footer}>Already Have Account?</Text>
+              </TouchableOpacity>
+            </View>
+          </ScrollView>
         </ImageBackground>
       </View>
     </>

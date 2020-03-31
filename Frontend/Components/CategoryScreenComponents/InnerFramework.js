@@ -32,7 +32,7 @@ export default function LowLevel() {
     <>
       <View style={styles.MainContainer}>
         <View style={styles.categoryCardMainContainer}>
-          <SearchBar title="Search Languages.." />
+          <SearchBar title="Search Frameworks.." />
           <ScrollView>
             {/*For Each Rows */}
             <View style={styles.categoryCardGridContainer}>

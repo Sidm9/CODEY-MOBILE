@@ -6,6 +6,7 @@ import ImageHolder from '../Components/ImageHolder';
 import Header from '../Components/Navbar';
 import Card from '../Components/Card';
 import SearchBar from '../Components/SearchBar';
+import Heading from '../Components/Heading';
 const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
@@ -70,13 +71,16 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   containerUpper: {
-    flex: 1,
+    flex: 0.4,
+    height : '25%',
+    width :'100%',
     flexDirection: 'row',
     alignSelf: 'auto',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    paddingLeft: '5%',
-    paddingRight: '5%',
+    paddingLeft: '1%',
+    //borderWidth :3,
+    paddingRight: '4%',
   },
   containerLower: {
     flex: 1,
@@ -92,12 +96,13 @@ export default function Profile({navigation} , props) {
     <ImageBackground
       style={styles.imageBackground}
       source={require('../assets/images/86373.jpg')}>
-      <Header title="Profile" />
+      <Heading title = "Profile" />
       <View style={styles.containerUpper}>
+        <Header title="Profile" />
         <View style={styles.imageContainer}>
         <TouchableOpacity onPress ={() => navigation.navigate('Settings')}>
           <ImageHolder
-            displayPic={require('../assets/images/tyler.jpg')}
+            img={require('../assets/images/tyler.jpg')}
           />
           </TouchableOpacity>
         </View>
