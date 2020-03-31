@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Bold',
     alignItems :  "center",
     justifyContent : "center",
+    // borderWidth : 3,
   },
   NavbarContainer: {
     flex: 1,
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignContent: "center",
     textAlignVertical: "center",
+    // borderWidth : 3,
   },
   image: {
     alignSelf: 'center',
@@ -32,6 +34,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderColor: 'black',
+    // borderWidth : 3,
   },
 });
 export default function Heading(props) {

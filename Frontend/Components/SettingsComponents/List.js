@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: '63%',
     marginRight: 5,
+    borderRadius : 4,
     // borderWidth: 4,
   },
   iconLeftContainer: {
@@ -74,7 +75,7 @@ export default function List(props) {
         </View>
         <View style={styles.listText}>
           <Text style={styles.textStyle}>{props.title}</Text>
-          <Text style={styles.textDescription}>{props.brief}</Text>
+          <Text numberOfLines = {1} style={styles.textDescription}>{props.brief}</Text>
         </View>
         <View style={styles.iconContainer}>
           <TouchableNativeFeedback
