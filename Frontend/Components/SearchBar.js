@@ -9,7 +9,7 @@ import {
 
 const styles = StyleSheet.create({
   inputStyle: {
-    width: 300,
+    width: '99%',
     fontFamily: 'Montserrat-Regular',
     fontSize: 15,
     marginRight: 0,
@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
     margin: 10,
     //borderBottomWidth: 0.2,
     borderBottomColor: 'black',
-    width: 380,
+    width: '80%',
     backgroundColor: '#eae9ed',
-    height: 40,
+    height: '11.5%',
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'flex-start',

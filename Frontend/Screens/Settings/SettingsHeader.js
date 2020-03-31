@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontFamily: 'Montserrat-SemiBold',
-    fontSize: 30,
+    fontSize: 25,
   },
   headerLowerText: {
     fontFamily: 'Montserrat-Regular',

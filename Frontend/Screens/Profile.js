@@ -75,21 +75,22 @@ const styles = StyleSheet.create({
     alignSelf: 'auto',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingLeft: '5%',
+    paddingRight: '5%',
   },
   containerLower: {
-    flex: 2,
-  },
-  container: {
     flex: 1,
+  },
+  imageBackground: {
+    width : '100%',
+    height : '100%',
   },
 });
 
 export default function Profile({navigation} , props) {
   return (
     <ImageBackground
-      style={styles.container}
+      style={styles.imageBackground}
       source={require('../assets/images/86373.jpg')}>
       <Header title="Profile" />
       <View style={styles.containerUpper}>
@@ -132,7 +133,7 @@ export default function Profile({navigation} , props) {
         </View>
       </View>
       <View style={styles.containerLower}>
-        <SearchBar />
+        <SearchBar title = "Profile ..." />
       </View>
     </ImageBackground>
   );

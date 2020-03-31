@@ -12,6 +12,7 @@ import CategoriesIconFocused from '../assets/icons/listPressed.png';
 import PlaygroundIconFocused from '../assets/icons/dataPressed.png';
 import Profile from '../Screens/Profile';
 import Chatscreen from '../Screens/Chat/ChatScreen';
+import NewPost from '../Screens/NewPost'
 const Tab = createBottomTabNavigator();
 const styles = StyleSheet.create({
   image: {
@@ -78,7 +79,7 @@ export default function BottomNavBar() {
         <Tab.Screen name="Categories" component={newCategories} />
         <Tab.Screen name="Profile" component={Profile} />
         <Tab.Screen name="Chat" component={Chatscreen} />
-        <Tab.Screen name="Playground" component={Playground} />
+        <Tab.Screen name="NewPost" component={NewPost} />
       </Tab.Navigator>
     </>
   );

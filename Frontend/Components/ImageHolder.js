@@ -2,6 +2,7 @@ import React from 'react';
 import {Image, View, StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     // backgroundColor: 'rgba(191, 191, 110, 1)',
     borderRadius: 28,
     alignSelf: 'center',
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     width: 90,
     height: 90,
     // tintColor: 'rgba(7, 241, 241, 1)',
-    backgroundColor: 'rgba(1, 254, 1, 1)',
+   // backgroundColor: 'rgba(1, 254, 1, 1)',
     borderRadius: 28,
   },
 });

@@ -7,19 +7,18 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, } from 'react-native';
 
 const styles = StyleSheet.create({
   HeadingStyle: {
-    width: 250,
-    fontSize: 45,
-    marginLeft : 15,
-    height: null,
+    width: '70%',
+    height : '100%',
+    fontSize: 35,
+    marginLeft : 25,
     fontFamily: 'Montserrat-Bold',
     alignItems :  "center",
     justifyContent : "center",
     // borderWidth : 3,
   },
   NavbarContainer: {
-    flex: 1,
     flexDirection: 'row',
-    alignItems: 'stretch',
+    alignItems: 'center',
     borderColor: 'black',
     justifyContent: 'space-between',
     alignContent: "center",
@@ -30,7 +29,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 50,
     marginRight : 20,
-    marginTop : 6,
+    marginTop : 4,
     width: 50,
     height: 50,
     borderColor: 'black',

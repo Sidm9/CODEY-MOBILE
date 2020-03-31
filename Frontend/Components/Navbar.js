@@ -1,15 +1,13 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   HeaderStyle: {
-    width: 270,
-    marginLeft: 15,
-    marginTop: 20,
-    marginBottom: 10,
-    fontSize: 40,
-    height: 60,
+    fontSize: 30,
+    flex: 1,
+    height: null,
     fontFamily: 'Montserrat-Bold',
+    // borderWidth: 3,
   },
   BackIconHeaderStyle: {
     width: 20,
@@ -19,9 +17,12 @@ const styles = StyleSheet.create({
   },
   NavbarContainer: {
     flexDirection: 'row',
+    alignItems: "center",
+    // borderWidth: 4,
+    flex: 0.3,
   },
 });
-export default function Header(props, {navigation}) {
+export default function Header(props, { navigation }) {
   return (
     <View style={styles.NavbarContainer}>
       <TouchableOpacity
