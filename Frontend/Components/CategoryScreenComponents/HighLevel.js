@@ -49,6 +49,36 @@ export default function HighLevel() {
                 languageName="Golang"
                 languageIcon={require('../../assets/images/Golang.png')}
               />
+              <CategoryCard
+                languageName="R"
+                languageIcon={require('../../assets/images/r.png')}
+              />
+            </View>
+            <View style={styles.categoryCardGridContainer}>
+              <CategoryCard
+                languageName="Kotlin"
+                languageIcon={require('../../assets/images/kotlin.png')}
+              />
+              <CategoryCard
+                languageName="Julia"
+                languageIcon={require('../../assets/images/julia.png')}
+              />
+            </View>
+            <View style={styles.categoryCardGridContainer}>
+              <CategoryCard
+                languageName="Lua"
+                languageIcon={require('../../assets/images/lua.png')}
+              />
+              <CategoryCard
+                languageName="Swift"
+                languageIcon={require('../../assets/images/swift.png')}
+              />
+            </View>
+            <View style={styles.categoryCardGridContainer}>
+              <CategoryCard
+                languageName="CSS"
+                languageIcon={require('../../assets/images/css.png')}
+              />
             </View>
           </ScrollView>
           {/* End */}

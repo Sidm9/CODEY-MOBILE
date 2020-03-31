@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Header from '../../Components/Navbar';
-
+import InnerFramework from '../../Components/CategoryScreenComponents/InnerFramework';
 const styles = StyleSheet.create({
   Button1: {
     marginTop: 10,
@@ -44,6 +44,7 @@ export default function CategoryFrameWork({navigation}) {
           </TouchableOpacity>
           <Text style={styles.Button2}>Frameworks</Text>
         </View>
+        <InnerFramework/>
       </View>
     </Fragment>
   );

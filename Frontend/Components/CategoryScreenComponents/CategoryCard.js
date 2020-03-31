@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   imageStyle: {
-    height: 80,
-    width: 80,
+    height: 70,
+    width: 70,
     transform: [{rotate: '25.67deg'}],
     alignSelf: 'flex-end',
     overflow: 'visible',

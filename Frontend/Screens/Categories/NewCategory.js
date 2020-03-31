@@ -4,7 +4,6 @@ import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import TopBarLowLevel from '../../Components/TopBarLowLevel';
-import Header from '../../Components/Navbar';
 
 const styles = StyleSheet.create({
   Button1: {

@@ -14,7 +14,7 @@ export default function NewPost() {
     return (
         <>
             <View style={styles.container}>
-                <Heading title="New Post" />
+                <Heading title=" New Post" />
                 <PlaceHolders placeholder={'Enter Email'} />
                 <PlaceHolders placeholder={'Enter Email'} />
                 <Button text="Post" />

@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import React, {Fragment} from 'react';
+import {View, Text, StyleSheet, Image} from 'react-native';
 
 const styles = StyleSheet.create({
   imageContainer: {
@@ -74,26 +74,27 @@ const styles = StyleSheet.create({
     width: '100%',
     borderWidth: 1,
     flexDirection: 'row',
-    justifyContent: "center",
-    alignSelf: "center",
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
 });
 
-const App = props => {
+export default function CommentCard() {
   return (
     <>
       <View style={styles.commentCardContainer}>
         <View style={styles.imageContainer}>
-          <Image source={require("../assets/images/C++.png")} width='100%' height="100%" />
+          <Image
+            source={require('../assets/images/C++.png')}
+            width="100%"
+            height="100%"
+          />
         </View>
         <View style={styles.rightSection}>
           <View style={styles.username_comment}>
             <View style={styles.username_container}>
               <Text style={styles.username}>Email ID</Text>
-              <Text style={styles.comment}>
-                This is the need
-                to te
-          </Text>
+              <Text style={styles.comment}>This is the need to te</Text>
             </View>
           </View>
           <View style={styles.comment_bottom_bar}>
@@ -107,10 +108,4 @@ const App = props => {
       </View>
     </>
   );
-};
-
-App.defaultProps = {};
-
-export default App;
-
-export { styles };
+}

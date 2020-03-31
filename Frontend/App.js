@@ -11,7 +11,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import Login from './Screens/Login.js';
-import Categories from './Screens/Categories.js';
+//import Categories from './Screens/Categories.js';
 import Register from './Screens/Register.js';
 import Profile from './Screens/Profile.js';
 import Main from './Screens/Main.js';
@@ -51,15 +51,13 @@ const App: () => React$Node = () => {
           <Stack.Screen
             name="CategoryFramework"
             component={CategoryFramework}
-          /> 
+          />
           <Stack.Screen name="Comment" component={Comment} />
           <Stack.Screen name="LanguagePage" component={LanguagePage} />
           <Stack.Screen name="Security" component={Security}/>
           <Stack.Screen name="BottomNavBar" component={BottomNavBar} />
           <Stack.Screen name="Login" component={Login} />
-         
           <Stack.Screen name="Register" component={Register} />
-          <Stack.Screen name="Categories" component={Categories} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Posts" component={Posts} />
           <Stack.Screen name="Settings" component={Settings} />

@@ -8,11 +8,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     //flex: 1,
     display: 'flex',
- 
+
     //justifyContent: 'space-evenly',
     //flexWrap: 'initial',
     alignContent: 'flex-start',
-    
   },
   categoryCardMainContainer: {
     flex: 1,
@@ -24,7 +23,6 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     flexDirection: 'column',
     flexGrow: 1,
-    
   },
 });
 
@@ -44,21 +42,15 @@ export default function LowLevel() {
               languageName="C++"
               languageIcon={require('../../assets/images/C++.png')}
             />
-          
           </View>
 
           <View style={styles.categoryCardGridContainer}>
-          <CategoryCard
-            languageName="C"
-            languageIcon={require('../../assets/images/C.png')}
-          />
-        
-         
-        
+            <CategoryCard
+              languageName="C"
+              languageIcon={require('../../assets/images/C.png')}
+            />
+          </View>
         </View>
-        </View>
-
-        
       </View>
     </>
   );

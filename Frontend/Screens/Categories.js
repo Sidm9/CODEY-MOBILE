@@ -68,16 +68,7 @@ export default function Categories() {
                 />
               </View>
               <Heading title="Hybrid" />
-              <View style={styles.categoryCardGridContainer}>
-                <CategoryCard
-                  languageName="Flutter"
-                  languageIcon={require('../assets/images/Dart.png')}
-                />
-                <CategoryCard
-                  languageName="React"
-                  languageIcon={require('../assets/images/jsx.png')}
-                />
-              </View>
+
               <View style={styles.categoryCardGridContainer}>
                 <CategoryCard
                   languageName="C#"
