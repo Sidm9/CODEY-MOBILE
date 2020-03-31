@@ -8,23 +8,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 50,
-    width: 55,
-    height: 55,
+    width: '100%',
+    height: null,
   },
   username: {
     flex: 0.5,
-    padding : 5,
+    padding: 5,
     fontSize: 20,
-    height : null,
-    fontFamily : 'Montserrat-Medium',
+    height: null,
+    fontFamily: 'Montserrat-Medium',
   },
   comment: {
-    flex : 1,
-    padding :5,
+    flex: 1,
+    padding: 5,
     width: '100%',
-    height : null,
+    height: null,
     flexWrap: 'wrap',
-    fontFamily : 'Montserrat-Medium',
+    fontFamily: 'Montserrat-Medium',
     // borderWidth :1,
   },
   username_container: {
@@ -35,9 +35,9 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   username_comment: {
-    flex : 1,
-    width:'100%',
-    height:null,
+    flex: 1,
+    width: '100%',
+    height: null,
     justifyContent: 'center',
     // borderWidth: 8,
     alignItems: 'stretch',
@@ -47,12 +47,12 @@ const styles = StyleSheet.create({
   },
   text: {
     margin: 5,
-    fontFamily : 'Montserrat-Medium',
+    fontFamily: 'Montserrat-Medium',
   },
   comment_bottom_bar: {
     flex: 0.6,
-    margin : 5,
-    borderTopWidth : 1,
+    margin: 5,
+    borderTopWidth: 1,
     // borderWidth: 5,
     flexDirection: 'row',
     alignSelf: 'flex-start',
@@ -62,20 +62,20 @@ const styles = StyleSheet.create({
   rightSection: {
     // borderWidth: 1,
     flex: 1,
-    height : null,
-    width : null,
+    height: null,
+    width: null,
     justifyContent: 'center',
   },
   commentCardContainer: {
     flex: 0.25,
-    margin : 2,
-    borderRadius : 8,
-    height : null,
-    width : '100%',
+    margin: 2,
+    borderRadius: 8,
+    height: null,
+    width: '100%',
     borderWidth: 1,
     flexDirection: 'row',
     justifyContent: "center",
-    alignSelf : "center",
+    alignSelf: "center",
   },
 });
 
@@ -84,7 +84,7 @@ const App = props => {
     <>
       <View style={styles.commentCardContainer}>
         <View style={styles.imageContainer}>
-          <Image source = {require("../assets/images/C++.png")} width = '90%' height = "90%" />
+          <Image source={require("../assets/images/C++.png")} width='100%' height="100%" />
         </View>
         <View style={styles.rightSection}>
           <View style={styles.username_comment}>

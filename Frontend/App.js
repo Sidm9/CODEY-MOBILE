@@ -34,6 +34,7 @@ import Appearance from './Screens/Settings/Appearance';
 import Notification from './Screens/Settings/Notification';
 import Security from './Screens/Settings/Security';
 import Comment from './Screens/Comment';
+import ChatScreen from './Screens/Chat/ChatScreen';
 
 const Stack = createStackNavigator();
 

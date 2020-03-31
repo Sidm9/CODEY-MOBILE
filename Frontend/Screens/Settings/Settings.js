@@ -107,13 +107,13 @@ export default function Settings({ navigation }) {
 
             <List
               title={'Notifications'}
-              brief={'Priority notifications & Push notfications'}
+              brief={'Manage notifications'}
               img={require('../../assets/icons/notidWhiteBG.png')}
               click={() => navigation.navigate('Notification')} />
 
             <List
               title={'Appearance'}
-              brief={'Dark Theme & Light Tofhuwoefrasdasdasdadasdsa '}
+              brief={'Dark Theme & Light '}
               img={require('../../assets/icons/lightwhite.png')}
               click={() => navigation.navigate('Appearance')} />
 

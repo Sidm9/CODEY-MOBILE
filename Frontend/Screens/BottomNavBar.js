@@ -11,6 +11,7 @@ import HomeIconFocused from '../assets/icons/HomePressed.png';
 import CategoriesIconFocused from '../assets/icons/listPressed.png';
 import PlaygroundIconFocused from '../assets/icons/dataPressed.png';
 import Profile from '../Screens/Profile';
+import Chatscreen from '../Screens/Chat/ChatScreen';
 const Tab = createBottomTabNavigator();
 const styles = StyleSheet.create({
   image: {
@@ -38,7 +39,25 @@ export default function BottomNavBar() {
               } else {
                 return <Image source={CategoriesIcon} style={styles.image} />;
               }
-            } else if (route.name === 'Playground') {
+            } else if (route.name === 'Profile') {
+              if (focused) {
+                return (
+                  <Image source={PlaygroundIconFocused} style={styles.image} />
+                );
+              } else {
+                return <Image source={PlaygroundIcon} style={styles.image} />;
+              }
+            }
+            else if (route.name === 'Chat') {
+              if (focused) {
+                return (
+                  <Image source={PlaygroundIconFocused} style={styles.image} />
+                );
+              } else {
+                return <Image source={PlaygroundIcon} style={styles.image} />;
+              }
+            }
+            else if (route.name === 'Playground') {
               if (focused) {
                 return (
                   <Image source={PlaygroundIconFocused} style={styles.image} />
@@ -57,7 +76,9 @@ export default function BottomNavBar() {
         }}>
         <Tab.Screen name="Home" component={Posts} />
         <Tab.Screen name="Categories" component={newCategories} />
-        <Tab.Screen name="Playground" component={Profile} />
+        <Tab.Screen name="Profile" component={Profile} />
+        <Tab.Screen name="Chat" component={Chatscreen} />
+        <Tab.Screen name="Playground" component={Playground} />
       </Tab.Navigator>
     </>
   );
