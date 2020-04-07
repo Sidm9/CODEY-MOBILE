@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   buttonS: {
     borderWidth: 4,
-    flex:1,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
 
 export default function ChatLayout({navigation}) {
   let [array, setarray] = useState([{title: ''}]);
-
   const [textString, settextString] = useState('');
 
   useEffect(() => {
@@ -61,11 +60,15 @@ export default function ChatLayout({navigation}) {
     };
   });
 
+  function reset() {
+    settextString();
+  }
+
   function joindata() {
     console.log('You Entered :' + textString);
-    // anotherarray.concat(array);
     setarray(array.concat({title: textString}));
     console.log('The New Element is Added');
+    reset();
   }
 
   function Item({title}) {
@@ -84,7 +87,8 @@ export default function ChatLayout({navigation}) {
           <View style={styles.textInputAndButtonContainer}>
             <TextInput
               style={styles.textInput}
-              placeholder="Enter Message."
+              value={textString}
+              placeholder="Enter Message"
               placeholderTextColor="black"
               onChangeText={data => settextString(data)}
             />
