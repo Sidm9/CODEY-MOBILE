@@ -1,7 +1,7 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react';
-import { FlatList, TextInput, StyleSheet, View, Button } from 'react-native';
+import { FlatList, TextInput, StyleSheet, View, Button, Text } from 'react-native';
 
 
 const styles = StyleSheet.create({
@@ -22,34 +22,46 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         flexDirection: 'row',
     },
-    chatArea : {
-        
-    }
+    chatArea: {
+        flex: 1,
+        borderWidth: 3,
+    },
+    item: {
+        backgroundColor: '#f9c2ff',
+        padding: 20,
+        marginVertical: 8,
+        marginHorizontal: 16,
+    },
+
 });
 
 export default function ChatLayout() {
     const [array, setarray] = useState([
-         'ONE' ,
-         'TWO' ,
-         'THREE' ,
-         'FOUR' ,
+        { title: 'ONE' },
     ]);
 
     const [textString, settextString] = useState('');
 
-    // useEffect(() => {
-    //     return () => {
-    //         setArrayHolder(...arrayHolder, array);
-    //     };
-    // });
+    useEffect(() => {
+        return () => {
+            console.log(array);
+        };
+    });
 
     function joindata() {
-        setarray()
-        console.log("You Entered :" + textString);
-        setarray(array.concat(textString))
+        console.log('You Entered :' + textString);
+        setarray(array.concat({ title: textString }));
         console.log(
-            array
-        )
+            'The New Element is Added'
+        );
+    }
+
+    function Item({ title }) {
+        return (
+            <View style = {styles.item}>
+                <Text>{title}</Text>
+            </View>
+        );
     }
 
 
@@ -65,8 +77,10 @@ export default function ChatLayout() {
                     </TextInput>
                     <Button title="Send" style={styles.buttonS} onPress={joindata} />
                 </View>
-                <View style = {styles.chatArea}>
-                
+                <View style={styles.chatArea}>
+                    <FlatList
+                        data={array}
+                        renderItem={({ item }) => <Item title={item.key} />} />
                 </View>
             </View>
         </>
