@@ -35,6 +35,7 @@ import Notification from './Screens/Settings/Notification';
 import Security from './Screens/Settings/Security';
 import Comment from './Screens/Comment';
 import ChatScreen from './Screens/Chat/ChatScreen';
+import ChatLayout from './Screens/ChatLayout';
 // import NewPost from './Screens/NewPost';
 
 const Stack = createStackNavigator();
@@ -44,6 +45,7 @@ const App: () => React$Node = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="ChatLayout" component={ChatLayout} />
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Article" component={Article} />
           <Stack.Screen name="ArticleHeader" component={ArticleHeader} />
