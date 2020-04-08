@@ -52,9 +52,9 @@ const styles = StyleSheet.create({
   },
   entriesContainer: {
     borderWidth: 0,
-    justifyContent: "center",
+    justifyContent: 'center',
     flex: 1.2,
-    alignItems: "flex-start",
+    alignItems: 'flex-start',
   },
   signUpWithContainer: {
     marginLeft: '8%',

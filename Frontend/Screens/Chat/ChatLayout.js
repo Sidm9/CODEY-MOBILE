@@ -4,12 +4,12 @@ import {
   TextInput,
   StyleSheet,
   View,
-  Button,
   Text,
   TouchableOpacity,
   Image,
 } from 'react-native';
-import Heading from '../Components/Heading';
+import Heading from '../../Components/Heading';
+import ChatHeader from '../../Components/ChatHeader';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -82,7 +82,7 @@ export default function ChatLayout({navigation}) {
   return (
     <>
       <View style={{flex: 1}}>
-        <Heading title="Chats" click={() => navigation.navigate('Profile')} />
+        <ChatHeader title="Hakoona Matata" />
         <View style={styles.container}>
           <View style={styles.textInputAndButtonContainer}>
             <TextInput
@@ -95,7 +95,7 @@ export default function ChatLayout({navigation}) {
             <TouchableOpacity onPress={joindata}>
               <View style={styles.buttonS}>
                 <Image
-                  source={require('../assets/images/sendWhiteBG.png')}
+                  source={require('../../assets/images/sendWhiteBG.png')}
                   style={styles.sendButton}
                 />
               </View>
