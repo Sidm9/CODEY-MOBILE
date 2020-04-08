@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import {
   Image,
@@ -13,31 +11,67 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     position: 'relative',
-    borderWidth: 4,
+    //borderWidth: 4,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   Text: {
     width: null,
-    fontSize: 20,
+    fontSize: 24,
     fontFamily: 'Montserrat-Bold',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 3,
+    //borderWidth: 3,
   },
   go_back_button: {
-    width: '10%',
+    width: '1%',
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'row',
     height: '100%',
-    borderWidth: 3,
+    marginVertical: '1%',
+    //borderWidth: 3,
+  },
+  burger_button: {
+    width: '1%',
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'row',
+    height: '100%',
+    marginVertical: '1%',
+    justifyContent: 'flex-end',
+    //borderWidth: 3,
+  },
+  header_icons: {
+    height: 33,
+    width: 33,
+    marginHorizontal: '10%',
+    //borderWidth: 4,
+    borderColor: 'black',
   },
 });
 export default function ChatHeader(props) {
-  return <>
+  return (
+    <>
       <View style={styles.container}>
-        <View style={styles.go_back_button} />
+        <View style={styles.go_back_button}>
+          <TouchableOpacity>
+            <Image
+              source={require('../assets/icons/backWhiteBG.png')}
+              style={styles.header_icons}
+            />
+          </TouchableOpacity>
+        </View>
+
         <Text style={styles.Text}>{props.title}</Text>
-        <View style={styles.go_back_button} />
+        <View style={styles.burger_button}>
+          <TouchableOpacity>
+            <Image
+              source={require('../assets/icons/burgerWhiteBG.png')}
+              style={styles.header_icons}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
-  </>;
+    </>
+  );
 }
