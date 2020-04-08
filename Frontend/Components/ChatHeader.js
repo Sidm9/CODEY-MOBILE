@@ -11,15 +11,16 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     position: 'relative',
-    //borderWidth: 4,
+    borderBottomWidth: 1.5,
+    paddingBottom : 5,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   Text: {
     width: null,
-    fontSize: 24,
-    fontFamily: 'Montserrat-Bold',
+    fontSize: 25,
+    fontFamily: 'Montserrat-SemiBold',
     //borderWidth: 3,
   },
   go_back_button: {
@@ -32,7 +33,6 @@ const styles = StyleSheet.create({
     //borderWidth: 3,
   },
   burger_button: {
-    width: '1%',
     alignItems: 'center',
     flex: 1,
     flexDirection: 'row',
@@ -61,7 +61,6 @@ export default function ChatHeader(props) {
             />
           </TouchableOpacity>
         </View>
-
         <Text style={styles.Text}>{props.title}</Text>
         <View style={styles.burger_button}>
           <TouchableOpacity>

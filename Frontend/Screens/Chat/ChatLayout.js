@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState, useEffect} from 'react';
 import {
   FlatList,
@@ -7,51 +8,62 @@ import {
   Text,
   TouchableOpacity,
   Image,
+  ImageBackground,
 } from 'react-native';
 import Heading from '../../Components/Heading';
 import ChatHeader from '../../Components/ChatHeader';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white',
     padding: 5,
     flexDirection: 'column-reverse',
     justifyContent: 'flex-start',
   },
   textInput: {
     borderWidth: 1,
-    borderRadius: 10,
+    borderRadius: 20,
+    paddingHorizontal: '4%',
     color: 'black',
+    fontFamily: 'Montserrat-Regular',
     flexGrow: 1,
   },
   textInputAndButtonContainer: {
     justifyContent: 'space-evenly',
     flexDirection: 'row',
+    minWidth: '80%',
+    position: 'relative',
   },
   chatArea: {
     flex: 1,
-    //borderWidth: 3,
   },
   item: {
     backgroundColor: 'blue',
     padding: 10,
     marginVertical: 5,
     marginHorizontal: 5,
-    borderRadius: 8,
+    borderRadius: 20,
   },
   sendButton: {
     width: 45,
     height: 45,
   },
   buttonS: {
-    borderWidth: 4,
+    // borderWidth: 1,
+    // borderRadius: 10,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
+  chat_text: {
+    color: 'white',
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 17,
+  },
 });
 
 export default function ChatLayout({navigation}) {
-  let [array, setarray] = useState([{title: ''}]);
+  let [array, setarray] = useState([{title: 'Default Text'}]);
   const [textString, settextString] = useState('');
 
   useEffect(() => {
@@ -74,7 +86,7 @@ export default function ChatLayout({navigation}) {
   function Item({title}) {
     return (
       <View style={styles.item}>
-        <Text>{title}</Text>
+        <Text style={styles.chat_text}>{title}</Text>
       </View>
     );
   }
@@ -87,6 +99,7 @@ export default function ChatLayout({navigation}) {
           <View style={styles.textInputAndButtonContainer}>
             <TextInput
               style={styles.textInput}
+              multiline={true}
               value={textString}
               placeholder="Enter Message"
               placeholderTextColor="black"
