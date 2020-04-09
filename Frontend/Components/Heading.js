@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     width: '70%',
     height : '100%',
     fontSize: 35,
-    marginLeft : 25,
+    marginLeft : 15,
     fontFamily: 'Montserrat-Bold',
     alignItems :  "center",
     justifyContent : "center",

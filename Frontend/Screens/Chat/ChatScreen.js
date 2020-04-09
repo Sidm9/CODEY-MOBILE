@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {Text, View, FlatList, StyleSheet, Image} from 'react-native';
+import {
+  Text,
+  View,
+  FlatList,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import List from '../../Components/SettingsComponents/List';
 import Header from '../../Components/Navbar';
 import Heading from '../../Components/Heading';
@@ -22,7 +29,7 @@ const styles = StyleSheet.create({
   person_name: {
     color: 'black',
     fontFamily: 'Montserrat-Bold',
-    //fontSize: 17,
+    fontSize: 17,
     marginVertical: 1,
     //borderWidth: 1,
   },
@@ -30,7 +37,13 @@ const styles = StyleSheet.create({
     color: 'black',
     fontFamily: 'Montserrat-Regular',
     fontSize: 14,
-    padding: 1,
+    //borderWidth: 1,
+  },
+  recent_chat_timestamp: {
+    color: 'black',
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 12,
+    textAlign: 'center',
     //borderWidth: 1,
   },
   right_and_left_container: {
@@ -45,21 +58,22 @@ const styles = StyleSheet.create({
     flex: 4,
   },
   right_container: {
-    borderWidth: 1,
+    //borderWidth: 1,
     flex: 1,
-    backgroundColor: 'yellow',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image_container: {
-    width: 50,
+    width: 45,
     height: '100%',
     justifyContent: 'center',
-    marginRight: 1,
+    marginRight: 5,
     // borderWidth :4,
   },
   image: {
     alignSelf: 'center',
-    width: '83%',
-    height: '83%',
+    width: '80%',
+    height: '80%',
     borderRadius: 50,
     // marginRight: 5,
     // borderWidth: 4,
@@ -72,34 +86,74 @@ export default function ChatScreen({navigation}, props) {
       person_name: 'Siddharth Mishra',
       recent_chat:
         'This string must be passed from Database and then this would ',
+      time: '14:08',
     },
     {
       id: '2',
       person_name: 'Siddharth Mishra',
       recent_chat:
         'This string must be passed from Database and then this would ',
+      time: '14:08',
     },
     {
       id: '3',
       person_name: 'Siddharth Mishra',
       recent_chat:
         'This string must be passed from Database and then this would ',
+      time: '14:08',
     },
     {
       id: '4',
       person_name: 'Siddharth Mishra',
       recent_chat:
         'This string must be passed from Database and then this would ',
+      time: '14:08',
     },
     {
       id: '5',
       person_name: 'Siddharth Mishra',
       recent_chat:
         'This string must be passed from Database and then this would ',
+      time: '14:08',
+    },
+    {
+      id: '6',
+      person_name: 'Siddharth Mishra',
+      recent_chat:
+        'This string must be passed from Database and then this would ',
+      time: '14:08',
+    },
+    {
+      id: '7',
+      person_name: 'Siddharth Mishra',
+      recent_chat:
+        'This string must be passed from Database and then this would ',
+      time: '14:08',
+    },
+    {
+      id: '8',
+      person_name: 'Siddharth Mishra',
+      recent_chat:
+        'This string must be passed from Database and then this would ',
+      time: '14:08',
+    },
+    {
+      id: '9',
+      person_name: 'Siddharth Mishra',
+      recent_chat:
+        'This string must be passed from Database and then this would ',
+      time: '14:08',
+    },
+    {
+      id: '10',
+      person_name: 'Siddharth Mishra',
+      recent_chat:
+        'This string must be passed from Database and then this would ',
+      time: '14:08',
     },
   ]);
 
-  function ChatsList({person_name, recent_chat}) {
+  function ChatsList({person_name, recent_chat, time}) {
     return (
       <View style={styles.item}>
         <View style={styles.right_and_left_container}>
@@ -120,12 +174,7 @@ export default function ChatScreen({navigation}, props) {
             </View>
           </View>
           <View style={styles.right_container}>
-            <View>
-              <Text> ONLINE</Text>
-            </View>
-            <View>
-              <Text> TIMESPAMP </Text>
-            </View>
+            <Text style={styles.recent_chat_timestamp}> {time} </Text>
           </View>
         </View>
       </View>
@@ -138,40 +187,17 @@ export default function ChatScreen({navigation}, props) {
         <Heading title="Chats" click={() => navigation.navigate('Profile')} />
         <FlatList
           data={array}
+          initialNumToRender={10}
           renderItem={({item}) => (
-            <ChatsList
-              person_name={item.person_name}
-              recent_chat={item.recent_chat}
-            />
+            <TouchableOpacity onPress={navigation.navigate('ChatLayout')}>
+              <ChatsList
+                person_name={item.person_name}
+                recent_chat={item.recent_chat}
+                time={item.time}
+              />
+            </TouchableOpacity>
           )}
         />
-        {/*       //   <List
-        //     title="Person 1"
-        //     brief="Before you speak, listen. Before you write, think. Before you spend, earn. "
-        //     img={require('../../assets/images/tyler.jpg')}
-        //   />
-        //   <List
-        //     title="Person 2"
-        //     brief="It is not the man who has too little, but the man who craves more, that is poor."
-        //     img={require('../../assets/images/tyler.jpg')}
-        //   />
-        //   <List
-        //     title="Person 3"
-        //     brief="Not he who has much is rich, but he who gives much."
-        //     img={require('../../assets/images/tyler.jpg')}
-        //   />
-        //   <List
-        //     title="Person 4"
-        //     brief="This is something else"
-        //     img={require('../../assets/images/tyler.jpg')}
-        //   />
-        //   <List
-        //     title="Person 5"
-        //     brief="Before you speak, listen. Before you write, think. Before you spend, earn. "
-        //     img={require('../../assets/images/tyler.jpg')}
-        //   />
-        // </ScrollView>
-*/}
       </View>
     </>
   );
