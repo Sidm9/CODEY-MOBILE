@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import {Text, View, StyleSheet, Image} from 'react-native';
 import {
   TouchableOpacity,
   TouchableNativeFeedback,
@@ -15,14 +15,14 @@ const styles = StyleSheet.create({
   textDescription: {
     fontFamily: 'Montserrat-Medium',
     fontSize: 11,
-    height :null,
+    height: null,
   },
   listText: {
     height: '100%',
     flex: 1,
     //  borderWidth: 1,
     flexWrap: 'nowrap',
-    justifyContent: "flex-start",
+    justifyContent: 'flex-start',
     flexDirection: 'column',
   },
   iconContainer: {
@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   listItemsContainer: {
-    width : '100%',
+    width: '100%',
     // borderWidth :3 ,
-    height : 50,
+    height: 50,
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    marginBottom : '2%',
-    marginTop : '2%',
+    marginBottom: '2%',
+    marginTop: '2%',
     alignSelf: 'baseline',
     paddingRight: 10,
     borderBottomWidth: 0.8,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: '63%',
     marginRight: 5,
-    borderRadius : 4,
+    borderRadius: 4,
     // borderWidth: 4,
   },
   iconLeftContainer: {
@@ -69,28 +69,28 @@ const styles = StyleSheet.create({
 export default function List(props) {
   return (
     <>
-      <TouchableOpacity style={styles.listItemsContainer} onPress = {props.click}>
+      <TouchableOpacity style={styles.listItemsContainer} onPress={props.click}>
         <View style={styles.iconLeftContainer}>
           <Image source={props.img} style={styles.iconLeft} />
         </View>
         <View style={styles.listText}>
           <Text style={styles.textStyle}>{props.title}</Text>
-          <Text numberOfLines = {1} style={styles.textDescription}>{props.brief}</Text>
+          <Text numberOfLines={1} style={styles.textDescription}>
+            {props.brief}
+          </Text>
         </View>
         <View style={styles.iconContainer}>
           <TouchableNativeFeedback
             useForeground={true}
             background={TouchableNativeFeedback.Ripple('white', true)}
-              onPress={props.click}>
-              <Image
-                source={require('../../assets/icons/arrowWhite.png')}
-                style={styles.icon}
-              />
-            </TouchableNativeFeedback>
-          </View>
-
-        </TouchableOpacity>
-
+            onPress={props.click}>
+            <Image
+              source={require('../../assets/icons/arrowWhite.png')}
+              style={styles.icon}
+            />
+          </TouchableNativeFeedback>
+        </View>
+      </TouchableOpacity>
     </>
   );
 }
