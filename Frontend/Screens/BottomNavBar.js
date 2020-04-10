@@ -11,10 +11,13 @@ import HomeIconFocused from '../assets/icons/HomePressed.png';
 import CategoriesIconFocused from '../assets/icons/listPressed.png';
 import PlaygroundIconFocused from '../assets/icons/dataPressed.png';
 import chatNotPressed from '../assets/icons/chatNotPressed.png';
+import penNotPressed from '../assets/icons/penNotPressed.png';
+import penPressed from '../assets/icons/penPressed.png';
 import chatPressed from '../assets/icons/chatPressed.png';
 import Profile from '../Screens/Profile';
 import Chatscreen from '../Screens/Chat/ChatScreen';
 import NewPost from '../Screens/NewPost';
+
 const Tab = createBottomTabNavigator();
 const styles = StyleSheet.create({
   image: {
@@ -56,13 +59,11 @@ export default function BottomNavBar() {
               } else {
                 return <Image source={chatNotPressed} style={styles.image} />;
               }
-            } else if (route.name === 'Playground') {
+            } else if (route.name === 'Post') {
               if (focused) {
-                return (
-                  <Image source={PlaygroundIconFocused} style={styles.image} />
-                );
+                return <Image source={penPressed} style={styles.image} />;
               } else {
-                return <Image source={PlaygroundIcon} style={styles.image} />;
+                return <Image source={penNotPressed} style={styles.image} />;
               }
             }
           },
@@ -77,7 +78,7 @@ export default function BottomNavBar() {
         <Tab.Screen name="Categories" component={newCategories} />
         <Tab.Screen name="Profile" component={Profile} />
         <Tab.Screen name="Chat" component={Chatscreen} />
-        <Tab.Screen name="NewPost" component={NewPost} />
+        <Tab.Screen name="Post" component={NewPost} />
       </Tab.Navigator>
     </>
   );

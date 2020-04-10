@@ -12,8 +12,11 @@ const styles = StyleSheet.create({
   },
   image_text: {
     fontFamily: 'Montserrat-SemiBold',
-    textAlign :"center",
+    textAlign: 'center',
   },
+  image: {
+    left: 11,
+  }
 });
 
 export default function NewPost() {
@@ -25,7 +28,11 @@ export default function NewPost() {
         <PlaceHolders placeholder={'Enter Content'} />
         <View style={styles.image_container}>
           <TouchableOpacity>
-            <Image source={require('../assets/images/gallery.png')} />
+            <Image
+              source={require('../assets/images/gallery.png')}
+              style={styles.image}
+            />
+            <Text style={styles.image_text}> Add Image </Text>
           </TouchableOpacity>
         </View>
         <Button text="Post !" />
