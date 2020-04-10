@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   NavbarContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding:5,
-    borderColor: 'black',
+    padding:'1%',
+    backgroundColor :'white',
     justifyContent: 'space-between',
     alignContent: "center",
     textAlignVertical: "center",

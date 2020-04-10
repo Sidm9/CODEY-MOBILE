@@ -7,10 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import List from '../../Components/SettingsComponents/List';
-import Header from '../../Components/Navbar';
 import Heading from '../../Components/Heading';
-import {ScrollView} from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
   container: {
@@ -28,7 +25,7 @@ const styles = StyleSheet.create({
   },
   person_name: {
     color: 'black',
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: 'Montserrat-SemiBold',
     fontSize: 17,
     marginVertical: 1,
     //borderWidth: 1,
@@ -111,41 +108,6 @@ export default function ChatScreen({navigation}, props) {
     },
     {
       id: '5',
-      person_name: 'Siddharth Mishra',
-      recent_chat:
-        'This string must be passed from Database and then this would ',
-      time: '14:08',
-    },
-    {
-      id: '6',
-      person_name: 'Siddharth Mishra',
-      recent_chat:
-        'This string must be passed from Database and then this would ',
-      time: '14:08',
-    },
-    {
-      id: '7',
-      person_name: 'Siddharth Mishra',
-      recent_chat:
-        'This string must be passed from Database and then this would ',
-      time: '14:08',
-    },
-    {
-      id: '8',
-      person_name: 'Siddharth Mishra',
-      recent_chat:
-        'This string must be passed from Database and then this would ',
-      time: '14:08',
-    },
-    {
-      id: '9',
-      person_name: 'Siddharth Mishra',
-      recent_chat:
-        'This string must be passed from Database and then this would ',
-      time: '14:08',
-    },
-    {
-      id: '10',
       person_name: 'Siddharth Mishra',
       recent_chat:
         'This string must be passed from Database and then this would ',

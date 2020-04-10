@@ -94,10 +94,9 @@ const styles = StyleSheet.create({
 });
 
 export default function Card(props, {navigation}) {
-  const title = 'White Text with black outline works with every background';
 
-  const content =
-    "Cognitive load refers here to the amount of brain power required to use the app. The human brain has a limited amount of processing power, and when an app provides too much information at once, it might overwhelm the user and make them abandon the task. Generally, this is what you want. But it's possible that in some circumstances that you want to customize the back button more than you can through the options mentioned above, in which case you can set the headerLeft option to a React Element that will be rendered, just as we did with headerRight. Alternatively, the headerLeft option also accepts a React Component, which can be used, for example, for overriding the onPress behavior of the back button. Read more about this in the api reference.";
+  // const content =
+  //   "Cognitive load refers here to the amount of brain power required to use the app. The human brain has a limited amount of processing power, and when an app provides too much information at once, it might overwhelm the user and make them abandon the task. Generally, this is what you want. But it's possible that in some circumstances that you want to customize the back button more than you can through the options mentioned above, in which case you can set the headerLeft option to a React Element that will be rendered, just as we did with headerRight. Alternatively, the headerLeft option also accepts a React Component, which can be used, for example, for overriding the onPress behavior of the back button. Read more about this in the api reference.";
 
   const [toggleStateLike, settoggleStateLike] = useState(0);
   function likeToggle() {
@@ -123,7 +122,7 @@ export default function Card(props, {navigation}) {
             style={styles.image}
             source={require('../assets/images/qqwe.jpg')}
           />
-          <Text style={styles.heading}>{title}</Text>
+          <Text style={styles.heading}>{props.heading}</Text>
           <View style={styles.byLineContainer}>
             <Image
               style={styles.imageWhoHasPostedThisPostHeadShot}
@@ -132,7 +131,7 @@ export default function Card(props, {navigation}) {
             <Text style={styles.subHeading}>Tyler Durden 5 Minute Read</Text>
           </View>
           <Text numberOfLines={10} style={styles.content}>
-            {content}
+            {props.content}
           </Text>
 
           <View style={styles.cardNavbar}>

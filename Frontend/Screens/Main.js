@@ -9,8 +9,8 @@ import Button from '../Components/Button.js';
 
 const styles = StyleSheet.create({
   logo: {
-    width: '90%',
-    height: '95%',
+    width: '85%',
+    height: '100%',
     borderColor: 'black',
     alignSelf: 'center',
   },
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
 
 const darkStyles = StyleSheet.create({
   logo: {
-    width: '80%',
-    height: '70%',
+    width: '85%',
+    height: '100%',
     borderColor: 'black',
     alignSelf: 'center',
   },
@@ -69,6 +69,7 @@ const darkStyles = StyleSheet.create({
     fontSize: 20,
     width: '100%',
     letterSpacing: 5,
+    color : 'white',
     justifyContent: 'flex-end',
     textAlign: 'center',
     textAlignVertical: 'center',
@@ -96,7 +97,7 @@ const darkStyles = StyleSheet.create({
 
 export default function ({ navigation }) {
   let bgWhite = require('../assets/images/BG.jpg');
-  let bgDark = require('../assets/images/bgDark.png');
+  let bgDark = require('../assets/images/mai.jpg');
   let codeyDark = require('../assets/images/CodeyDark.png');
   let codeyWhite = require('../assets/images/CodeyWhiteBG.png');
 
@@ -122,7 +123,7 @@ export default function ({ navigation }) {
             />
           </View>
           <View style={styles.footerContainer}>
-            <Text style={styles.footer}>POWERED BY A7A</Text>
+            <Text style={colorScheme === 'dark' ? darkStyles.footer : styles.footer}>POWERED BY A7A</Text>
           </View>
         </ImageBackground>
       </View>

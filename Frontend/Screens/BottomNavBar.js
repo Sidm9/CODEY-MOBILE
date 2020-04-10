@@ -10,6 +10,8 @@ import PlaygroundIcon from '../assets/icons/data.png';
 import HomeIconFocused from '../assets/icons/HomePressed.png';
 import CategoriesIconFocused from '../assets/icons/listPressed.png';
 import PlaygroundIconFocused from '../assets/icons/dataPressed.png';
+import chatNotPressed from '../assets/icons/chatNotPressed.png';
+import chatPressed from '../assets/icons/chatPressed.png';
 import Profile from '../Screens/Profile';
 import Chatscreen from '../Screens/Chat/ChatScreen';
 import NewPost from '../Screens/NewPost';
@@ -50,11 +52,9 @@ export default function BottomNavBar() {
               }
             } else if (route.name === 'Chat') {
               if (focused) {
-                return (
-                  <Image source={PlaygroundIconFocused} style={styles.image} />
-                );
+                return <Image source={chatPressed} style={styles.image} />;
               } else {
-                return <Image source={PlaygroundIcon} style={styles.image} />;
+                return <Image source={chatNotPressed} style={styles.image} />;
               }
             } else if (route.name === 'Playground') {
               if (focused) {
