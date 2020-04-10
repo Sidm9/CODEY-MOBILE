@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding :4,
   },
   chat_text: {
     color: 'white',
@@ -97,6 +98,14 @@ export default function ChatLayout({navigation}) {
         <ChatHeader title="Hakoona Matata" />
         <View style={styles.container}>
           <View style={styles.textInputAndButtonContainer}>
+          <TouchableOpacity>
+              <View style={styles.buttonS}>
+                <Image
+                  source={require('../../assets/images/gallery.png')}
+                  style={styles.sendButton}
+                />
+              </View>
+            </TouchableOpacity>
             <TextInput
               style={styles.textInput}
               multiline={true}
