@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     alignSelf: 'center',
     justifyContent: 'center',
-    height: 100,
-    width: 100,
+    height: '100%',
+    width: '100%',
     alignItems: 'center',
   },
   image: {
@@ -19,9 +19,7 @@ const styles = StyleSheet.create({
 export default function ImageHolder(props) {
   return (
     <>
-      <View style={styles.container}>
-        <Image style={styles.image} source={props.img} />
-      </View>
+      <Image style={styles.image} source={props.img} />
     </>
   );
 }

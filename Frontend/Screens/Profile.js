@@ -10,10 +10,10 @@ import Heading from '../Components/Heading';
 const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
-    height: 125,
+    flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 15,
+    justifyContent: 'flex-start',
+    //borderWidth: 3,
   },
   userName: {
     fontFamily: 'Montserrat-Bold',
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     flexWrap: 'nowrap',
     marginBottom: 16,
+    //borderWidth: 3,
   },
   stats: {
     fontFamily: 'Montserrat-Regular',
@@ -38,8 +39,8 @@ const styles = StyleSheet.create({
   connectionImage: {
     borderRadius: 50,
     backgroundColor: 'rgba(3, 3, 255, 1)',
-    width: 45,
-    height: 45,
+    width: 40,
+    height: 40,
   },
   connectionText: {
     fontFamily: 'Montserrat-SemiBold',
@@ -48,8 +49,6 @@ const styles = StyleSheet.create({
   },
   connectionContainer2: {
     borderRadius: 50,
-    height: 40,
-    width: 40,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -59,87 +58,86 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignSelf: 'stretch',
     alignItems: 'flex-end',
-    marginTop: 20,
+    marginTop: '5%',
   },
   profileContainer: {
-    justifyContent: 'space-evenly',
+    justifyContent: 'flex-start',
     flexDirection: 'column',
-    flex: 2,
+    flex: 3,
     alignItems: 'center',
-    alignSelf: 'center',
-    height: 125,
-    marginBottom: 25,
+    //borderWidth: 1,
   },
   containerUpper: {
-    flex: 0.4,
-    height : '25%',
-    width :'100%',
+    flex :0.9,
+    marginBottom :39,
+    width: '100%',
     flexDirection: 'row',
-    alignSelf: 'auto',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'space-evenly',
-    paddingLeft: '1%',
-    //borderWidth :3,
-    paddingRight: '4%',
+    //borderWidth: 5 ,
+    padding: '4%',
   },
   containerLower: {
-    flex: 1,
+    flex: 2,
   },
   imageBackground: {
-    width : '100%',
-    height : '100%',
+    width: '100%',
+    height: '100%',
   },
 });
 
-export default function Profile({navigation} , props) {
+export default function Profile({ navigation }, props) {
   return (
+    <View style = {{ flex : 1 , flexWrap :'wrap'}}>
     <ImageBackground
       style={styles.imageBackground}
       source={require('../assets/images/86373.jpg')}>
-      <Heading title = "Profile" />
-      <View style={styles.containerUpper}>
-        <Header title="Profile" />
-        <View style={styles.imageContainer}>
-        <TouchableOpacity onPress ={() => navigation.navigate('Settings')}>
-          <ImageHolder
-            img={require('../assets/images/tyler.jpg')}
-          />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.profileContainer}>
-          <Text style={styles.userName}>Tyler Durden</Text>
-          <View style={styles.statsContainer}>
-            <Text style={styles.stats}>Likes{'\n'}5455</Text>
-            <Text style={styles.stats}>Following{'\n'}456</Text>
+      <Heading title="Profile" />
+        <View style={styles.containerUpper}>
+          <Header title="Profile" />
+          <View style={styles.imageContainer}>
+            <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+              <ImageHolder
+                img={require('../assets/images/tyler.jpg')}
+              />
+            </TouchableOpacity>
           </View>
-          <View style={styles.connectionContainer}>
-            <View style={styles.connectionContainer2}>
-              <Image
-                style={styles.connectionImage}
-                source={require('../assets/images/github.png')}
-              />
-              <Text style={styles.connectionText}>Github</Text>
+          <View style={styles.profileContainer}>
+            <Text style={styles.userName}>Tyler Durden</Text>
+            <View style={styles.statsContainer}>
+              <Text style={styles.stats}>Likes{'\n'}5455</Text>
+              <Text style={styles.stats}>Following{'\n'}456</Text>
             </View>
-            <View style={styles.connectionContainer2}>
-              <Image
-                style={styles.connectionImage}
-                source={require('../assets/images/Linkedin.png')}
-              />
-              <Text style={styles.connectionText}>LinkedIn</Text>
-            </View>
-            <View style={styles.connectionContainer2}>
-              <Image
-                style={styles.connectionImage}
-                source={require('../assets/images/CodeyWhiteBG.png')}
-              />
-              <Text style={styles.connectionText}>Codey </Text>
+            <View style={styles.connectionContainer}>
+              <View style={styles.connectionContainer2}>
+                <Image
+                  style={styles.connectionImage}
+                  source={require('../assets/images/github.png')}
+                />
+                <Text style={styles.connectionText}>Github</Text>
+              </View>
+              <View style={styles.connectionContainer2}>
+                <Image
+                  style={styles.connectionImage}
+                  source={require('../assets/images/Linkedin.png')}
+                />
+                <Text style={styles.connectionText}>LinkedIn</Text>
+              </View>
+              <View style={styles.connectionContainer2}>
+                <Image
+                  style={styles.connectionImage}
+                  source={require('../assets/images/CodeyWhiteBG.png')}
+                />
+                <Text style={styles.connectionText}>Codey </Text>
+              </View>
             </View>
           </View>
         </View>
-      </View>
-      <View style={styles.containerLower}>
-        <SearchBar title = "Profile ..." />
-      </View>
+        <View style={styles.containerLower}>
+          <SearchBar title="Profile ..." />
+        </View>
+
     </ImageBackground>
+    </View>
   );
 }
