@@ -34,15 +34,28 @@ const styles = StyleSheet.create({
   },
   subHeading: {
     marginLeft: 15,
-    marginTop: 20,
+    marginTop: 15,
     position: 'relative',
     marginRight: 130,
+    fontFamily: 'Montserrat-SemiBold',
+  },
+  timeAndMinuteTime: {
+    marginLeft: 15,
+    marginTop: 1,
+    fontSize: 10,
+    position: 'relative',
+    marginRight: '1%',
     fontFamily: 'Montserrat-SemiBold',
   },
   content: {
     flexWrap: 'wrap',
     margin: 15,
     fontFamily: 'Montserrat-Medium',
+  },
+  timeAndMinuteTimeContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
   },
   cardNavbar: {
     backgroundColor: 'rgba(224, 233, 240, 1)',
@@ -94,7 +107,6 @@ const styles = StyleSheet.create({
 });
 
 export default function Card(props, {navigation}) {
-
   // const content =
   //   "Cognitive load refers here to the amount of brain power required to use the app. The human brain has a limited amount of processing power, and when an app provides too much information at once, it might overwhelm the user and make them abandon the task. Generally, this is what you want. But it's possible that in some circumstances that you want to customize the back button more than you can through the options mentioned above, in which case you can set the headerLeft option to a React Element that will be rendered, just as we did with headerRight. Alternatively, the headerLeft option also accepts a React Component, which can be used, for example, for overriding the onPress behavior of the back button. Read more about this in the api reference.";
 
@@ -118,20 +130,25 @@ export default function Card(props, {navigation}) {
     <>
       <View style={styles.container}>
         <TouchableOpacity onPress={props.open}>
-          <Image
-            style={styles.image}
-            source={require('../assets/images/qqwe.jpg')}
-          />
+          <Image style={styles.image} source={props} />
           <Text style={styles.heading}>{props.heading}</Text>
           <View style={styles.byLineContainer}>
             <Image
               style={styles.imageWhoHasPostedThisPostHeadShot}
               source={require('../assets/images/tyler.jpg')}
             />
-            <Text style={styles.subHeading}>Tyler Durden 5 Minute Read</Text>
+            <View>
+              <Text style={styles.subHeading}>{props.auther}</Text>
+              <View style={styles.timeAndMinuteTimeContainer}>
+                <Text style={styles.timeAndMinuteTime}>{props.time}</Text>
+                <Text style={styles.timeAndMinuteTime}>
+                  {props.timetoread} Read
+                </Text>
+              </View>
+            </View>
           </View>
           <Text numberOfLines={10} style={styles.content}>
-            {props.contenthandler}
+            {props.post}
           </Text>
 
           <View style={styles.cardNavbar}>
