@@ -131,7 +131,7 @@ export default function Card(props, {navigation}) {
             <Text style={styles.subHeading}>Tyler Durden 5 Minute Read</Text>
           </View>
           <Text numberOfLines={10} style={styles.content}>
-            {props.content}
+            {props.contenthandler}
           </Text>
 
           <View style={styles.cardNavbar}>
