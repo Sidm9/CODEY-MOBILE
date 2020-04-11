@@ -8,9 +8,7 @@ import {
   Text,
   TouchableOpacity,
   Image,
-  ImageBackground,
 } from 'react-native';
-import Heading from '../../Components/Heading';
 import ChatHeader from '../../Components/ChatHeader';
 const styles = StyleSheet.create({
   container: {
@@ -49,12 +47,10 @@ const styles = StyleSheet.create({
     height: 45,
   },
   buttonS: {
-    // borderWidth: 1,
-    // borderRadius: 10,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding :4,
+    padding: 4,
   },
   chat_text: {
     color: 'white',
@@ -98,7 +94,7 @@ export default function ChatLayout({navigation}) {
         <ChatHeader title="Hakoona Matata" />
         <View style={styles.container}>
           <View style={styles.textInputAndButtonContainer}>
-          <TouchableOpacity>
+            <TouchableOpacity>
               <View style={styles.buttonS}>
                 <Image
                   source={require('../../assets/images/gallery.png')}

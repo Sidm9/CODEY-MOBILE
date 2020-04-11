@@ -3,7 +3,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import newCategories from './Categories/NewCategory';
 import {Image, StyleSheet} from 'react-native';
 import Posts from './Posts';
-import Playground from './Playground';
 import CategoriesIcon from '../assets/icons/list.png';
 import HomeIcon from '../assets/icons/Home.png';
 import PlaygroundIcon from '../assets/icons/data.png';

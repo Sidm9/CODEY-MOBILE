@@ -35,7 +35,7 @@ export default function TopBarLowLevel() {
               width: 130, alignContent: "flex-start",
               alignItems: "baseline",
               elevation: 0,
-              shadowOpacity: 0
+              shadowOpacity: 0,
             },
             style: {
               elevation: 0, //for android.

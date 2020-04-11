@@ -7,7 +7,6 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import Button from './Button';
 const styles = StyleSheet.create({
   inputStyle: {
     width: '83%',

@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 
 const styles = StyleSheet.create({

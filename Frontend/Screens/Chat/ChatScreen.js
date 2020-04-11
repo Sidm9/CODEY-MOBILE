@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     marginVertical: 1,
     marginHorizontal: 5,
     borderRadius: 10,
-    // borderBottomWidth: 1,
     borderColor: 'black',
   },
   person_name: {
@@ -28,34 +27,28 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-SemiBold',
     fontSize: 17,
     marginVertical: 1,
-    //borderWidth: 1,
   },
   recent_chat: {
     color: 'black',
     fontFamily: 'Montserrat-Regular',
     fontSize: 14,
-    //borderWidth: 1,
   },
   recent_chat_timestamp: {
     color: 'black',
     fontFamily: 'Montserrat-Regular',
     fontSize: 12,
     textAlign: 'center',
-    //borderWidth: 1,
   },
   right_and_left_container: {
-    //borderWidth: 1,
     flex: 1,
     flexDirection: 'row',
     borderColor: 'red',
     flexWrap: 'wrap',
   },
   left_container: {
-    //borderWidth: 1,
     flex: 4,
   },
   right_container: {
-    //borderWidth: 1,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -65,15 +58,12 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     marginRight: 5,
-    // borderWidth :4,
   },
   image: {
     alignSelf: 'center',
     width: '80%',
     height: '80%',
     borderRadius: 50,
-    // marginRight: 5,
-    // borderWidth: 4,
   },
 });
 export default function ChatScreen({navigation}, props) {

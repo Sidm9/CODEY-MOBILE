@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   TextInput,
   View,
@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     margin: 10,
-    //borderBottomWidth: 0.2,
     borderBottomColor: 'black',
     width: '90%',
     backgroundColor: '#eae9ed',

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, RefreshControl, FlatList } from 'react-native';
 import Card from '../Components/Card';
 import Heading from '../Components/Heading';
