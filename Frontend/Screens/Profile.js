@@ -88,13 +88,13 @@ const styles = StyleSheet.create({
 
 export default function Profile({ navigation }, props) {
   return (
-    <View style = {{ flex : 1 , flexWrap :'wrap'}}>
+    <View style = {{ flex : 1 , flexWrap :'wrap', flexDirection: 'column'}}>
     <ImageBackground
       style={styles.imageBackground}
       source={require('../assets/images/86373.jpg')}>
       <Heading title="Profile" />
         <View style={styles.containerUpper}>
-          <Header title="Profile" />
+
           <View style={styles.imageContainer}>
             <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
               <ImageHolder
@@ -133,9 +133,7 @@ export default function Profile({ navigation }, props) {
             </View>
           </View>
         </View>
-        <View style={styles.containerLower}>
-          <SearchBar title="Profile ..." />
-        </View>
+      
 
     </ImageBackground>
     </View>

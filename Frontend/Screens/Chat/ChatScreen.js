@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {
   Text,
@@ -107,6 +108,7 @@ export default function ChatScreen({navigation}, props) {
 
   function ChatsList({person_name, recent_chat, time}) {
     return (
+      <TouchableOpacity onPress={() => navigation.navigate('ChatLayout')}>
       <View style={styles.item}>
         <View style={styles.right_and_left_container}>
           <View style={styles.image_container}>
@@ -130,6 +132,7 @@ export default function ChatScreen({navigation}, props) {
           </View>
         </View>
       </View>
+      </TouchableOpacity>
     );
   }
 
@@ -141,13 +144,13 @@ export default function ChatScreen({navigation}, props) {
           data={array}
           initialNumToRender={10}
           renderItem={({item}) => (
-            <TouchableOpacity onPress={navigation.navigate('ChatLayout')}>
+           
               <ChatsList
                 person_name={item.person_name}
                 recent_chat={item.recent_chat}
                 time={item.time}
               />
-            </TouchableOpacity>
+           
           )}
         />
       </View>

@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { View, StyleSheet, RefreshControl, FlatList } from 'react-native';
+import { View, StyleSheet, RefreshControl, FlatList, Button } from 'react-native';
 import Card from '../Components/Card';
 import Heading from '../Components/Heading';
 
@@ -35,8 +35,8 @@ export default function Posts({ navigation }, props) {
   let [array, setarray] = useState([
     {
       id: '1',
-      image: 'https://reactnative.dev/img/tiny_logo.png',
-      person_name: 'Siddharth Mishra',
+      image: 'https://images.unsplash.com/photo-1586606445486-833e11c0d459?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      person_name: 'Siddharth dscir',
       title: ' 111 This is just a title nothing else it should be ... ed when becomes to large!',
       recent_chat:
         'This string must be passed from Database and then this would flex: 1, flexDirection :"row" , justifyContent :"flex-start",flex: 1, flexDirection :"row" , justifyContent :"flex-start",flex: 1, flexDirection :"row" , justifyContent :"flex-start",',
@@ -65,9 +65,9 @@ export default function Posts({ navigation }, props) {
     },
     {
       id: '4',
-      image: 'https://reactnative.dev/img/tiny_logo.png',
-      person_name: 'Siddharth Mishra',
-      title: 'This is just a title nothing else it should be ... ed when becomes to large!',
+      image: 'https://cdn.discordapp.com/attachments/662330689521188874/698543855485714432/JPEG_20200411_201331.jpg',
+      person_name: 'Siddwieufgiwuegfharth Mishra',
+      title: 'This is just  title nothing else it should be ... ed when becomes to large!',
       recent_chat:
         'This string must be passed from Database and then this would ',
       time: '14:08 15th April 2020',
@@ -90,12 +90,13 @@ export default function Posts({ navigation }, props) {
 
       <View style={colorScheme === 'dark' ? Darkstyles.container : styles.container} >
         <Heading title="Feed" click={() => navigation.navigate('Profile')} />
+        <Button title  = "Comments" onPress = {() => navigation.navigate('Comment')} />
         <FlatList
           data={array}
-          initialNumToRender={2}
+          initialNumToRender={5}
           renderItem={({ item }) => (
             <Card
-              imagesss={{ uri: item.image }}
+              imagesss={item.image }
               heading={item.title}
               auther={item.person_name}
               time={item.time}
