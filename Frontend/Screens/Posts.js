@@ -37,7 +37,7 @@ let ar = array;
   return (
     <>
 
-      <View style={colorScheme === 'dark' ? Darkstyles.container : styles.container} >
+      <View style={colorScheme != 'dark' ? Darkstyles.container : styles.container} >
         <Heading title="Feed" click={() => navigation.navigate('Profile')} />
         <FlatList
           data={ar}

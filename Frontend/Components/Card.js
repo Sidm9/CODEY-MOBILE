@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     alignSelf: 'center',
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
+    borderTopRightRadius: 1,
+    borderTopLeftRadius: 1,
     height: 190,
   },
   countNumber: {
@@ -123,6 +123,17 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginHorizontal: '2%',
   },
+  commentTime: {
+    color: 'grey'
+  },
+  commentDivider: {
+    height: 1,
+    backgroundColor: 'grey',
+    marginLeft: '2%',
+    marginRight: '2%',
+    marginTop: '2%',
+    marginBottom: '2%'
+  },  
   like: {
     paddingRight: 10,
     paddingLeft: '2%',
@@ -144,7 +155,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     width: '100%',
     position: 'relative',
-    borderRadius: 20,
+    borderRadius: 1,
     marginTop: '2%',
     marginBottom: '2%',
     shadowColor: '#000',
@@ -185,6 +196,7 @@ export default function Card(props, { navigation }) {
         <View style = {{ flex :1 , flexDirection : 'row' , marginLeft : '2%', alignItems :'center'}}>
         <Image style = {styles.username_pic} source={require('../assets/images/tyler.jpg')}/>
           <Text style={styles.commentUsername}>{usernames}</Text>
+          <Text style={styles.commentTime}>5h ago</Text>
           </View>
           <Text numberOfLines={1} style={styles.commentText}>{comment}</Text>
         </View>
@@ -216,7 +228,7 @@ export default function Card(props, { navigation }) {
           <Text numberOfLines={10} style={styles.content}>
             {props.post}
           </Text>
-
+          <View style={styles.commentDivider}/>
           <View style={styles.cardNavbar}>
             <TouchableOpacity style={styles.like} onPress={likeToggle}>
               <Image source={require('../assets/icons/LikeLight.png')} />
@@ -234,6 +246,8 @@ export default function Card(props, { navigation }) {
             </TouchableOpacity>
           </View>
         </TouchableOpacity>
+        <View style={styles.commentDivider}/>
+       
         <View style={styles.commentsBar}>
           <Text style={styles.commentHeader}>Comments</Text>
           <FlatList data={Temp}

@@ -13,14 +13,15 @@ import Heading from '../../Components/Heading';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 4
   },
   item: {
     backgroundColor: 'white',
     flex: 1,
     padding: 10,
-    marginVertical: 1,
-    marginHorizontal: 5,
-    borderRadius: 10,
+    marginVertical: 1.5,
+    marginHorizontal: 1,
+    borderRadius: 2,
     borderColor: 'black',
   },
   person_name: {
