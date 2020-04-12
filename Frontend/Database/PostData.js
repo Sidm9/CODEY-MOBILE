@@ -13,14 +13,13 @@ export const array = [
   },
   {
     id: '2',
-    image: 'https://reactnative.dev/img/tiny_logo.png',
+    image: 'https://images.unsplash.com/photo-1586606445486-833e11c0d459?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     person_name: 'Siddharth Mishra',
-    title:
-      'This is just a title nothing else it should be ... ed when becomes to large!',
+    title: '111 This is just a title nothing else it should be ... ed when becomes to ',
     recent_chat:
-      'This string must be passed from Database and then this would ',
-    time: '14:08 15th April 2020',
-    time_to_read: '5 Minute',
+      'tring must be passed from Database and then this would flex: 1, flex',
+    time: '18:30 12th April 2020',
+    time_to_read: '1 Minute',
   },
   {
     id: '3',

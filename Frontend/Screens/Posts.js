@@ -39,7 +39,6 @@ let ar = array;
 
       <View style={colorScheme === 'dark' ? Darkstyles.container : styles.container} >
         <Heading title="Feed" click={() => navigation.navigate('Profile')} />
-        <Button title  = "Comments" onPress = {() => navigation.navigate('Comment')} />
         <FlatList
           data={ar}
           initialNumToRender={5}

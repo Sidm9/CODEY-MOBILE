@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 22,
     marginTop: 10,
-    marginLeft: 15,
+    marginLeft: '2%',
     marginRight: 15,
     fontWeight: 'normal',
     fontFamily: 'Montserrat-Bold',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     marginTop: 10,
-    marginLeft: 15,
+    marginLeft: '2%',
     borderRadius: 50,
   },
   subHeading: {
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
   },
   content: {
     flexWrap: 'wrap',
-    margin: 15,
+    marginVertical: '2%',
+    marginHorizontal : '2%',
     fontFamily: 'Montserrat-Medium',
   },
   timeAndMinuteTimeContainer: {
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   cardNavbar: {
-    backgroundColor: 'rgba(224, 233, 240, 1)',
+    //backgroundColor: 'rgba(224, 233, 240, 1)',
     width: '100%',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
@@ -79,18 +80,20 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   commentsBar: {
-    backgroundColor: 'white',
+    //backgroundColor: 'white',
     width: '100%',
     paddingBottom: '2%',
     flexDirection: 'column',
     height: null,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
     justifyContent: 'flex-start',
   },
   commentUsername: {
     color: 'black',
     fontFamily: 'Montserrat-SemiBold',
     fontSize: 15,
-    marginHorizontal: '1%',
+    marginHorizontal: '2%',
   },
   commentHeader: {
     color: 'black',
@@ -100,9 +103,9 @@ const styles = StyleSheet.create({
     marginHorizontal: '2%',
   },
   commentFooter: {
-    color: 'black',
+    color: 'grey',
     fontFamily: 'Montserrat-Regular',
-    fontSize: 16,
+    fontSize: 13,
     marginVertical : '1%',
     marginHorizontal: '2%',
   },
@@ -114,16 +117,16 @@ const styles = StyleSheet.create({
   },
   like: {
     paddingRight: 10,
-    paddingLeft: 15,
+    paddingLeft: '2%',
     flexDirection: 'row',
   },
   commentButton: {
-    paddingLeft: 10,
+    paddingLeft: '2%',
     paddingRight: 10,
     flexDirection: 'row',
   },
   share: {
-    paddingLeft: 10,
+    paddingLeft: '2%',
     paddingRight: 10,
     flexDirection: 'row',
   },
@@ -131,7 +134,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(237, 240, 243, 1)',
     alignSelf: 'center',
     justifyContent: 'flex-start',
-    width: '95%',
+    width: '100%',
     position: 'relative',
     borderRadius: 20,
     marginTop: '2%',
@@ -149,33 +152,38 @@ const styles = StyleSheet.create({
 });
 
 export default function Card(props, { navigation }) {
-  const [toggleStateLike, settoggleStateLike] = useState(0);
+  const [toggleStateLike, settoggleStateLike] = useState(456);
   function likeToggle() {
     settoggleStateLike(toggleStateLike === 0 ? 1 : 0);
     return toggleStateLike;
   }
-  const [toggleStateComment, settoggleStateComment] = useState(0);
+  const [toggleStateComment, settoggleStateComment] = useState(8);
   function commentToggle() {
     settoggleStateComment(toggleStateComment === 0 ? 1 : 0);
     return toggleStateComment;
   }
-  const [toggleStateShare, settoggleStateShare] = useState(0);
+  const [toggleStateShare, settoggleStateShare] = useState(29);
   function shareToggle() {
     settoggleStateShare(toggleStateShare === 0 ? 1 : 0);
     return toggleStateShare;
   }
   //All THE PROPS OF THIS COMPONENT WILL COME FROM POST.JS
+
+
+  // THIS IS THE FIRST 5 COMMENTS  
   const Temp = commentData;
   function First_5_comments_handler({ usernames, comment }) {
     return (
       <View style={{ flex: 1, width: '100%' }}>
-        <View style={{ margin: '1%' }}>
+        <View style={{ margin: '1%'   }}>
           <Text style={styles.commentUsername}>{usernames}</Text>
           <Text numberOfLines={1} style={styles.commentText}>{comment}</Text>
         </View>
       </View>
     );
   }
+
+
 
   return (
     <>
