@@ -1,7 +1,9 @@
-import React, {Fragment} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+import React from 'react';
+import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 import CommentCard from '../Components/commentCard';
-import {ScrollView} from 'react-native-gesture-handler';
+import { commentData } from '../Database/DbComment';
 const styles = StyleSheet.create({
   container: {
     // borderWidth: 2,
@@ -14,20 +16,36 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Comment(props) {
+
+
+const Temp = commentData;
+// function First_5_comments_handler({ usernames, comment , navigation} ) {
+//   return (
+//     <View style={{ flex: 1, width: '100%' }}>
+//       <View style={{ marginVertical: '1%' }}>
+//       <View style = {{ flex :1 , flexDirection : 'row' , marginLeft : '2%', alignItems :'center'}}>
+//       <Image style = {styles.username_pic} source={require('../assets/images/tyler.jpg')}/>
+//         <Text style={styles.commentUsername}>{usernames}</Text>
+//         </View>
+//         <Text numberOfLines={1} style={styles.commentText}>{comment}</Text>
+//       </View>
+//     </View>
+//   );
+// }
+export default function Comment() {
   return (
     <>
       <View style={styles.container}>
-        <ScrollView>
-          <CommentCard />
-          <CommentCard />
-          <CommentCard />
-          <CommentCard />
-          <CommentCard />
-          <CommentCard />
-          <CommentCard />
-          <CommentCard />
-        </ScrollView>
+        <FlatList
+          data={Temp}
+          renderItem={({ item }) => (
+            <CommentCard
+            username={item.usernames}
+            comment={item.comment}
+            likes = {item.likes}
+            reply = {item.reply}
+            timestamp = {item.time}/>
+           )} />
       </View>
     </>
   );

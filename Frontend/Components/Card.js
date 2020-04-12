@@ -176,15 +176,13 @@ export default function Card(props, { navigation }) {
     return toggleStateShare;
   }
   //All THE PROPS OF THIS COMPONENT WILL COME FROM POST.JS
-
-
-  // THIS IS THE FIRST 5 COMMENTS  
+  // THIS IS THE FIRST 5 COMMENTS
   const Temp = commentData;
-  function First_5_comments_handler({ usernames, comment  }) {
+  function First_5_comments_handler({ usernames, comment , navigation} ) {
     return (
       <View style={{ flex: 1, width: '100%' }}>
         <View style={{ marginVertical: '1%' }}>
-        <View style = {{ flex :1 , flexDirection : "row" , marginLeft : '2%', alignItems :"center"}}>
+        <View style = {{ flex :1 , flexDirection : 'row' , marginLeft : '2%', alignItems :'center'}}>
         <Image style = {styles.username_pic} source={require('../assets/images/tyler.jpg')}/>
           <Text style={styles.commentUsername}>{usernames}</Text>
           </View>
@@ -226,7 +224,7 @@ export default function Card(props, { navigation }) {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.commentButton}
-              onPress={props.commentClick}>
+              onPress={() => navigation.navigate('Comment')}>
               <Image source={require('../assets/icons/commentDark.png')} />
               <Text style={styles.countNumber}> {toggleStateComment} </Text>
             </TouchableOpacity>

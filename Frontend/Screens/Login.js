@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import {
@@ -108,7 +109,7 @@ export default function login({ route, navigation }, props) {
                 <Oauth text={'Github'} image={Github} />
                 <Oauth text={'Facebook'} image={Facebook} />
               </View>
-              <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+              <TouchableOpacity onPress={() => navigation.navigate('Comment')}>
                 <Text style={styles.footer}>Don't Have An Account? </Text>
               </TouchableOpacity>
             </View>

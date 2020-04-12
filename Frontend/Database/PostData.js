@@ -10,16 +10,22 @@ export const array = [
       'This string must be passed from Database and then this would flex: 1, flexDirection :"row" , justifyContent :"flex-start",flex: 1, flexDirection :"row" , justifyContent :"flex-start",flex: 1, flexDirection :"row" , justifyContent :"flex-start",',
     time: '14:08 15th April 2020',
     time_to_read: '5 Minute',
+    like: '122',
+    comment: '350',
   },
   {
     id: '2',
-    image: 'https://images.unsplash.com/photo-1586606445486-833e11c0d459?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+    image:
+      'https://images.unsplash.com/photo-1586606445486-833e11c0d459?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     person_name: 'Siddharth Mishra',
-    title: '111 This is just a title nothing else it should be ... ed when becomes to ',
+    title:
+      '111 This is just a title nothing else it should be ... ed when becomes to ',
     recent_chat:
       'tring must be passed from Database and then this would flex: 1, flex',
     time: '18:30 12th April 2020',
     time_to_read: '1 Minute',
+    like: '122',
+    comment: '350',
   },
   {
     id: '3',
@@ -31,6 +37,8 @@ export const array = [
       'This string must be passed from Database and then this would ',
     time: '14:08 15th April 2020',
     time_to_read: '5 Minute',
+    like: '122',
+    comment: '350',
   },
   {
     id: '4',
@@ -43,6 +51,8 @@ export const array = [
       'This string must be passed from Database and then this would ',
     time: '14:08 15th April 2020',
     time_to_read: '5 Minute',
+    like: '122',
+    comment: '350',
   },
   {
     id: '5',
@@ -53,5 +63,7 @@ export const array = [
     recent_chat: 'Okay It work  ',
     time: '14:08 15th April 2020',
     time_to_read: '5 Minute',
+    like: '122',
+    comment: '350',
   },
 ];
