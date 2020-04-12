@@ -1,5 +1,15 @@
-import React, {useState} from 'react';
-import {Image, Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+import React, { useState } from 'react';
+import {
+  Image,
+  Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  FlatList,
+} from 'react-native';
+import { commentData } from '../Database/DbComment';
 const styles = StyleSheet.create({
   image: {
     width: '100%',
@@ -68,12 +78,46 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
+  commentsBar: {
+    backgroundColor: 'white',
+    width: '100%',
+    paddingBottom: '2%',
+    flexDirection: 'column',
+    height: null,
+    justifyContent: 'flex-start',
+  },
+  commentUsername: {
+    color: 'black',
+    fontFamily: 'Montserrat-SemiBold',
+    fontSize: 15,
+    marginHorizontal: '1%',
+  },
+  commentHeader: {
+    color: 'black',
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 18,
+    marginVertical : '1%',
+    marginHorizontal: '2%',
+  },
+  commentFooter: {
+    color: 'black',
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 16,
+    marginVertical : '1%',
+    marginHorizontal: '2%',
+  },
+  commentText: {
+    color: 'black',
+    fontFamily: 'Montserrat-Medium',
+    fontSize: 14,
+    marginHorizontal: '1%',
+  },
   like: {
     paddingRight: 10,
     paddingLeft: 15,
     flexDirection: 'row',
   },
-  comment: {
+  commentButton: {
     paddingLeft: 10,
     paddingRight: 10,
     flexDirection: 'row',
@@ -83,16 +127,15 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     flexDirection: 'row',
   },
-
   container: {
     backgroundColor: 'rgba(237, 240, 243, 1)',
     alignSelf: 'center',
     justifyContent: 'flex-start',
-    width: '90%',
+    width: '95%',
     position: 'relative',
     borderRadius: 20,
-    marginTop: '5%',
-    marginBottom: '5%',
+    marginTop: '2%',
+    marginBottom: '2%',
     shadowColor: '#000',
     shadowOffset: {
       width: 3,
@@ -101,15 +144,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.86,
     shadowRadius: 1.68,
     elevation: 8,
-    borderWidth: 2,
     flex: 1,
   },
 });
 
-export default function Card(props, {navigation}) {
-  // const content =
-  //   "Cognitive load refers here to the amount of brain power required to use the app. The human brain has a limited amount of processing power, and when an app provides too much information at once, it might overwhelm the user and make them abandon the task. Generally, this is what you want. But it's possible that in some circumstances that you want to customize the back button more than you can through the options mentioned above, in which case you can set the headerLeft option to a React Element that will be rendered, just as we did with headerRight. Alternatively, the headerLeft option also accepts a React Component, which can be used, for example, for overriding the onPress behavior of the back button. Read more about this in the api reference.";
-
+export default function Card(props, { navigation }) {
   const [toggleStateLike, settoggleStateLike] = useState(0);
   function likeToggle() {
     settoggleStateLike(toggleStateLike === 0 ? 1 : 0);
@@ -125,12 +164,24 @@ export default function Card(props, {navigation}) {
     settoggleStateShare(toggleStateShare === 0 ? 1 : 0);
     return toggleStateShare;
   }
+  //All THE PROPS OF THIS COMPONENT WILL COME FROM POST.JS
+  const Temp = commentData;
+  function First_5_comments_handler({ usernames, comment }) {
+    return (
+      <View style={{ flex: 1, width: '100%' }}>
+        <View style={{ margin: '1%' }}>
+          <Text style={styles.commentUsername}>{usernames}</Text>
+          <Text numberOfLines={1} style={styles.commentText}>{comment}</Text>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <>
       <View style={styles.container}>
         <TouchableOpacity onPress={props.open}>
-          <Image style={styles.image} source={{uri: props.imagesss}} />
+          <Image style={styles.image} source={{ uri: props.imagesss }} />
           <Text style={styles.heading}>{props.heading}</Text>
           <View style={styles.byLineContainer}>
             <Image
@@ -157,7 +208,7 @@ export default function Card(props, {navigation}) {
               <Text style={styles.countNumber}> {toggleStateLike} </Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={styles.comment}
+              style={styles.commentButton}
               onPress={props.commentClick}>
               <Image source={require('../assets/icons/commentDark.png')} />
               <Text style={styles.countNumber}> {toggleStateComment} </Text>
@@ -168,7 +219,17 @@ export default function Card(props, {navigation}) {
             </TouchableOpacity>
           </View>
         </TouchableOpacity>
-      </View>
+        <View style={styles.commentsBar}>
+        <Text style={styles.commentHeader}>Comments</Text>
+        <FlatList data={Temp}
+        renderItem={({ item }) => (
+          <First_5_comments_handler
+            usernames={item.usernames}
+            comment={item.comment} />
+        )} />
+        <Text style={styles.commentFooter}>Load More Comments ...</Text>
+        </View>
+    </View>
     </>
   );
 }

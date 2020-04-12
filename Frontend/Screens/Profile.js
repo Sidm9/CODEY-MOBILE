@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
     //borderWidth: 1,
   },
   containerUpper: {
-    flex :0.9,
-    marginBottom :39,
+    flex: 0.9,
+    marginBottom: 39,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'flex-start',
@@ -84,15 +84,20 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  container: {
+    flex: 1,
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+  },
 });
 
 export default function Profile({ navigation }, props) {
   return (
-    <View style = {{ flex : 1 , flexWrap :'wrap', flexDirection: 'column'}}>
-    <ImageBackground
-      style={styles.imageBackground}
-      source={require('../assets/images/86373.jpg')}>
-      <Heading title="Profile" />
+    <View style={styles.container}>
+      <ImageBackground
+        style={styles.imageBackground}
+        source={require('../assets/images/86373.jpg')}>
+        <Heading title="Profile" />
         <View style={styles.containerUpper}>
 
           <View style={styles.imageContainer}>
@@ -133,9 +138,7 @@ export default function Profile({ navigation }, props) {
             </View>
           </View>
         </View>
-      
-
-    </ImageBackground>
+      </ImageBackground>
     </View>
   );
 }

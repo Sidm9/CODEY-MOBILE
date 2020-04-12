@@ -144,13 +144,11 @@ export default function ChatScreen({navigation}, props) {
           data={array}
           initialNumToRender={10}
           renderItem={({item}) => (
-           
               <ChatsList
                 person_name={item.person_name}
                 recent_chat={item.recent_chat}
                 time={item.time}
               />
-           
           )}
         />
       </View>
