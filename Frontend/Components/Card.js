@@ -43,14 +43,15 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   subHeading: {
-    marginLeft: 15,
-    marginTop: 15,
+    marginLeft: '3%',
+    marginTop: 10,
     position: 'relative',
     marginRight: 130,
+    fontSize : 18,
     fontFamily: 'Montserrat-SemiBold',
   },
   timeAndMinuteTime: {
-    marginLeft: 15,
+    marginLeft: '3%',
     marginTop: 1,
     fontSize: 10,
     position: 'relative',
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
   content: {
     flexWrap: 'wrap',
     marginVertical: '2%',
-    marginHorizontal : '2%',
+    marginHorizontal: '2%',
     fontFamily: 'Montserrat-Medium',
   },
   timeAndMinuteTimeContainer: {
@@ -92,28 +93,35 @@ const styles = StyleSheet.create({
   commentUsername: {
     color: 'black',
     fontFamily: 'Montserrat-SemiBold',
-    fontSize: 15,
+    fontSize: 14,
     marginHorizontal: '2%',
   },
   commentHeader: {
     color: 'black',
-    fontFamily: 'Montserrat-Bold',
-    fontSize: 18,
-    marginVertical : '1%',
+    fontFamily: 'Montserrat-SemiBold',
+    fontSize: 16,
+    marginVertical: '1%',
     marginHorizontal: '2%',
+  },
+  username_pic: {
+    width: 20,
+    height: 20,
+    // marginTop: 10,
+    // marginLeft: '2%',
+    borderRadius: 50,
   },
   commentFooter: {
     color: 'grey',
     fontFamily: 'Montserrat-Regular',
     fontSize: 13,
-    marginVertical : '1%',
-    marginHorizontal: '2%',
+    marginVertical: '1%',
+    marginHorizontal: '3%',
   },
   commentText: {
     color: 'black',
     fontFamily: 'Montserrat-Medium',
-    fontSize: 14,
-    marginHorizontal: '1%',
+    fontSize: 12,
+    marginHorizontal: '2%',
   },
   like: {
     paddingRight: 10,
@@ -172,18 +180,19 @@ export default function Card(props, { navigation }) {
 
   // THIS IS THE FIRST 5 COMMENTS  
   const Temp = commentData;
-  function First_5_comments_handler({ usernames, comment }) {
+  function First_5_comments_handler({ usernames, comment  }) {
     return (
       <View style={{ flex: 1, width: '100%' }}>
-        <View style={{ margin: '1%'   }}>
+        <View style={{ marginVertical: '1%' }}>
+        <View style = {{ flex :1 , flexDirection : "row" , marginLeft : '2%', alignItems :"center"}}>
+        <Image style = {styles.username_pic} source={require('../assets/images/tyler.jpg')}/>
           <Text style={styles.commentUsername}>{usernames}</Text>
+          </View>
           <Text numberOfLines={1} style={styles.commentText}>{comment}</Text>
         </View>
       </View>
     );
   }
-
-
 
   return (
     <>
@@ -228,16 +237,18 @@ export default function Card(props, { navigation }) {
           </View>
         </TouchableOpacity>
         <View style={styles.commentsBar}>
-        <Text style={styles.commentHeader}>Comments</Text>
-        <FlatList data={Temp}
-        renderItem={({ item }) => (
-          <First_5_comments_handler
-            usernames={item.usernames}
-            comment={item.comment} />
-        )} />
-        <Text style={styles.commentFooter}>Load More Comments ...</Text>
+          <Text style={styles.commentHeader}>Comments</Text>
+          <FlatList data={Temp}
+            renderItem={({ item }) => (
+              <First_5_comments_handler
+                usernames={item.usernames}
+                comment={item.comment} />
+            )} />
+          <TouchableOpacity onPress = {props.loadcomments}>
+            <Text style={styles.commentFooter}>Load More Comments ...</Text>
+          </TouchableOpacity>
         </View>
-    </View>
+      </View>
     </>
   );
 }
