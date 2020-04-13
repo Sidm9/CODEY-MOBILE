@@ -72,10 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
 });
-
-
 export default function login({ route, navigation }, props) {
-  // const {toggle} = route.params;
   return (
     <>
       <View style={styles.container}>

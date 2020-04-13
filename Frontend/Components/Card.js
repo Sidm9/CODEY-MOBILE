@@ -124,16 +124,13 @@ const styles = StyleSheet.create({
     marginHorizontal: '2%',
   },
   commentTime: {
-    color: 'grey'
+    color: 'grey',
   },
   commentDivider: {
     height: 1,
     backgroundColor: 'grey',
-    marginLeft: '2%',
-    marginRight: '2%',
-    marginTop: '2%',
-    marginBottom: '2%'
-  },  
+    margin: '2%',
+  },
   like: {
     paddingRight: 10,
     paddingLeft: '2%',
@@ -189,7 +186,7 @@ export default function Card(props, { navigation }) {
   //All THE PROPS OF THIS COMPONENT WILL COME FROM POST.JS
   // THIS IS THE FIRST 5 COMMENTS
   const Temp = commentData;
-  function First_5_comments_handler({ usernames, comment , navigation} ) {
+  function First_5_comments_handler({ usernames, comment } ) {
     return (
       <View style={{ flex: 1, width: '100%' }}>
         <View style={{ marginVertical: '1%' }}>
@@ -247,7 +244,6 @@ export default function Card(props, { navigation }) {
           </View>
         </TouchableOpacity>
         <View style={styles.commentDivider}/>
-       
         <View style={styles.commentsBar}>
           <Text style={styles.commentHeader}>Comments</Text>
           <FlatList data={Temp}
