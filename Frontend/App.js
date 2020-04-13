@@ -26,13 +26,16 @@ import Security from './Screens/Settings/Security';
 import Comment from './Screens/Comment';
 import ChatScreen from './Screens/Chat/ChatScreen';
 import ChatLayout from './Screens/Chat/ChatLayout';
+import { Provider } from 'react-redux';
+import store from './redux/store'
 // import NewPost from './Screens/NewPost';
 
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
-    <>
+  
+    <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false}}>
           <Stack.Screen name="Main" component={Main} />
@@ -58,7 +61,8 @@ const App: () => React$Node = () => {
           <Stack.Screen name="Notification" component={Notification} />
         </Stack.Navigator>
       </NavigationContainer>
-    </>
+      </Provider>
+ 
   );
 };
 
