@@ -3,13 +3,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
-import { Image, View, Text, StyleSheet, ImageBackground, Appearance } from 'react-native';
+import React, { useState , useEffect , useRef } from 'react';
+import { Image, View, Text, StyleSheet, ImageBackground, Appearance , Animated} from 'react-native';
 import Button from '../Components/Button.js';
+import FadeInView from '../Animations/FadeIn.js';
 
 const styles = StyleSheet.create({
   logo: {
-    width: '85%',
+    width: '95%',
     height: '100%',
     borderColor: 'black',
     alignSelf: 'center',
@@ -53,10 +54,9 @@ const styles = StyleSheet.create({
 
 const darkStyles = StyleSheet.create({
   logo: {
-    width: '85%',
+    width: '95%',
     height: '100%',
-    borderColor: 'black',
-    alignSelf: 'center',
+    borderColor: 'white',
   },
   logoContainer: {
     width: '100%',
@@ -109,12 +109,12 @@ export default function ({ navigation }) {
         <ImageBackground
           style={styles.backgroundImage}
           source={colorScheme === 'dark' ? bgDark : bgWhite}>
-          <View style={styles.logoContainer}>
+          <FadeInView style={styles.logoContainer}>
             <Image
               style={styles.logo}
               source={colorScheme === 'dark' ? codeyWhite : codeyDark}
             />
-          </View>
+          </FadeInView>
           <View style={styles.entryContainer}>
             <Button text="Login" click={() => navigation.navigate('Login')} />
             <Button

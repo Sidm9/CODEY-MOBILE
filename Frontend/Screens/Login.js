@@ -106,7 +106,7 @@ export default function login({ route, navigation }, props) {
                 <Oauth text={'Github'} image={Github} />
                 <Oauth text={'Facebook'} image={Facebook} />
               </View>
-              <TouchableOpacity onPress={() => navigation.navigate('Comment')}>
+              <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                 <Text style={styles.footer}>Don't Have An Account? </Text>
               </TouchableOpacity>
             </View>
