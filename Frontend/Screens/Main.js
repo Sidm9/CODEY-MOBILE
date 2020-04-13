@@ -3,10 +3,11 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
-import React, { useState , useEffect , useRef } from 'react';
-import { Image, View, Text, StyleSheet, ImageBackground, Appearance , Animated} from 'react-native';
+import React from 'react';
+import { Image, View, Text, StyleSheet, ImageBackground, Appearance, Animated } from 'react-native';
 import Button from '../Components/Button.js';
 import FadeInView from '../Animations/FadeIn.js';
+import EaseIn from '../Animations/Easein.js';
 
 const styles = StyleSheet.create({
   logo: {
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 0.6,
     alignSelf: 'center',
     justifyContent: 'center',
-    marginTop : '20%',
+    marginTop: '20%',
   },
   footer: {
     fontSize: 20,
@@ -33,12 +34,12 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Bold',
   },
   footerContainer: {
-    alignItems: 'flex-end', 
-    flex: 0.3, 
+    alignItems: 'flex-end',
+    flex: 0.3,
     justifyContent: "flex-start",
-     width: '100%', 
-     paddingBottom: '10%', 
-     flexDirection: 'row',
+    width: '100%',
+    paddingBottom: '10%',
+    flexDirection: 'row',
   },
   entryContainer: {
     flex: 0.6, justifyContent: "center", alignItems: "center",
@@ -69,22 +70,25 @@ const darkStyles = StyleSheet.create({
     fontSize: 20,
     width: '100%',
     letterSpacing: 5,
-    color : 'white',
+    color: 'white',
     justifyContent: 'flex-end',
     textAlign: 'center',
     textAlignVertical: 'center',
     fontFamily: 'Montserrat-Bold',
   },
   footerContainer: {
-    alignItems: 'flex-end', 
-    flex: 0.3, 
+    alignItems: 'flex-end',
+    flex: 0.3,
     justifyContent: "flex-start",
-     width: '100%', 
-     paddingBottom: '10%', 
-     flexDirection: 'row',
+    width: '100%',
+    paddingBottom: '10%',
+    flexDirection: 'row',
   },
   entryContainer: {
-    flex: 0.5, borderWidth: 3, justifyContent: "center", alignItems: "center",
+    flex: 0.5,
+    borderWidth: 3,
+    justifyContent: "center",
+    alignItems: "center",
   },
   backgroundImage: {
     width: '100%',
@@ -115,16 +119,16 @@ export default function ({ navigation }) {
               source={colorScheme === 'dark' ? codeyWhite : codeyDark}
             />
           </FadeInView>
-          <View style={styles.entryContainer}>
+          <FadeInView style={styles.entryContainer}>
             <Button text="Login" click={() => navigation.navigate('Login')} />
             <Button
               text="Register"
               click={() => navigation.navigate('Register')}
             />
-          </View>
-          <View style={styles.footerContainer}>
+          </FadeInView>
+          <FadeInView style={styles.footerContainer}>
             <Text style={colorScheme === 'dark' ? darkStyles.footer : styles.footer}>POWERED BY A7A</Text>
-          </View>
+          </FadeInView>
         </ImageBackground>
       </View>
     </>
