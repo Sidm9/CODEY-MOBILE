@@ -4,7 +4,7 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Image, View, Text, StyleSheet, ImageBackground, Appearance, Animated } from 'react-native';
+import { Image, View, Text, StyleSheet, ImageBackground, Appearance } from 'react-native';
 import Button from '../Components/Button.js';
 import FadeInView from '../Animations/FadeIn.js';
 import EaseIn from '../Animations/Easein.js';
@@ -126,9 +126,9 @@ export default function ({ navigation }) {
               click={() => navigation.navigate('Register')}
             />
           </FadeInView>
-          <FadeInView style={styles.footerContainer}>
+          <EaseIn style={styles.footerContainer}>
             <Text style={colorScheme === 'dark' ? darkStyles.footer : styles.footer}>POWERED BY A7A</Text>
-          </FadeInView>
+          </EaseIn>
         </ImageBackground>
       </View>
     </>

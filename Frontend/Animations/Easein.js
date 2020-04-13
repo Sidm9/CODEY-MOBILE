@@ -1,24 +1,20 @@
-/* eslint-disable react/jsx-no-undef */
-import React, {useEffect, useRef} from 'react';
-import {Animated} from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, View, Animated} from 'react-native';
 
-export default function FadeInView(props) {
-  const position = useRef(new Animated.ValueXY(0, 0)).current; // Initial value for opacity: 0
-
-  React.useEffect(() => {
-    Animated.spring(position, {
+type Props = {};
+export default class App extends Component<Props> {
+  componentWillMount() {
+    this.position = new Animated.ValueXY(0, 0);
+    Animated.spring(this.position, {
       toValue: {x: 300, y: 100},
-      // duration: 1000,
     }).start();
-  }, []);
+  }
 
-  return (
-    <Animated.View // Special animatable View
-      style={{
-        ...props.style,
-        // opacity: position, // Bind opacity to animated value
-      }}>
-      {props.children}
-    </Animated.View>
-  );
+  render() {
+    return (
+      <Animated.View style={(this.position.getLayout(), this.props.style)}>
+        {this.props.children}
+      </Animated.View>
+    );
+  }
 }
