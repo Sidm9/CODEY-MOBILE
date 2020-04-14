@@ -119,13 +119,13 @@ export default function ({ navigation }) {
               source={colorScheme === 'dark' ? codeyWhite : codeyDark}
             />
           </FadeInView>
-          <FadeInView style={styles.entryContainer}>
+          <EaseIn style={styles.entryContainer}>
             <Button text="Login" click={() => navigation.navigate('Login')} />
             <Button
               text="Register"
               click={() => navigation.navigate('Register')}
             />
-          </FadeInView>
+          </EaseIn>
           <EaseIn style={styles.footerContainer}>
             <Text style={colorScheme === 'dark' ? darkStyles.footer : styles.footer}>POWERED BY A7A</Text>
           </EaseIn>
