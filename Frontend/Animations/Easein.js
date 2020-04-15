@@ -8,7 +8,7 @@ export default function Easein(props) {
   React.useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 1000,
+      duration: 500,
       useNativeDriver: true,
     }).start();
   }, []);
@@ -22,7 +22,7 @@ export default function Easein(props) {
           {
             translateY: fadeAnim.interpolate({
               inputRange: [0, 1],
-              outputRange: [90, 0], // 0 : 150, 0.5 : 75, 1 : 0
+              outputRange: [100, 0], // 0 : 150, 0.5 : 75, 1 : 0
             }),
           },
         ],

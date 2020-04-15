@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: '4%',
     color: 'black',
     fontFamily: 'Montserrat-Regular',
-    flexGrow: 1,
+    flex: 1,
   },
   textInputAndButtonContainer: {
     justifyContent: 'space-evenly',

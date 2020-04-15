@@ -10,6 +10,7 @@ import {
   FlatList,
 } from 'react-native';
 import { commentData } from '../Database/DbComment';
+import Easein from '../Animations/Easein';
 const styles = StyleSheet.create({
   image: {
     width: '100%',
@@ -203,7 +204,7 @@ export default function Card(props, { navigation }) {
 
   return (
     <>
-      <View style={styles.container}>
+      <Easein style={styles.container}>
         <TouchableOpacity onPress={props.open}>
           <Image style={styles.image} source={{ uri: props.imagesss }} />
           <Text style={styles.heading}>{props.heading}</Text>
@@ -256,7 +257,7 @@ export default function Card(props, { navigation }) {
             <Text style={styles.commentFooter}>Load More Comments ...</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </Easein>
     </>
   );
 }

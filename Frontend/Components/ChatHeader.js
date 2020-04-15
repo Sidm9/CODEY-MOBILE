@@ -42,12 +42,12 @@ const styles = StyleSheet.create({
     borderColor: 'black',
   },
 });
-export default function ChatHeader(props) {
+export default function ChatHeader(props, {navigation}) {
   return (
     <>
       <View style={styles.container}>
         <View style={styles.go_back_button}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Register')}>
             <Image
               source={require('../assets/icons/backWhiteBG.png')}
               style={styles.header_icons}

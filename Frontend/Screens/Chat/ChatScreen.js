@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Heading from '../../Components/Heading';
+import Easein from '../../Animations/Easein';
 
 const styles = StyleSheet.create({
   container: {
@@ -110,7 +111,7 @@ export default function ChatScreen({navigation}, props) {
   function ChatsList({person_name, recent_chat, time}) {
     return (
       <TouchableOpacity onPress={() => navigation.navigate('ChatLayout')}>
-      <View style={styles.item}>
+      <Easein style={styles.item}>
         <View style={styles.right_and_left_container}>
           <View style={styles.image_container}>
             <Image
@@ -132,7 +133,7 @@ export default function ChatScreen({navigation}, props) {
             <Text style={styles.recent_chat_timestamp}> {time} </Text>
           </View>
         </View>
-      </View>
+      </Easein>
       </TouchableOpacity>
     );
   }

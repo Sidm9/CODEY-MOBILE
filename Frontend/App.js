@@ -26,18 +26,36 @@ import Security from './Screens/Settings/Security';
 import Comment from './Screens/Comment';
 import ChatScreen from './Screens/Chat/ChatScreen';
 import ChatLayout from './Screens/Chat/ChatLayout';
-import { Provider } from 'react-redux';
-import store from './redux/store'
+import {Provider} from 'react-redux';
+import store from './redux/store';
+import {Easing, Animated} from 'react-native';
 // import NewPost from './Screens/NewPost';
 
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
-  
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+            cardStyleInterpolator: ({current: {progress}}) => ({
+              cardStyle: {
+                opacity: progress.interpolate({
+                  inputRange: [0, 1, 5],
+                  outputRange: [0, 1, 5],
+                }),
+              },
+              overlayStyle: {
+                opacity: progress.interpolate({
+                  inputRange: [0, 3],
+                  outputRange: [0, 2.5],
+                  extrapolate: 'clamp',
+                }),
+              },
+            }),
+          }}>
           <Stack.Screen name="Main" component={Main} />
           <Stack.Screen name="Article" component={Article} />
           <Stack.Screen name="ArticleHeader" component={ArticleHeader} />
@@ -61,8 +79,7 @@ const App: () => React$Node = () => {
           <Stack.Screen name="Notification" component={Notification} />
         </Stack.Navigator>
       </NavigationContainer>
-      </Provider>
- 
+    </Provider>
   );
 };
 
