@@ -5,6 +5,7 @@ import List from '../../Components/SettingsComponents/ListWithSwitch';
 import ListWithSwitch from '../../Components/SettingsComponents/ListWithSwitch.js';
 import SettingsHeader from './SettingsHeader';
 import { ScrollView } from 'react-native-gesture-handler';
+import Easein from '../../Animations/Easein';
 
 const style = StyleSheet.create({
   container: {
@@ -16,7 +17,7 @@ export default function Account() {
   return (
     <>
     
-    <View style = {style.container}>
+    <Easein style = {style.container}>
     <ScrollView>
       <SettingsHeader title = {'Notifications'}  subtitle = {'Mange Normal notifications'}/>
 
@@ -29,7 +30,7 @@ export default function Account() {
       <ListWithSwitch title={'Major Updates'} brief={'Dark Mode ?'}  />
 
       </ScrollView>
-      </View>
+      </Easein>
     </>
   );
 }

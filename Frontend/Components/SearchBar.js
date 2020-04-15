@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
+import Easein from '../Animations/Easein';
 
 const styles = StyleSheet.create({
   inputStyle: {
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
 export default function SearchBar(props) {
   return (
     <>
-      <View style={styles.inputContainer}>
+      <Easein style={styles.inputContainer}>
         <TouchableOpacity>
           {/*       <Image style={styles.icon} source={props.icon} /> */}
           <Image
@@ -52,7 +53,7 @@ export default function SearchBar(props) {
           placeholderTextColor="black"
           placeholder={props.title}
         />
-      </View>
+      </Easein>
     </>
   );
 }

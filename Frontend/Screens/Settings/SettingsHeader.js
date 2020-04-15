@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, StyleSheet, Text , PixelRatio} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';;
+import FadeInView from '../../Animations/FadeIn';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,10 +23,10 @@ export default function SettingsHeader(props) {
 
   return (
     <>
-      <View style={styles.container}>
-        <Text  style={styles.headerText}>{props.title}</Text>
+      <FadeInView style={styles.container}>
+        <Text style={styles.headerText}>{props.title}</Text>
         <Text style={styles.headerLowerText}>{props.subtitle}</Text>
-      </View>
+      </FadeInView>
     </>
   );
 }

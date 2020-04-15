@@ -7,6 +7,7 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 import List from '../../Components/SettingsComponents/List.js';
 import ListWithSwitch from '../../Components/SettingsComponents/ListWithSwitch.js';
+import Easein from '../../Animations/Easein.js';
 
 const styles = StyleSheet.create({
   settingsHeader: {
@@ -80,21 +81,21 @@ export default function Settings({ navigation }) {
   return (
     <>
       <ScrollView>
-        <View style={styles.container}>
-          <View style={styles.settingsHeader}>
-            <View style={styles.imageContainer}>
+        <Easein style={styles.container}>
+          <Easein style={styles.settingsHeader}>
+            <Easein style={styles.imageContainer}>
               <Image source={a} style={styles.image} />
-              <View style={styles.editImageContainer}>
+              <Easein style={styles.editImageContainer}>
                 <Image source={c} style={styles.editImage} />
-              </View>
-            </View>
+              </Easein>
+            </Easein>
             <TouchableOpacity style={styles.editNameButtonContainer}>
               <Text style={styles.name}>Tyler Durden</Text>
               <Image source={b} style={styles.editButton} />
             </TouchableOpacity>
-          </View>
+          </Easein>
 
-          <View style={{
+          <Easein style={{
             flex: 1, flexDirection: "column", alignItems: `center`,
             justifyContent: `flex-start`, width: '100%'
           }}>
@@ -129,8 +130,8 @@ export default function Settings({ navigation }) {
               img={require('../../assets/icons/aboutblack.png')}
               click={() => alert('Codey - A7A')} />
 
-          </View>
-        </View>
+          </Easein>
+        </Easein>
       </ScrollView>
     </>
   );

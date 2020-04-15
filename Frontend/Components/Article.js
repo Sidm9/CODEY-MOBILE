@@ -13,6 +13,8 @@ import ShareIconsGrid from './ShareIconsGrid';
 import TextHere from './--TextHere---';
 import Heading from '../Components/Heading';
 import ImageHolder from './ImageHolder';
+import Easein from '../Animations/Easein';
+import FadeInView from '../Animations/FadeIn';
 const styles = StyleSheet.create({
   Title_Heading: {
     fontSize: 30,
@@ -162,42 +164,42 @@ export default function Article({ navigation }) {
   }
   return (
     <ScrollView>
-      <View style={styles.container}>
+      <Easein style={styles.container}>
         {/*  <Heading title = "Article"/>*/}
-        <View style={styles.imageContainer}>
+        <FadeInView style={styles.imageContainer}>
           <ImageBackground
             source={bg}
             style={styles.imageB} />
-        </View>
+        </FadeInView>
         <Text style={styles.Title_Heading}>
           White Text with black outline works with every background
       </Text>
-        <View style={styles.line} />
+        <Easein style={styles.line} />
         <ShareIconsGrid />
-        <View style={styles.articleContentContainer}>
-          <View style={styles.byCon}>
+        <Easein style={styles.articleContentContainer}>
+          <Easein style={styles.byCon}>
             <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
               <Image style={styles.logo} source={require('../assets/images/tyler.jpg')} />
             </TouchableOpacity>
             <Text style={styles.byLine}>Tyler Durdern</Text>
             <Image source={require('../assets/icons/clockWhiteBG.png')} style={{ width: 20, height: 20, marginTop: 5 }} />
             <Text style={styles.minuteDuration}>5 Minute Read</Text>
-          </View>
-          <View><Text style={{ alignSelf: "center", fontFamily: 'Montserrat-Medium' }}> Mar 26 2020 23:05:30</Text></View>
-          <View style={styles.byLineAndMinuteReadContainer}>
-            <View style={styles.tagContainer}>
+          </Easein>
+          <Easein><Text style={{ alignSelf: "center", fontFamily: 'Montserrat-Medium' }}> Mar 26 2020 23:05:30</Text></Easein>
+          <Easein style={styles.byLineAndMinuteReadContainer}>
+            <Easein style={styles.tagContainer}>
               <Text style={styles.tags}>what </Text>
-            </View>
-            <View style={styles.tagContainer}>
+            </Easein>
+            <Easein style={styles.tagContainer}>
               <Text style={styles.tags}>is this </Text>
-            </View>
-            <View style={styles.tagContainer}>
+            </Easein>
+            <Easein style={styles.tagContainer}>
               <Text style={styles.tags}>reality</Text>
-            </View>
-          </View>
-        </View>
-      </View>
-      <View style={styles.PostContentContainer}>
+            </Easein>
+          </Easein>
+        </Easein>
+      </Easein>
+      <Easein style={styles.PostContentContainer}>
         <Text style={styles.PostContent}>
           Cognitive load refers here to the amount of brain power required to
           use the app. The human brain has a limited amount of processing power,
@@ -213,7 +215,7 @@ export default function Article({ navigation }) {
           overriding the onPress behavior of the back button. Read more about
           this in the api reference.
         </Text>
-      </View>
+      </Easein>
     </ScrollView>
   );
 }

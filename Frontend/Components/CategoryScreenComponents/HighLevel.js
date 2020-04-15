@@ -6,17 +6,12 @@ import SearchBar from '../SearchBar';
 const styles = StyleSheet.create({
   categoryCardGridContainer: {
     flexDirection: 'row',
-    //flex: 1,
     display: 'flex',
-
-    //justifyContent: 'space-evenly',
-    //flexWrap: 'initial',
     alignContent: 'flex-start',
   },
   categoryCardMainContainer: {
     flex: 1,
     flexDirection: 'column',
-    //marginTop: 20,
   },
   MainContainer: {
     flex: 1,

@@ -5,6 +5,7 @@ import {
   TouchableNativeFeedback,
   ScrollView,
 } from 'react-native-gesture-handler';
+import Easein from '../../Animations/Easein';
 
 const styles = StyleSheet.create({
   textStyle: {
@@ -70,16 +71,16 @@ export default function List(props) {
   return (
     <>
       <TouchableOpacity style={styles.listItemsContainer} onPress={props.click}>
-        <View style={styles.iconLeftContainer}>
+        <Easein style={styles.iconLeftContainer}>
           <Image source={props.img} style={styles.iconLeft} />
-        </View>
-        <View style={styles.listText}>
+        </Easein>
+        <Easein style={styles.listText}>
           <Text style={styles.textStyle}>{props.title}</Text>
           <Text numberOfLines={1} style={styles.textDescription}>
             {props.brief}
           </Text>
-        </View>
-        <View style={styles.iconContainer}>
+        </Easein>
+        <Easein style={styles.iconContainer}>
           <TouchableNativeFeedback
             useForeground={true}
             background={TouchableNativeFeedback.Ripple('white', true)}
@@ -89,7 +90,7 @@ export default function List(props) {
               style={styles.icon}
             />
           </TouchableNativeFeedback>
-        </View>
+        </Easein>
       </TouchableOpacity>
     </>
   );
