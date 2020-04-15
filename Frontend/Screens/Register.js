@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
   Image,
@@ -17,6 +18,8 @@ import Github from '../assets/icons/git.png';
 import Facebook from '../assets/icons/facebook.png';
 import TextHere from '../Components/--TextHere---';
 import {ScrollView} from 'react-native-gesture-handler';
+import FadeInView from '../Animations/FadeIn';
+import Easein from '../Animations/Easein';
 const styles = StyleSheet.create({
   logo: {
     width: '70%',
@@ -82,10 +85,10 @@ export default function login({navigation}) {
           style={styles.backgroundImage}
           source={require('../assets/images/3272176.jpg')}>
           <ScrollView>
-            <View style={styles.logoContainer}>
+            <FadeInView style={styles.logoContainer}>
               <Image source={codeyLogo} style={styles.logo} />
-            </View>
-            <View style={styles.entriesContainer}>
+            </FadeInView>
+            <Easein style={styles.entriesContainer}>
               <Text style={styles.heading}>Register</Text>
               <PlaceHolders placeholder={'Enter Email'} />
               <PasswordInput
@@ -100,8 +103,8 @@ export default function login({navigation}) {
                 text="Continue ▶▶"
                 click={() => navigation.navigate('BottomNavBar')}
               />
-            </View>
-            <View
+            </Easein>
+            <Easein
               style={{
                 flex: 0.7,
                 borderWidth: 0,
@@ -110,15 +113,15 @@ export default function login({navigation}) {
                 justifyContent: 'center',
               }}>
               <TextHere text={'OR'} />
-              <View style={styles.registerWithContainer}>
+              <Easein style={styles.registerWithContainer}>
                 <OAuth text={'Google'} image={Google} />
                 <OAuth text={'Github'} image={Github} />
                 <OAuth text={'Facebook'} image={Facebook} />
-              </View>
+              </Easein>
               <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.footer}>Already Have Account?</Text>
               </TouchableOpacity>
-            </View>
+            </Easein>
           </ScrollView>
         </ImageBackground>
       </View>

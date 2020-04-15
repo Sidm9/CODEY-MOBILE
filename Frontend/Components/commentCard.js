@@ -37,10 +37,10 @@ const styles = StyleSheet.create({
   },
   comment_bottom_bar: {
     flex: 1,
-    borderTopWidth: 0.6,
+    borderTopWidth: 0.4,
     flexDirection: 'row',
     width: null,
-    marginVertical: '1%',
+    marginVertical: '2%',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },

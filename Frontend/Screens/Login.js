@@ -18,6 +18,8 @@ import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
 import Facebook from '../assets/icons/facebook.png';
 import TextHere from '../Components/--TextHere---';
+import Easein from '../Animations/Easein';
+import FadeInView from '../Animations/FadeIn';
 const styles = StyleSheet.create({
   logo: {
     width: '70%',
@@ -80,10 +82,10 @@ export default function login({ route, navigation }, props) {
           style={styles.backgroundImage}
           source={require('../assets/images/3272176.jpg')}>
           <ScrollView>
-            <View style={styles.logoContainer}>
+            <FadeInView style={styles.logoContainer}>
               <Image source={codeyLogo} style={styles.logo} />
-            </View>
-            <View style={styles.entriesContainer}>
+            </FadeInView>
+            <Easein style={styles.entriesContainer}>
               <Text style={styles.heading}>Login</Text>
               <PlaceHolders placeholder={'Enter Email'} />
               <PasswordInput
@@ -93,23 +95,23 @@ export default function login({ route, navigation }, props) {
                 text="Login"
                 click={() => navigation.navigate('Posts')}
               />
-            </View>
-            <View style={{
+            </Easein>
+            <Easein style={{
               flex: 1.0, borderWidth: 0,
               borderColor: 'green',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
               <TextHere text={'OR'} />
-              <View style={styles.signUpWithContainer}>
+              <Easein style={styles.signUpWithContainer}>
                 <Oauth text={'Google'} image={Google} />
                 <Oauth text={'Github'} image={Github} />
                 <Oauth text={'Facebook'} image={Facebook} />
-              </View>
+              </Easein>
               <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                 <Text style={styles.footer}>Don't Have An Account? </Text>
               </TouchableOpacity>
-            </View>
+            </Easein>
           </ScrollView>
         </ImageBackground>
       </View>

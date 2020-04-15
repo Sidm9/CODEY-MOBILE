@@ -205,7 +205,7 @@ export default function Card(props, { navigation }) {
   return (
     <>
       <Easein style={styles.container}>
-        <TouchableOpacity onPress={props.open}>
+        <TouchableOpacity onPress={(props.open)}>
           <Image style={styles.image} source={{ uri: props.imagesss }} />
           <Text style={styles.heading}>{props.heading}</Text>
           <View style={styles.byLineContainer}>

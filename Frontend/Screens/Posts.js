@@ -3,10 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, RefreshControl, FlatList, Button } from 'react-native';
 import Card from '../Components/Card';
 import Heading from '../Components/Heading';
-import {array} from '../Database/PostData'; 
+import {array} from '../Database/PostData';
 import {fetchPosts} from '../redux/actions/postAction';
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import FadeInView from '../Animations/FadeIn';
 
 
 
@@ -30,40 +31,40 @@ function wait(timeout) {
 }
 
 export default function Posts({ navigation }, props) {
-  
 
-  const posts = useSelector(state => state.posts)
 
-  const dispatch = useDispatch()
-  
+  const posts = useSelector(state => state.posts);
+
+  const dispatch = useDispatch();
+
 
   useEffect(() => {
     dispatch(fetchPosts());
-  }, posts.items ? [posts.items.length] : [posts.items])
+  }, posts.items ? [posts.items.length] : [posts.items]);
 
- 
+
 
   const [refreshing, setRefreshing] = React.useState(false);
 
   const onRefresh = React.useCallback(() => {
     setRefreshing(true);
-    dispatch(fetchPosts())
+    dispatch(fetchPosts());
     wait(2000).then(() => setRefreshing(false));
   });
-  
+
 
 
 let ar = array;
   return (
     <>
 
-      <View style={colorScheme != 'dark' ? Darkstyles.container : styles.container} >
+      <FadeInView style={colorScheme != 'dark' ? Darkstyles.container : styles.container} >
         <Heading title="Feed" click={() => navigation.navigate('Profile')} />
         <FlatList
           initialNumToRender={8}
           data={posts.items}
           renderItem={({ item }) => (
-            <Card
+            <Card open = {() => navigation.navigate('Article')} loadcomments = {() => navigation.navigate('Comment')}
               imagesss={item.thumbnailUrl}
               heading={item.title}
               auther={item.person_name}
@@ -73,7 +74,7 @@ let ar = array;
           )}
           refreshControl={
             <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />} />
-      </View>
+      </FadeInView>
     </>
   );
 }

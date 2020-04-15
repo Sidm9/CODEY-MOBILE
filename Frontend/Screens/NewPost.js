@@ -1,8 +1,10 @@
 import React from 'react';
 import Heading from '../Components/Heading';
-import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 import Button from '../Components/Button';
 import PlaceHolders from '../Components/PlaceHolders';
+import Easein from '../Animations/Easein';
+import FadeInView from '../Animations/FadeIn';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -22,11 +24,11 @@ const styles = StyleSheet.create({
 export default function NewPost() {
   return (
     <>
-      <View style={styles.container}>
+      <Easein style={styles.container}>
         <Heading title=" New Post" />
         <PlaceHolders placeholder={'Title'} />
         <PlaceHolders placeholder={'Enter Content'} />
-        <View style={styles.image_container}>
+        <FadeInView style={styles.image_container}>
           <TouchableOpacity>
             <Image
               source={require('../assets/images/gallery.png')}
@@ -34,9 +36,9 @@ export default function NewPost() {
             />
             <Text style={styles.image_text}> Add Image </Text>
           </TouchableOpacity>
-        </View>
+        </FadeInView>
         <Button text="Post !" />
-      </View>
+      </Easein>
     </>
   );
 }

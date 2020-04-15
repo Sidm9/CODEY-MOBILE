@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {Text, View, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import Easein from '../../Animations/Easein';
 // CATEGORY CARD IS THE SIMPLEST COMPONENT CONTAING CARDS BLUEPRINT (IN SET OF 2)
 const styles = StyleSheet.create({
   categoryCardNameStyle: {
@@ -73,21 +74,21 @@ const styles = StyleSheet.create({
 
 export default function CategoryCard(props) {
   return (
-    <View style={styles.categoryCardContainer}>
+    <Easein style={styles.categoryCardContainer}>
       <TouchableOpacity
         onPress={() => {}}
         style={styles.categoryCardButtonStyle}>
-        <View style={styles.categoryCardTextAndImageContainer}>
-          <View style={styles.categoryCardTextContainer}>
+        <Easein style={styles.categoryCardTextAndImageContainer}>
+          <Easein style={styles.categoryCardTextContainer}>
             <Text numberOfLines={1} ellipsizeMode="tail" style={styles.categoryCardNameStyle}>
               {props.languageName}
             </Text>
-          </View>
-          <View style={styles.categoryImageContainer}>
+          </Easein>
+          <Easein style={styles.categoryImageContainer}>
             <Image source={props.languageIcon} style={styles.imageStyle} />
-          </View>
-        </View>
+          </Easein>
+        </Easein>
       </TouchableOpacity>
-    </View>
+    </Easein>
   );
 }
