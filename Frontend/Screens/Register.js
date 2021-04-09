@@ -1,25 +1,30 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
-  Image,
-  View,
-  Text,
-  StyleSheet,
+  Dimensions, Image,
+
+
+
   ImageBackground,
-  TouchableOpacity,
+
+
+  KeyboardAvoidingView, StyleSheet, Text,
+
+
+  TouchableOpacity
 } from 'react-native';
-import PlaceHolders from '../Components/PlaceHolders';
-import PasswordInput from '../Components/PasswordInput';
-import codeyLogo from '../assets/images/CodeyDark.png';
-import LoginButton from '../Components/Button.js';
-import OAuth from '../Components/GoogleButton';
+import { ScrollView } from 'react-native-gesture-handler';
+import Easein from '../Animations/Easein';
+import FadeInView from '../Animations/FadeIn';
+import Facebook from '../assets/icons/facebook.png';
 import Google from '../assets/icons/G.png';
 import Github from '../assets/icons/git.png';
-import Facebook from '../assets/icons/facebook.png';
+import codeyLogo from '../assets/images/CodeyDark.png';
 import TextHere from '../Components/--TextHere---';
-import {ScrollView} from 'react-native-gesture-handler';
-import FadeInView from '../Animations/FadeIn';
-import Easein from '../Animations/Easein';
+import LoginButton from '../Components/Button.js';
+import OAuth from '../Components/GoogleButton';
+import PasswordInput from '../Components/PasswordInput';
+import PlaceHolders from '../Components/PlaceHolders';
 const styles = StyleSheet.create({
   logo: {
     width: '70%',
@@ -57,8 +62,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   backgroundImage: {
-    width: '100%',
-    height: '100%',
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+    zIndex: -1,
+    position: "absolute",
   },
   registerWithContainer: {
     marginLeft: 35,
@@ -80,10 +87,8 @@ const styles = StyleSheet.create({
 export default function login({navigation}) {
   return (
     <>
-      <View style={styles.container}>
-        <ImageBackground
-          style={styles.backgroundImage}
-          source={require('../assets/images/3272176.jpg')}>
+      <KeyboardAvoidingView style={styles.container}>
+       
           <ScrollView>
             <FadeInView style={styles.logoContainer}>
               <Image source={codeyLogo} style={styles.logo} />
@@ -123,8 +128,10 @@ export default function login({navigation}) {
               </TouchableOpacity>
             </Easein>
           </ScrollView>
-        </ImageBackground>
-      </View>
+      </KeyboardAvoidingView>
+      <ImageBackground
+          style={styles.backgroundImage}
+          source={require('../assets/images/3272176.jpg')}/>
     </>
   );
 }

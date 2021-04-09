@@ -1,25 +1,17 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
-import {
-  Image,
-  View,
-  Text,
-  StyleSheet,
-  ImageBackground,
-} from 'react-native';
-import PlaceHolders from '../Components/PlaceHolders';
-import PasswordInput from '../Components/PasswordInput';
-import codeyLogo from '../assets/images/CodeyDark.png';
-import LoginButton from '../Components/Button.js';
-import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
-import Oauth from '../Components/GoogleButton';
-import Google from '../assets/icons/G.png';
-import Github from '../assets/icons/git.png';
-import Facebook from '../assets/icons/facebook.png';
-import TextHere from '../Components/--TextHere---';
+import React from 'react';
+import { Dimensions, Image, ImageBackground, KeyboardAvoidingView, StyleSheet, Text } from 'react-native';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Easein from '../Animations/Easein';
 import FadeInView from '../Animations/FadeIn';
+import Facebook from '../assets/icons/facebook.png';
+import Google from '../assets/icons/G.png';
+import Github from '../assets/icons/git.png';
+import CodeyLogo from '../assets/images/CodeyDark.png';
+import TextHere from '../Components/--TextHere---';
+import LoginButton from '../Components/Button.js';
+import Oauth from '../Components/GoogleButton';
+import PasswordInput from '../Components/PasswordInput';
+import PlaceHolders from '../Components/PlaceHolders';
 const styles = StyleSheet.create({
   logo: {
     width: '70%',
@@ -50,8 +42,10 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
   },
   backgroundImage: {
-    width: '100%',
-    height: '100%',
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+    zIndex: -1,
+    position: "absolute",
   },
   entriesContainer: {
     borderWidth: 0,
@@ -74,47 +68,49 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
 });
-export default function login({ route, navigation }, props) {
+export default function login({ navigation }) {
   return (
     <>
-      <View style={styles.container}>
-        <ImageBackground
-          style={styles.backgroundImage}
-          source={require('../assets/images/3272176.jpg')}>
-          <ScrollView>
-            <FadeInView style={styles.logoContainer}>
-              <Image source={codeyLogo} style={styles.logo} />
-            </FadeInView>
-            <Easein style={styles.entriesContainer}>
-              <Text style={styles.heading}>Login</Text>
-              <PlaceHolders placeholder={'Enter Email'} />
-              <PasswordInput
-                placeholder={'Enter Password'}
-              />
-              <LoginButton
-                text="Login"
-                click={() => navigation.navigate('Posts')}
-              />
+    
+      <KeyboardAvoidingView style={styles.container}>
+        <ScrollView>
+          <FadeInView style={styles.logoContainer}>
+            <Image source={CodeyLogo} style={styles.logo} />
+          </FadeInView>
+          <Easein style={styles.entriesContainer}>
+            <Text style={styles.heading}>Login</Text>
+            <PlaceHolders placeholder={'Enter Email'} />
+            <PasswordInput
+              placeholder={'Enter Password'}
+            />
+            <LoginButton
+              text="Login"
+              click={() => navigation.navigate('Posts')}
+            />
+          </Easein>
+          <Easein style={{
+            flex: 1.0,
+            borderWidth: 0,
+            borderColor: 'green',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <TextHere text={'OR'} />
+            <Easein style={styles.signUpWithContainer}>
+              <Oauth text={'Google'} image={Google} />
+              <Oauth text={'Github'} image={Github} />
+              <Oauth text={'Facebook'} image={Facebook} />
             </Easein>
-            <Easein style={{
-              flex: 1.0, borderWidth: 0,
-              borderColor: 'green',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <TextHere text={'OR'} />
-              <Easein style={styles.signUpWithContainer}>
-                <Oauth text={'Google'} image={Google} />
-                <Oauth text={'Github'} image={Github} />
-                <Oauth text={'Facebook'} image={Facebook} />
-              </Easein>
-              <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-                <Text style={styles.footer}>Don't Have An Account? </Text>
-              </TouchableOpacity>
-            </Easein>
-          </ScrollView>
-        </ImageBackground>
-      </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+              <Text style={styles.footer}>Don't Have An Account? </Text>
+            </TouchableOpacity>
+          </Easein>
+        </ScrollView>
+
+      </KeyboardAvoidingView>
+      <ImageBackground
+        style={styles.backgroundImage}
+        source={require('../assets/images/3272176.jpg')} />
     </>
   );
 }
